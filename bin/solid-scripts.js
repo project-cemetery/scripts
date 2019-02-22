@@ -14,18 +14,20 @@ if (functionScripts.includes(script)) {
     projectPath,
   }
 
-  const { status } = require(path.join('../scripts', script))(context)
-  process.exit(status)
+  require(path.join('../scripts', script))(context)
+    .then(({ status }) => process.exit(status))
 }
 
 if (processScripts.includes(script)) {
   const result = spawn.sync(
     'node',
     [require.resolve(path.join('../scripts', script)), projectPath],
-    { stdio: 'inherit' }
+    { stdio: 'inherit' },
   )
   process.exit(result.status)
 }
 
-console.log(`Unknown script "${script}".`)
-process.exit(1)
+if (![...processScripts, ...functionScripts].includes(script)) {
+  console.log(`Unknown script "${script}".`)
+  process.exit(1)
+}
