@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+cache: yarn
+script: yarn s lint
+deploy:
+  provider: npm
+  email: igor@kamyshev.me
+  api_key:
+    secure: Cf/pq83LGsyffIdaDH7z15FijUhqwKiejDn4/rwWqcpk1XRYOWZvok01AZoNxzqH6JnXZ0qKic6i1y88g2lr8ODi9vP8E9DUhc2GfXcToN1MDMtQgL8ffHbbHezwi54USrS3Fu4TLVcUoOloQXwmu8AFP3MKBR6PTMVGAVjWBF7p0Q87MNNWoYO11J9SDWFtGWFmmWr8LU0gevM2txP3gjOwmxPNbQiiEcGgvQs/6s2Ydyo4xj97azJbpup+pyrkjQWdjobpfAHECP/bAOfviSo5auygHpkCn+vSdfC70vfWk5QDYq+rOeD0iMNwGWC1KJhRFtDtI/fB3rQ8w3iGi1QZlDlutqwBOVE5YtWYFNFxrA1h/9UCtghmONrxEH0CCOylDrvwPOAoNyFdfUTgQTihba5XD3f0/xuJJlHN9i+GkxWfEbpkT0I+QccukUQt6WgcBOWXM28k6C9nHu9+GnXUn9ZGpPRJCz0eKIWOVhXbihnLv/0+9bh0nvjIxQ9zexxhaDGCZQLL9wDOfS0qmJtDpbzYTeYtdLSOku1dZq9FAb6CxmVibyWpHJKrXfPaEmjyzkioTaeyIcL3dQkHL32kgMZLfEBpwdJEMSZbS8HFDreUWHobeLQFjYdYAZ74QOrK1TLNJ7OywY+mqqUuVeBOGPIq03DA6mhJwM26ueE=
+  on:
+    tags: true
+    repo: solid-soda/scripts
