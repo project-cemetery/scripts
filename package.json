@@ -10,7 +10,7 @@
   "scripts": {
     "s": "yarn soda",
     "soda": "node ./bin/solid-scripts.js",
-    "postinstall": "s init"
+    "postinstall": "yarn s init"
   },
   "dependencies": {
     "@commitlint/cli": "^7.5.2",
