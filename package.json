@@ -1,0 +1,19 @@
+{
+  "name": "@solid-soda/scripts",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:solid-soda/solid-scripts.git",
+  "author": "Igor Kamyshev <igor@kamyshev.me>",
+  "license": "MIT",
+  "bin": {
+    "soda": "./bin/solid-scripts.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.0",
+    "@typescript-eslint/parser": "^1.4.0",
+    "babel-eslint": "^10.0.1",
+    "cross-spawn": "^6.0.5",
+    "eslint": "^5.14.1",
+    "prettier": "^1.16.4"
+  }
+}
