@@ -4,21 +4,12 @@
 
 ## Instal
 
-`yarn add -D @solid-soda/scripts`
+```sh
+yarn add -D @solid-soda/scripts
+yarn soda init
+```
 
 ## Usage
-
-Modify your `package.json`
-```json
-{
-  ...,
-  scripts: {
-    ...,
-    s: "yarn soda",
-  },
-  ...
-}
-```
 
 The following scripts available:
 
