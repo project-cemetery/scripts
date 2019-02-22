@@ -9,7 +9,7 @@
     "soda": "./bin/solid-scripts.js"
   },
   "scripts": {
-    "soda": "node ./bin/solid-scripts.js"
+    "s": "node ./bin/solid-scripts.js"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.4.0",
