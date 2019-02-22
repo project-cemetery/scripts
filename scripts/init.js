@@ -10,6 +10,7 @@ const modifyPackageJson = projectPath => {
   projectPackageJson.unset('husky')
   projectPackageJson.unset('lint-staged')
   projectPackageJson.unset('commitlint')
+  projectPackageJson.unset('publishConfig')
   projectPackageJson.unset('scripts.s')
 
   projectPackageJson.set('husky', {
@@ -24,6 +25,9 @@ const modifyPackageJson = projectPath => {
   })
   projectPackageJson.set('commitlint', {
     extends: ['@commitlint/config-conventional'],
+  })
+  projectPackageJson.set('publishConfig', {
+    access: 'public',
   })
   projectPackageJson.set('scripts.s', 'yarn soda')
 
