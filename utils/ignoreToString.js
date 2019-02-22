@@ -1,9 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
-const isDirectory = async dirPath => {
+const isDirectory = dirPath => {
   try {
-    return fs.lstatSync(dirPath).isDirectory()
+    const t = fs.lstatSync(dirPath).isDirectory()
+    return t
   } catch (e) {
     return false
   }
