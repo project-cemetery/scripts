@@ -8,7 +8,6 @@ module.exports = async ({ projectPath }) => {
   const rcFile = path.join(__dirname, '../config/prettier.js')
 
   const ignorePaths = ignoreToStirng(projectPath, ignoreFile)
-  console.log(ignorePaths)
 
   const result = spawn.sync(
     'prettier',
