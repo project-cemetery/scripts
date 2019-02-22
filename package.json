@@ -21,6 +21,7 @@
     "eslint": "^5.14.1",
     "find": "^0.2.9",
     "prettier": "^1.16.4",
+    "standard-version": "^5.0.0",
     "typescript": "^3.3.3333"
   }
 }

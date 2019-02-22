@@ -3,7 +3,7 @@ const path = require('path')
 
 const ignoreToStirng = require('../utils/ignoreToString')
 
-module.exports = ({ projectPath }) => {
+module.exports = async ({ projectPath }) => {
   const ignoreFile = path.join(projectPath, '.gitignore')
   const rcFile = path.join(__dirname, '../config/prettier.js')
 
