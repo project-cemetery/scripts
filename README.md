@@ -14,7 +14,7 @@ Modify your `package.json`
   ...,
   scripts: {
     ...,
-    s: solid-scripts,
+    s: "yarn soda",
   },
   ...
 }

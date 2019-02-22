@@ -6,7 +6,7 @@ const script = process.argv[2]
 
 const projectPath = process.cwd()
 
-const functionScripts = ['lint', 'pretty', 'release']
+const functionScripts = ['lint', 'pretty', 'release', 'init']
 const processScripts = ['cz']
 
 if (functionScripts.includes(script)) {
@@ -14,8 +14,9 @@ if (functionScripts.includes(script)) {
     projectPath,
   }
 
-  require(path.join('../scripts', script))(context)
-    .then(({ status }) => process.exit(status))
+  require(path.join('../scripts', script))(context).then(({ status }) =>
+    process.exit(status),
+  )
 }
 
 if (processScripts.includes(script)) {

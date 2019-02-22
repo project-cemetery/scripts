@@ -10,7 +10,7 @@ const isDirectory = dirPath => {
   }
 }
 
-module.exports = (projectPath, ignoreFile) => 
+module.exports = (projectPath, ignoreFile) =>
   fs
     .readFileSync(ignoreFile)
     .toString()

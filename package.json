@@ -9,19 +9,46 @@
     "soda": "./bin/solid-scripts.js"
   },
   "scripts": {
-    "s": "node ./bin/solid-scripts.js"
+    "s": "yarn soda",
+    "soda": "node ./bin/solid-scripts.js",
+    "postinstall": "s init"
   },
   "dependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
     "@typescript-eslint/eslint-plugin": "^1.4.0",
     "@typescript-eslint/parser": "^1.4.0",
     "babel-eslint": "^10.0.1",
     "commitizen": "^3.0.7",
     "cross-spawn": "^6.0.5",
     "cz-conventional-changelog": "^2.1.0",
+    "edit-json-file": "^1.2.1",
     "eslint": "^5.14.1",
     "find": "^0.2.9",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4",
     "prettier": "^1.16.4",
     "standard-version": "^5.0.0",
     "typescript": "^3.3.3333"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "yarn soda lint"
+    ],
+    "*.{js,jsx,ts,tsx,css,json}": [
+      "yarn soda pretty",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
