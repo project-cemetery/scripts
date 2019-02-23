@@ -33,7 +33,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -x '@commitlint/config-conventional'"
     }
   },
   "lint-staged": {
@@ -43,11 +43,6 @@
     "*.{js,jsx,ts,tsx,css,json}": [
       "yarn soda pretty",
       "git add"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
     ]
   },
   "publishConfig": {
