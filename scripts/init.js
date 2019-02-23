@@ -15,14 +15,10 @@ const modifyPackageJson = projectPath => {
 
   projectPackageJson.set('husky', {
     hooks: {
-      'pre-commit': 'lint-staged',
+      'pre-commit': 'yarn soda lint-staged',
       'commit-msg':
         "commitlint -E HUSKY_GIT_PARAMS -x '@commitlint/config-conventional'",
     },
-  })
-  projectPackageJson.set('lint-staged', {
-    '*.{ts,tsx,js,jsx}': ['yarn soda lint'],
-    '*.{js,jsx,ts,tsx,css,json}': ['yarn soda pretty', 'git add'],
   })
   projectPackageJson.set('publishConfig', {
     access: 'public',
