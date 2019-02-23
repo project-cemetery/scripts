@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0](https://github.com/solid-soda/scripts/compare/v1.0.7...v1.1.0) (2019-02-23)
+
+
+### Bug Fixes
+
+* **init:** fix bug with postinstall in init ([6820d13](https://github.com/solid-soda/scripts/commit/6820d13))
+
+
+### Features
+
+* **commitlint:** inline config ([089a49b](https://github.com/solid-soda/scripts/commit/089a49b))
+* **lint-staged:** hide config ([8d3bd24](https://github.com/solid-soda/scripts/commit/8d3bd24))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.0.7](https://github.com/solid-soda/scripts/compare/v1.0.6...v1.0.7) (2019-02-23)
 
 
