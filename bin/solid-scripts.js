@@ -13,6 +13,7 @@ const functionScripts = [
   'release',
   'init',
   'post-install',
+  'commitlint',
 ]
 const processScripts = ['cz']
 
