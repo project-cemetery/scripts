@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.7](https://github.com/solid-soda/scripts/compare/v1.0.6...v1.0.7) (2019-02-23)
+
+
+### Bug Fixes
+
+* **utils:** add new filter for ignore paths ([8ca3820](https://github.com/solid-soda/scripts/commit/8ca3820))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.0.6](https://github.com/solid-soda/scripts/compare/v1.0.5...v1.0.6) (2019-02-22)
 
 
