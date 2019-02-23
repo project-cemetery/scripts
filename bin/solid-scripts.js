@@ -6,7 +6,7 @@ const script = process.argv[2]
 
 const projectPath = process.cwd()
 
-const functionScripts = ['lint', 'pretty', 'release', 'init']
+const functionScripts = ['lint', 'pretty', 'release', 'init', 'post-install']
 const processScripts = ['cz']
 
 if (functionScripts.includes(script)) {

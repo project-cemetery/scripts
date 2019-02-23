@@ -30,16 +30,13 @@ const modifyPackageJson = projectPath => {
     access: 'public',
   })
   projectPackageJson.set('scripts.s', 'yarn soda')
+  projectPackageJson.set('scripts.postinstall', 'yarn soda post-install')
 
   projectPackageJson.save()
 }
 
 module.exports = async ({ projectPath }) => {
-  const huskyInstaller = path.join(projectPath, './node_modules/husky/husky.js')
-
-  spawn.sync('node', [huskyInstaller, 'install'], { stdio: 'inherit' })
-
   modifyPackageJson(projectPath)
 
-  return { status: 0 }
+  return spawn.sync('yarn', ['soda', 'post-install'], { stdio: 'inherit' })
 }
