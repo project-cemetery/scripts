@@ -23,7 +23,6 @@ const modifyPackageJson = projectPath => {
     access: 'public',
   })
   projectPackageJson.set('scripts.s', 'yarn soda')
-  projectPackageJson.set('scripts.postinstall', 'yarn soda post-install')
 
   projectPackageJson.save()
 }
