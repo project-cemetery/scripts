@@ -1,7 +1,9 @@
 const spawn = require('cross-spawn')
 
-module.exports = async () => {
-  const result = spawn.sync('standard-version', { stdio: 'inherit' })
+module.exports = async ({ projectPath }) => {
+  const result = spawn.sync('standard-version', ['--path', projectPath], {
+    stdio: 'inherit',
+  })
 
   return result
 }
