@@ -9,6 +9,10 @@ yarn add -D @solid-soda/scripts
 yarn soda init
 ```
 
+### Init options
+
++ `--vscode` to initialize Visiual Studio Code setttings for ESLint plugin
+
 ## Usage
 
 The following scripts available:
