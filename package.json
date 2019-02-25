@@ -13,22 +13,22 @@
     "postinstall": "yarn soda post-install"
   },
   "dependencies": {
-    "@commitlint/cli": "7.x",
-    "@commitlint/config-conventional": "7.x",
-    "@typescript-eslint/eslint-plugin": "1.x",
-    "@typescript-eslint/parser": "1.x",
-    "babel-eslint": "10.x",
-    "commitizen": "3.x",
-    "cross-spawn": "6.x",
-    "cz-conventional-changelog": "2.x",
+    "@commitlint/cli": "7",
+    "@commitlint/config-conventional": "7",
+    "@typescript-eslint/eslint-plugin": "1",
+    "@typescript-eslint/parser": "1",
+    "babel-eslint": "10",
+    "commitizen": "3",
+    "cross-spawn": "6",
+    "cz-conventional-changelog": "2",
     "edit-json-file": "1.2.1",
-    "eslint": "5.x",
+    "eslint": "5",
     "find": "0.2.9",
-    "husky": "1.x",
-    "lint-staged": "8.x",
-    "prettier": "1.x",
-    "standard-version": "5.x",
-    "typescript": "3.x"
+    "husky": "1",
+    "lint-staged": "8",
+    "prettier": "1",
+    "standard-version": "5",
+    "typescript": "3"
   },
   "husky": {
     "hooks": {
