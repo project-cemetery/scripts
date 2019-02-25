@@ -4,9 +4,17 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', '@typescript-eslint/tslint'],
   extends: ['./eslint-base.js'],
   rules: {
     'no-empty-function': ['error', { allow: ['constructors'] }],
+    '@typescript-eslint/tslint/config': [
+      'error',
+      {
+        rules: {
+          'no-shadowed-variable': true,
+        },
+      },
+    ],
   },
 }

@@ -179,7 +179,6 @@ module.exports = {
     'no-path-concat': 'error',
     'no-delete-var': 'error',
     'no-label-var': 'error',
-    'no-shadow': 'error',
     'no-shadow-restricted-names': 'error',
     'no-undef-init': 'error',
     'no-use-before-define': [
