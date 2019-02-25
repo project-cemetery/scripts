@@ -3,6 +3,7 @@ const path = require('path')
 const spawn = require('cross-spawn')
 
 const script = process.argv[2]
+const args = process.argv.slice(3)
 
 const projectPath = process.cwd()
 
@@ -14,12 +15,14 @@ const functionScripts = [
   'init',
   'post-install',
   'commitlint',
+  'init-vscode',
 ]
 const processScripts = ['cz']
 
 if (functionScripts.includes(script)) {
   const context = {
     projectPath,
+    args,
   }
 
   require(path.join('../scripts', script))(context).then(({ status }) =>
@@ -30,7 +33,7 @@ if (functionScripts.includes(script)) {
 if (processScripts.includes(script)) {
   const result = spawn.sync(
     'node',
-    [require.resolve(path.join('../scripts', script)), projectPath],
+    [require.resolve(path.join('../scripts', script)), projectPath, ...args],
     { stdio: 'inherit' },
   )
   process.exit(result.status)

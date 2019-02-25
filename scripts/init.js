@@ -27,8 +27,12 @@ const modifyPackageJson = projectPath => {
   projectPackageJson.save()
 }
 
-module.exports = async ({ projectPath }) => {
+module.exports = async ({ projectPath, args = [] }) => {
   modifyPackageJson(projectPath)
+
+  if (args.includes('--vscode')) {
+    spawn.sync('yarn', ['soda', 'init-vscode'], { stdio: 'inherit' })
+  }
 
   return spawn.sync('yarn', ['soda', 'post-install'], { stdio: 'inherit' })
 }

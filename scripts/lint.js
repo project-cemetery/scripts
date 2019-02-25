@@ -1,24 +1,15 @@
 const spawn = require('cross-spawn')
 const path = require('path')
-const find = require('find')
 
-const ignoreToStirng = require('../utils/ignoreToString')
+const countFiles = require('../utils/countFiles')
 
 module.exports = async ({ projectPath }) => {
   const ignoreFile = path.join(projectPath, '.gitignore')
 
-  const filesAvailable = exts =>
-    new Promise(resolve => {
-      const ignorePaths = ignoreToStirng(projectPath, ignoreFile)
-
-      find.file(
-        new RegExp(`^((?!${ignorePaths}).)*(${exts})$`),
-        projectPath,
-        files => {
-          resolve(files.length > 0)
-        },
-      )
-    })
+  const filesAvailable = async exts => {
+    const count = await countFiles(exts, projectPath, ignoreFile)
+    return count > 0
+  }
 
   const jsRcPath = path.join(__dirname, '../config/eslint-js.js')
   const tsRcPath = path.join(__dirname, '../config/eslint-ts.js')
