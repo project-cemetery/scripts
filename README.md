@@ -2,7 +2,7 @@
 
 > [WIP] Package in develooment, be careful
 
-## Instal
+## Install
 
 ```sh
 yarn add -D @solid-soda/scripts
@@ -20,7 +20,7 @@ The following scripts available:
 + `lint` to apply ESLint to js/ts code
 + `pretty` to apply Prettier to all code
 + `cz` to create the commit by commitizen with Conventional Changelog rules
-+ `release` to create new release by standard-version (bump version in package.json, generate changelog nad create git tag)
++ `release` to create new release by standard-version (bump version in package.json, generate changelog and create git tag)
 
 Examples:
 
