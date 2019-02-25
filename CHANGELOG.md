@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.5](https://github.com/solid-soda/scripts/compare/v1.1.4...v1.1.5) (2019-02-25)
+
+
+### Bug Fixes
+
+* **ts:** fix shadows vars for ts ([60c15d0](https://github.com/solid-soda/scripts/commit/60c15d0))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.1.4](https://github.com/solid-soda/scripts/compare/v1.1.3...v1.1.4) (2019-02-25)
 
 
