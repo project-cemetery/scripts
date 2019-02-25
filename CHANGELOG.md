@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.2](https://github.com/solid-soda/scripts/compare/v1.2.0...v1.2.2) (2019-02-25)
+
+
+### Bug Fixes
+
+* **release:** fix path to commits on release ([6e5b56d](https://github.com/solid-soda/scripts/commit/6e5b56d))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.2.1](https://github.com/solid-soda/scripts/compare/v1.2.0...v1.2.1) (2019-02-25)
 
 
