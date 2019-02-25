@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.4](https://github.com/solid-soda/scripts/compare/v1.2.3...v1.2.4) (2019-02-25)
+
+
+### Bug Fixes
+
+* **release:** remove unused options in release ([7132f70](https://github.com/solid-soda/scripts/commit/7132f70))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.2.3](https://github.com/solid-soda/scripts/compare/v1.2.2...v1.2.3) (2019-02-25)
 
 
