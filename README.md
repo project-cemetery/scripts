@@ -1,6 +1,6 @@
 # Scripts
 
-> [WIP] Package in develooment, be careful
+Speed up the creation and maintenance of your JS applications.
 
 ## Install
 
