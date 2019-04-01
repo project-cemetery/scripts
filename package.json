@@ -24,6 +24,7 @@
     "cz-conventional-changelog": "2",
     "edit-json-file": "1.2.1",
     "eslint": "5",
+    "eslint-plugin-react": "^7.12.4",
     "find": "0.2.9",
     "fs-extra": "^7.0.1",
     "husky": "1",

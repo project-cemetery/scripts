@@ -1,4 +1,5 @@
 module.exports = {
+  extends: ['plugin:react/recommended'],
   rules: {
     'array-callback-return': ['error'],
     'consistent-return': ['error'],
