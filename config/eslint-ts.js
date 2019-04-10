@@ -14,6 +14,7 @@ module.exports = {
       {
         rules: {
           'no-shadowed-variable': true,
+          'react/prop-types': 0,
         },
       },
     ],

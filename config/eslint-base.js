@@ -174,7 +174,6 @@ module.exports = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
-    'react/prop-types': '0',
     'require-yield': 'error',
     'symbol-description': 'error',
     'no-buffer-constructor': 'error',
