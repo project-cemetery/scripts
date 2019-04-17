@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.6.0](https://github.com/solid-soda/scripts/compare/v1.4.1...v1.6.0) (2019-04-17)
+
+
+### Features
+
+* **eslint:** add react-hooks plugin ([c641b2f](https://github.com/solid-soda/scripts/commit/c641b2f))
+* **eslint:** disable proptypes and add hooks rules ([7bf274b](https://github.com/solid-soda/scripts/commit/7bf274b))
+
+
+
 ## [1.4.1](https://github.com/solid-soda/scripts/compare/v1.4.0...v1.4.1) (2019-04-10)
 
 
