@@ -1,6 +1,11 @@
 module.exports = {
   extends: ['plugin:react/recommended'],
+  plugins: ['react-hooks'],
+
   rules: {
+    'react/prop-types': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     'array-callback-return': ['error'],
     'consistent-return': ['error'],
     'default-case': ['error'],

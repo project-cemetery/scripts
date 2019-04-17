@@ -1,6 +1,6 @@
 {
   "name": "@solid-soda/scripts",
-  "version": "1.4.1",
+  "version": "1.6.0",
   "repository": "git@github.com:solid-soda/scripts.git",
   "author": "Igor Kamyshev <igor@kamyshev.me>",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "cz-conventional-changelog": "2",
     "edit-json-file": "1.2.1",
     "eslint": "5",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "7",
+    "eslint-plugin-react-hooks": "1",
     "find": "0.2.9",
     "fs-extra": "^7.0.1",
     "husky": "1",
