@@ -7,7 +7,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  extends: ['./eslint-base.js'],
+  extends: ['./eslint-base.js', 'plugin:react/recommended'],
+  plugins: ['react-hooks'],
   rules: {
     'no-useless-constructor': 'error',
     'no-unused-vars': [
