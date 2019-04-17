@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.2](https://github.com/solid-soda/scripts/compare/v1.6.1...v1.6.2) (2019-04-17)
+
+
+### Bug Fixes
+
+* **eslint:** remove react version warning ([8d92ec5](https://github.com/solid-soda/scripts/commit/8d92ec5))
+
+
+
 ## [1.6.1](https://github.com/solid-soda/scripts/compare/v1.6.0...v1.6.1) (2019-04-17)
 
 
