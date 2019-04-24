@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['plugin:react/recommended'],
-  plugins: ['react-hooks'],
+  plugins: ['react-hooks', 'react-hooks-with-magic'],
 
   settings: {
     react: {
@@ -8,9 +8,9 @@ module.exports = {
     },
   },
   rules: {
+    'react-hooks-with-magic/exhaustive-deps': 'error',
     'react/prop-types': 0,
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
     'array-callback-return': ['error'],
     'consistent-return': ['error'],
     'default-case': ['error'],
