@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.7.0](https://github.com/solid-soda/scripts/compare/v1.6.3...v1.7.0) (2019-04-24)
+
+
+### Features
+
+* **hooks lint:** replace hooks lint rule from react with custom one ([fd5c8e6](https://github.com/solid-soda/scripts/commit/fd5c8e6))
+
+
+
 ## [1.6.3](https://github.com/solid-soda/scripts/compare/v1.6.1...v1.6.3) (2019-04-17)
 
 
