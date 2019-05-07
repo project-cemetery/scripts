@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.1](https://github.com/solid-soda/scripts/compare/v1.7.0...v1.7.1) (2019-05-07)
+
+
+### Bug Fixes
+
+* **react:** use react plugins only for react apps ([59c1c48](https://github.com/solid-soda/scripts/commit/59c1c48))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [1.7.0](https://github.com/solid-soda/scripts/compare/v1.6.3...v1.7.0) (2019-04-24)
 
 
