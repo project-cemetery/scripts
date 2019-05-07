@@ -2,6 +2,7 @@ const spawn = require('cross-spawn')
 const path = require('path')
 
 const countFiles = require('../utils/countFiles')
+const isReactProject = require('../utils/isReactProject')
 
 module.exports = async ({ projectPath }) => {
   const ignoreFile = path.join(projectPath, '.gitignore')
@@ -11,8 +12,12 @@ module.exports = async ({ projectPath }) => {
     return count > 0
   }
 
-  const jsRcPath = path.join(__dirname, '../config/eslint-js.js')
-  const tsRcPath = path.join(__dirname, '../config/eslint-ts.js')
+  const isReact = await isReactProject(projectPath)
+
+  const configSuffix = isReact ? '-react' : ''
+
+  const jsRcPath = path.join(__dirname, `../config/eslint-js${configSuffix}.js`)
+  const tsRcPath = path.join(__dirname, `../config/eslint-ts${configSuffix}.js`)
 
   const [jsFilesExists, tsFilesExists] = await Promise.all([
     filesAvailable('js|jsx'),
