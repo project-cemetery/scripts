@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.8.0](https://github.com/solid-soda/scripts/compare/v1.7.1...v1.8.0) (2019-05-08)
+
+
+### Features
+
+* **lint:** add stylint to linting ([b19934b](https://github.com/solid-soda/scripts/commit/b19934b))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.7.1](https://github.com/solid-soda/scripts/compare/v1.7.0...v1.7.1) (2019-05-07)
 
 
