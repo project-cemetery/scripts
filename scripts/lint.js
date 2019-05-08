@@ -18,10 +18,12 @@ module.exports = async ({ projectPath }) => {
 
   const jsRcPath = path.join(__dirname, `../config/eslint-js${configSuffix}.js`)
   const tsRcPath = path.join(__dirname, `../config/eslint-ts${configSuffix}.js`)
+  const cssRcPath = path.join(__dirname, `../config/stylelint.js`)
 
-  const [jsFilesExists, tsFilesExists] = await Promise.all([
-    filesAvailable('js|jsx'),
-    filesAvailable('ts|tsx'),
+  const [jsFilesExists, tsFilesExists, cssFilesExists] = await Promise.all([
+    Promise.resolve(false), // filesAvailable('js|jsx'),
+    Promise.resolve(false), // filesAvailable('ts|tsx'),
+    filesAvailable('css'),
   ])
 
   const resultJs = jsFilesExists
@@ -52,11 +54,27 @@ module.exports = async ({ projectPath }) => {
       )
     : {}
 
+  const resultCss = cssFilesExists
+    ? spawn.sync(
+        'stylelint',
+        [
+          `${projectPath}/**/*.css`,
+          '--config',
+          cssRcPath,
+          '--ignore-path',
+          ignoreFile,
+        ],
+        { stdio: 'inherit' },
+      )
+    : {}
+
   if (
     resultJs.error ||
     resultTs.error ||
+    resultCss.error ||
     resultJs.status === 1 ||
-    resultTs.status === 1
+    resultTs.status === 1 ||
+    resultCss.status === 1
   ) {
     return { status: 1 }
   }

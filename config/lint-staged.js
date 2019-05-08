@@ -1,4 +1,7 @@
 module.exports = {
-  '*.{ts,tsx,js,jsx}': ['yarn soda lint'],
-  '*.{js,jsx,ts,tsx,css,json}': ['yarn soda pretty', 'git add'],
+  '*.{js,jsx,ts,tsx,css,json}': [
+    'yarn soda lint',
+    'yarn soda pretty',
+    'git add',
+  ],
 }
