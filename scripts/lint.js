@@ -21,8 +21,8 @@ module.exports = async ({ projectPath }) => {
   const cssRcPath = path.join(__dirname, `../config/stylelint.js`)
 
   const [jsFilesExists, tsFilesExists, cssFilesExists] = await Promise.all([
-    Promise.resolve(false), // filesAvailable('js|jsx'),
-    Promise.resolve(false), // filesAvailable('ts|tsx'),
+    filesAvailable('js|jsx'),
+    filesAvailable('ts|tsx'),
     filesAvailable('css'),
   ])
 
