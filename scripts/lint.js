@@ -74,7 +74,7 @@ module.exports = async ({ projectPath }) => {
     resultCss.error ||
     resultJs.status === 1 ||
     resultTs.status === 1 ||
-    resultCss.status === 1
+    resultCss.status === 2
   ) {
     return { status: 1 }
   }
