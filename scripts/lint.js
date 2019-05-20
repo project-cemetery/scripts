@@ -4,7 +4,7 @@ const path = require('path')
 const countFiles = require('../utils/countFiles')
 const isReactProject = require('../utils/isReactProject')
 
-module.exports = async ({ projectPath, ...args }) => {
+module.exports = async ({ projectPath, args }) => {
   const ignoreFile = path.join(projectPath, '.gitignore')
 
   const filesAvailable = async exts => {
@@ -35,7 +35,7 @@ module.exports = async ({ projectPath, ...args }) => {
           jsRcPath,
           '--ignore-path',
           ignoreFile,
-          args,
+          ...args,
         ],
         { stdio: 'inherit' },
       )
@@ -50,7 +50,7 @@ module.exports = async ({ projectPath, ...args }) => {
           tsRcPath,
           '--ignore-path',
           ignoreFile,
-          args,
+          ...args,
         ],
         { stdio: 'inherit' },
       )
@@ -65,7 +65,7 @@ module.exports = async ({ projectPath, ...args }) => {
           cssRcPath,
           '--ignore-path',
           ignoreFile,
-          args,
+          ...args,
         ],
         { stdio: 'inherit' },
       )
