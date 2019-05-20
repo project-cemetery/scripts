@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.1](https://github.com/solid-soda/scripts/compare/v1.9.0...v1.9.1) (2019-05-20)
+
+
+### Bug Fixes
+
+* remove lint from lint-staged to speed up the scripts ([a1b349f](https://github.com/solid-soda/scripts/commit/a1b349f))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [1.9.0](https://github.com/solid-soda/scripts/compare/v1.8.4...v1.9.0) (2019-05-20)
 
 
