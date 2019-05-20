@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.9.0](https://github.com/solid-soda/scripts/compare/v1.8.4...v1.9.0) (2019-05-20)
+
+
+### Bug Fixes
+
+* **stylelint:** delete extra string ([e973494](https://github.com/solid-soda/scripts/commit/e973494))
+* **stylelint:** fix ignoreAtRules option ([28a09bc](https://github.com/solid-soda/scripts/commit/28a09bc))
+
+
+### Features
+
+* **stylelint:** add ignoreAtRules option ([4403f74](https://github.com/solid-soda/scripts/commit/4403f74))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.8.4](https://github.com/solid-soda/scripts/compare/v1.8.2...v1.8.4) (2019-05-20)
 
 
