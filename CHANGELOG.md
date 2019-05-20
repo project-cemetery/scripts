@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.4](https://github.com/solid-soda/scripts/compare/v1.8.2...v1.8.4) (2019-05-20)
+
+
+### Bug Fixes
+
+* **lint:** remove json from lint process ([6ea7661](https://github.com/solid-soda/scripts/commit/6ea7661))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.8.3](https://github.com/solid-soda/scripts/compare/v1.8.2...v1.8.3) (2019-05-20)
 
 
