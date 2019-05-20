@@ -1,5 +1,13 @@
 module.exports = {
+  ignoreAtRules: ['at-rule-no-unknown', 'mixin'],
   extends: ['stylelint-config-recommended', 'stylelint-config-recess-order'],
   plugins: ['stylelint-order'],
-  ignoreAtRules: ['define-mixin', 'mixin'],
+  rules: {
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['define-mixin', 'mixin'],
+      },
+    ],
+  },
 }
