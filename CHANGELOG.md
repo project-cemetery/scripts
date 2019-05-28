@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.3](https://github.com/solid-soda/scripts/compare/v1.9.2...v1.9.3) (2019-05-28)
+
+
+### Bug Fixes
+
+* remove extra file ([22bdb30](https://github.com/solid-soda/scripts/commit/22bdb30))
+* **pretty:** pass prettier args to prettier ([9ebceff](https://github.com/solid-soda/scripts/commit/9ebceff))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.9.2](https://github.com/solid-soda/scripts/compare/v1.9.1...v1.9.2) (2019-05-27)
 
 
