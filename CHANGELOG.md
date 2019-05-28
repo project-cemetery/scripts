@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.10.0](https://github.com/solid-soda/scripts/compare/v1.9.3...v1.10.0) (2019-05-28)
+
+
+### Features
+
+* **prettier:** add external plugins for prettier ([8237d5a](https://github.com/solid-soda/scripts/commit/8237d5a))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.9.3](https://github.com/solid-soda/scripts/compare/v1.9.2...v1.9.3) (2019-05-28)
 
 
