@@ -2,6 +2,7 @@ const spawn = require('cross-spawn')
 const path = require('path')
 
 const ignoreToStirng = require('../utils/ignoreToString')
+const exts = require('../params/prettier-exts')
 
 module.exports = async ({ projectPath, args }) => {
   const ignoreFile = path.join(projectPath, '.gitignore')
@@ -13,9 +14,10 @@ module.exports = async ({ projectPath, args }) => {
     'prettier',
     [
       '--write',
-      `${projectPath}/{.,,!(${ignorePaths})/**}/*.{ts,tsx,js,jsx,css,json}`,
+      `${projectPath}/{.,,!(${ignorePaths})/**}/${exts}`,
       '--config',
       rcFile,
+      '--plugin-search-dir=.',
       ...args,
     ],
     { stdio: 'inherit' },

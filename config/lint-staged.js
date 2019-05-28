@@ -1,3 +1,5 @@
+const exts = require('../params/prettier-exts')
+
 module.exports = {
-  '*.{js,jsx,ts,tsx,css,json}': ['yarn soda pretty', 'git add'],
+  [exts]: ['yarn soda pretty', 'git add'],
 }
