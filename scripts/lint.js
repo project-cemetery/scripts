@@ -23,7 +23,7 @@ module.exports = async ({ projectPath, args }) => {
   const [jsFilesExists, tsFilesExists, cssFilesExists] = await Promise.all([
     filesAvailable('js|jsx'),
     filesAvailable('ts|tsx'),
-    filesAvailable('css'),
+    filesAvailable('css|svelte'),
   ])
 
   const resultJs = jsFilesExists
@@ -60,7 +60,7 @@ module.exports = async ({ projectPath, args }) => {
     ? spawn.sync(
         'stylelint',
         [
-          `${projectPath}/**/*.css`,
+          `${projectPath}/**/*.{css,svelte}`,
           '--config',
           cssRcPath,
           '--ignore-path',
