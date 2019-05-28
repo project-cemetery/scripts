@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.1](https://github.com/solid-soda/scripts/compare/v1.10.0...v1.10.1) (2019-05-28)
+
+
+### Bug Fixes
+
+* **stylelint:** add svelte files to stylelint ([0876118](https://github.com/solid-soda/scripts/commit/0876118))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [1.10.0](https://github.com/solid-soda/scripts/compare/v1.9.3...v1.10.0) (2019-05-28)
 
 
