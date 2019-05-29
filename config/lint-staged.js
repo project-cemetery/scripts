@@ -2,5 +2,5 @@ module.exports = {
   linters: {
     '*': ['yarn soda pretty', 'git add'],
   },
-  ignore: ['**/*.{lock,log}'],
+  ignore: ['**/*.{lock,workflow}'],
 }
