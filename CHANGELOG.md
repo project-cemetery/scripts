@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.1](https://github.com/solid-soda/scripts/compare/v1.11.0...v1.11.1) (2019-05-29)
+
+### Bug Fixes
+
+- fix broken prettier on lock files ([f36a1c6](https://github.com/solid-soda/scripts/commit/f36a1c6))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [1.11.0](https://github.com/solid-soda/scripts/compare/v1.10.1...v1.11.0) (2019-05-29)
 
 ### Features
