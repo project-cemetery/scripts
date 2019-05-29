@@ -1,3 +1,6 @@
 module.exports = {
-  '*': ['yarn soda pretty', 'git add'],
+  linters: {
+    '*': ['yarn soda pretty', 'git add'],
+  },
+  ignore: ['**/*.{lock,log}'],
 }
