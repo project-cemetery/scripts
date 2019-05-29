@@ -4,7 +4,7 @@ const util = require('util')
 
 const readFile = util.promisify(fs.readFile)
 
-const isReactProject = async projectPath => {
+const projectWithDependency = async (projectPath, dependency) => {
   const files = await new Promise(resolve =>
     find.file(
       new RegExp('^((?!node_modules).)+?(package.json)$'),
@@ -15,14 +15,22 @@ const isReactProject = async projectPath => {
 
   const contents = await Promise.all(files.map(name => readFile(name)))
 
-  const haveReact = contents
+  const haveDependency = contents
     .map(content => JSON.parse(content))
-    .map(info => info.dependencies || {})
+    .map(info => {
+      const dependencies = info.dependencies || {}
+      const devDependencies = info.devDependencies || {}
+
+      return {
+        ...dependencies,
+        ...devDependencies,
+      }
+    })
     .map(dependencies => Object.keys(dependencies))
     .reduce((acc, cur) => [...acc, ...cur], [])
-    .includes('react')
+    .includes(dependency)
 
-  return haveReact
+  return haveDependency
 }
 
-module.exports = isReactProject
+module.exports = projectWithDependency

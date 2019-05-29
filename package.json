@@ -31,6 +31,8 @@
     "fs-extra": "^7.0.1",
     "husky": "1",
     "lint-staged": "8",
+    "lodash": "^4.17.11",
+    "nanomerge": "^0.2.0",
     "prettier": "1",
     "standard-version": "5",
     "stylelint": "^10.0.1",

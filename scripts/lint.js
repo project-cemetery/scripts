@@ -1,8 +1,14 @@
 const spawn = require('cross-spawn')
 const path = require('path')
+const { flatMap } = require('lodash')
 
 const countFiles = require('../utils/countFiles')
-const isReactProject = require('../utils/isReactProject')
+const projectWithDependency = require('../utils/projectWithDependency')
+const defineProjectPlugins = require('../utils/defineProjectPlugins')
+const createExtString = require('../utils/createExtString')
+
+const preparePlugins = plugins =>
+  flatMap(plugins, plugin => ['--plugin', plugin])
 
 module.exports = async ({ projectPath, args }) => {
   const ignoreFile = path.join(projectPath, '.gitignore')
@@ -12,7 +18,7 @@ module.exports = async ({ projectPath, args }) => {
     return count > 0
   }
 
-  const isReact = await isReactProject(projectPath)
+  const isReact = await projectWithDependency(projectPath, 'react')
 
   const configSuffix = isReact ? '-react' : ''
 
@@ -20,21 +26,26 @@ module.exports = async ({ projectPath, args }) => {
   const tsRcPath = path.join(__dirname, `../config/eslint-ts${configSuffix}.js`)
   const cssRcPath = path.join(__dirname, `../config/stylelint.js`)
 
+  const { exts, plugins } = await defineProjectPlugins(projectPath)
+
   const [jsFilesExists, tsFilesExists, cssFilesExists] = await Promise.all([
-    filesAvailable('js|jsx'),
-    filesAvailable('ts|tsx'),
-    filesAvailable('css|svelte'),
+    filesAvailable(['js', 'jsx', ...exts.js]),
+    filesAvailable(['ts', 'tsx', ...exts.ts]),
+    filesAvailable(['css', ...exts.css]),
   ])
+
+  const eslintPlugins = preparePlugins(plugins.eslint)
 
   const resultJs = jsFilesExists
     ? spawn.sync(
         'eslint',
         [
-          `${projectPath}/**/*.{js,jsx}`,
+          `${projectPath}/**/*.{${createExtString(['js', 'jsx'], exts.js)}}`,
           '-c',
           jsRcPath,
           '--ignore-path',
           ignoreFile,
+          ...eslintPlugins,
           ...args,
         ],
         { stdio: 'inherit' },
@@ -45,11 +56,12 @@ module.exports = async ({ projectPath, args }) => {
     ? spawn.sync(
         'eslint',
         [
-          `${projectPath}/**/*.{ts,tsx}`,
+          `${projectPath}/**/*.{${createExtString(['ts', 'tsx'], exts.ts)}}`,
           '-c',
           tsRcPath,
           '--ignore-path',
           ignoreFile,
+          ...eslintPlugins,
           ...args,
         ],
         { stdio: 'inherit' },
@@ -60,7 +72,7 @@ module.exports = async ({ projectPath, args }) => {
     ? spawn.sync(
         'stylelint',
         [
-          `${projectPath}/**/*.{css,svelte}`,
+          `${projectPath}/**/*.{${createExtString(['css'], exts.css)}}`,
           '--config',
           cssRcPath,
           '--ignore-path',
