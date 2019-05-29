@@ -2,14 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.10.1](https://github.com/solid-soda/scripts/compare/v1.10.0...v1.10.1) (2019-05-28)
+# [1.11.0](https://github.com/solid-soda/scripts/compare/v1.10.1...v1.11.0) (2019-05-29)
 
+### Features
+
+- **svelte:** add svelte full support ([a84979d](https://github.com/solid-soda/scripts/commit/a84979d))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.10.1](https://github.com/solid-soda/scripts/compare/v1.10.0...v1.10.1) (2019-05-28)
 
 ### Bug Fixes
 
-* **stylelint:** add svelte files to stylelint ([0876118](https://github.com/solid-soda/scripts/commit/0876118))
-
-
+- **stylelint:** add svelte files to stylelint ([0876118](https://github.com/solid-soda/scripts/commit/0876118))
 
 # Change Log
 
@@ -17,12 +24,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.10.0](https://github.com/solid-soda/scripts/compare/v1.9.3...v1.10.0) (2019-05-28)
 
-
 ### Features
 
-* **prettier:** add external plugins for prettier ([8237d5a](https://github.com/solid-soda/scripts/commit/8237d5a))
-
-
+- **prettier:** add external plugins for prettier ([8237d5a](https://github.com/solid-soda/scripts/commit/8237d5a))
 
 # Change Log
 
@@ -30,13 +34,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.9.3](https://github.com/solid-soda/scripts/compare/v1.9.2...v1.9.3) (2019-05-28)
 
-
 ### Bug Fixes
 
-* remove extra file ([22bdb30](https://github.com/solid-soda/scripts/commit/22bdb30))
-* **pretty:** pass prettier args to prettier ([9ebceff](https://github.com/solid-soda/scripts/commit/9ebceff))
-
-
+- remove extra file ([22bdb30](https://github.com/solid-soda/scripts/commit/22bdb30))
+- **pretty:** pass prettier args to prettier ([9ebceff](https://github.com/solid-soda/scripts/commit/9ebceff))
 
 # Change Log
 
@@ -44,12 +45,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.9.2](https://github.com/solid-soda/scripts/compare/v1.9.1...v1.9.2) (2019-05-27)
 
-
 ### Bug Fixes
 
-* add skiping d.ts files ([6afef10](https://github.com/solid-soda/scripts/commit/6afef10))
-
-
+- add skiping d.ts files ([6afef10](https://github.com/solid-soda/scripts/commit/6afef10))
 
 # Change Log
 
@@ -57,12 +55,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.9.1](https://github.com/solid-soda/scripts/compare/v1.9.0...v1.9.1) (2019-05-20)
 
-
 ### Bug Fixes
 
-* remove lint from lint-staged to speed up the scripts ([a1b349f](https://github.com/solid-soda/scripts/commit/a1b349f))
-
-
+- remove lint from lint-staged to speed up the scripts ([a1b349f](https://github.com/solid-soda/scripts/commit/a1b349f))
 
 # Change Log
 
@@ -70,18 +65,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.9.0](https://github.com/solid-soda/scripts/compare/v1.8.4...v1.9.0) (2019-05-20)
 
-
 ### Bug Fixes
 
-* **stylelint:** delete extra string ([e973494](https://github.com/solid-soda/scripts/commit/e973494))
-* **stylelint:** fix ignoreAtRules option ([28a09bc](https://github.com/solid-soda/scripts/commit/28a09bc))
-
+- **stylelint:** delete extra string ([e973494](https://github.com/solid-soda/scripts/commit/e973494))
+- **stylelint:** fix ignoreAtRules option ([28a09bc](https://github.com/solid-soda/scripts/commit/28a09bc))
 
 ### Features
 
-* **stylelint:** add ignoreAtRules option ([4403f74](https://github.com/solid-soda/scripts/commit/4403f74))
-
-
+- **stylelint:** add ignoreAtRules option ([4403f74](https://github.com/solid-soda/scripts/commit/4403f74))
 
 # Change Log
 
@@ -89,12 +80,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.8.4](https://github.com/solid-soda/scripts/compare/v1.8.2...v1.8.4) (2019-05-20)
 
-
 ### Bug Fixes
 
-* **lint:** remove json from lint process ([6ea7661](https://github.com/solid-soda/scripts/commit/6ea7661))
-
-
+- **lint:** remove json from lint process ([6ea7661](https://github.com/solid-soda/scripts/commit/6ea7661))
 
 # Change Log
 
@@ -102,20 +90,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.8.3](https://github.com/solid-soda/scripts/compare/v1.8.2...v1.8.3) (2019-05-20)
 
-
-
 # Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [1.8.2](https://github.com/solid-soda/scripts/compare/v1.8.1...v1.8.2) (2019-05-15)
 
-
 ### Bug Fixes
 
-* **lint:** uncomment eslint ([b968cd3](https://github.com/solid-soda/scripts/commit/b968cd3))
-
-
+- **lint:** uncomment eslint ([b968cd3](https://github.com/solid-soda/scripts/commit/b968cd3))
 
 # Change Log
 
@@ -123,12 +106,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.8.1](https://github.com/solid-soda/scripts/compare/v1.8.0...v1.8.1) (2019-05-15)
 
-
 ### Bug Fixes
 
-* **lint:** fix bug with stylelint status code ([49534bf](https://github.com/solid-soda/scripts/commit/49534bf))
-
-
+- **lint:** fix bug with stylelint status code ([49534bf](https://github.com/solid-soda/scripts/commit/49534bf))
 
 # Change Log
 
@@ -136,12 +116,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.8.0](https://github.com/solid-soda/scripts/compare/v1.7.1...v1.8.0) (2019-05-08)
 
-
 ### Features
 
-* **lint:** add stylint to linting ([b19934b](https://github.com/solid-soda/scripts/commit/b19934b))
-
-
+- **lint:** add stylint to linting ([b19934b](https://github.com/solid-soda/scripts/commit/b19934b))
 
 # Change Log
 
@@ -149,12 +126,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.7.1](https://github.com/solid-soda/scripts/compare/v1.7.0...v1.7.1) (2019-05-07)
 
-
 ### Bug Fixes
 
-* **react:** use react plugins only for react apps ([59c1c48](https://github.com/solid-soda/scripts/commit/59c1c48))
-
-
+- **react:** use react plugins only for react apps ([59c1c48](https://github.com/solid-soda/scripts/commit/59c1c48))
 
 # Change Log
 
@@ -162,53 +136,36 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.7.0](https://github.com/solid-soda/scripts/compare/v1.6.3...v1.7.0) (2019-04-24)
 
-
 ### Features
 
-* **hooks lint:** replace hooks lint rule from react with custom one ([fd5c8e6](https://github.com/solid-soda/scripts/commit/fd5c8e6))
-
-
+- **hooks lint:** replace hooks lint rule from react with custom one ([fd5c8e6](https://github.com/solid-soda/scripts/commit/fd5c8e6))
 
 ## [1.6.3](https://github.com/solid-soda/scripts/compare/v1.6.1...v1.6.3) (2019-04-17)
 
-
 ### Bug Fixes
 
-* **eslint:** remove react version warning ([8d92ec5](https://github.com/solid-soda/scripts/commit/8d92ec5))
-
-
+- **eslint:** remove react version warning ([8d92ec5](https://github.com/solid-soda/scripts/commit/8d92ec5))
 
 ## [1.6.2](https://github.com/solid-soda/scripts/compare/v1.6.1...v1.6.2) (2019-04-17)
 
-
 ### Bug Fixes
 
-* **eslint:** remove react version warning ([8d92ec5](https://github.com/solid-soda/scripts/commit/8d92ec5))
-
-
+- **eslint:** remove react version warning ([8d92ec5](https://github.com/solid-soda/scripts/commit/8d92ec5))
 
 ## [1.6.1](https://github.com/solid-soda/scripts/compare/v1.6.0...v1.6.1) (2019-04-17)
 
-
-
 # [1.6.0](https://github.com/solid-soda/scripts/compare/v1.4.1...v1.6.0) (2019-04-17)
-
 
 ### Features
 
-* **eslint:** add react-hooks plugin ([c641b2f](https://github.com/solid-soda/scripts/commit/c641b2f))
-* **eslint:** disable proptypes and add hooks rules ([7bf274b](https://github.com/solid-soda/scripts/commit/7bf274b))
-
-
+- **eslint:** add react-hooks plugin ([c641b2f](https://github.com/solid-soda/scripts/commit/c641b2f))
+- **eslint:** disable proptypes and add hooks rules ([7bf274b](https://github.com/solid-soda/scripts/commit/7bf274b))
 
 ## [1.4.1](https://github.com/solid-soda/scripts/compare/v1.4.0...v1.4.1) (2019-04-10)
 
-
 ### Bug Fixes
 
-* **global:** fix eslint rule ([fc9f9f3](https://github.com/solid-soda/scripts/commit/fc9f9f3))
-
-
+- **global:** fix eslint rule ([fc9f9f3](https://github.com/solid-soda/scripts/commit/fc9f9f3))
 
 # Change Log
 
@@ -216,17 +173,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.4.0](https://github.com/solid-soda/scripts/compare/v1.3.0...v1.4.0) (2019-04-10)
 
-
 ### Bug Fixes
 
-* **eslint:** moved disables prop-types to eslint-ts ([6003610](https://github.com/solid-soda/scripts/commit/6003610))
-
+- **eslint:** moved disables prop-types to eslint-ts ([6003610](https://github.com/solid-soda/scripts/commit/6003610))
 
 ### Features
 
-* **eslint:** disable react/prop-types ([2ff6d37](https://github.com/solid-soda/scripts/commit/2ff6d37))
-
-
+- **eslint:** disable react/prop-types ([2ff6d37](https://github.com/solid-soda/scripts/commit/2ff6d37))
 
 # Change Log
 
@@ -234,12 +187,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.3.0](https://github.com/solid-soda/scripts/compare/v1.2.4...v1.3.0) (2019-04-01)
 
-
 ### Features
 
-* add eslint-plugin-react ([3663891](https://github.com/solid-soda/scripts/commit/3663891))
-
-
+- add eslint-plugin-react ([3663891](https://github.com/solid-soda/scripts/commit/3663891))
 
 # Change Log
 
@@ -247,12 +197,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.4](https://github.com/solid-soda/scripts/compare/v1.2.3...v1.2.4) (2019-02-25)
 
-
 ### Bug Fixes
 
-* **release:** remove unused options in release ([7132f70](https://github.com/solid-soda/scripts/commit/7132f70))
-
-
+- **release:** remove unused options in release ([7132f70](https://github.com/solid-soda/scripts/commit/7132f70))
 
 # Change Log
 
@@ -260,12 +207,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.3](https://github.com/solid-soda/scripts/compare/v1.2.2...v1.2.3) (2019-02-25)
 
-
 ### Bug Fixes
 
-* **release:** fix args for release command ([498a7ad](https://github.com/solid-soda/scripts/commit/498a7ad))
-
-
+- **release:** fix args for release command ([498a7ad](https://github.com/solid-soda/scripts/commit/498a7ad))
 
 # Change Log
 
@@ -273,12 +217,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.2](https://github.com/solid-soda/scripts/compare/v1.2.0...v1.2.2) (2019-02-25)
 
-
 ### Bug Fixes
 
-* **release:** fix path to commits on release ([6e5b56d](https://github.com/solid-soda/scripts/commit/6e5b56d))
-
-
+- **release:** fix path to commits on release ([6e5b56d](https://github.com/solid-soda/scripts/commit/6e5b56d))
 
 # Change Log
 
@@ -286,20 +227,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.2.1](https://github.com/solid-soda/scripts/compare/v1.2.0...v1.2.1) (2019-02-25)
 
-
-
 # Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 # [1.2.0](https://github.com/solid-soda/scripts/compare/v1.1.7...v1.2.0) (2019-02-25)
 
-
 ### Features
 
-* **vscode:** add initialize settings for vscode ([d03c4ef](https://github.com/solid-soda/scripts/commit/d03c4ef))
-
-
+- **vscode:** add initialize settings for vscode ([d03c4ef](https://github.com/solid-soda/scripts/commit/d03c4ef))
 
 # Change Log
 
@@ -307,12 +243,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.7](https://github.com/solid-soda/scripts/compare/v1.1.6...v1.1.7) (2019-02-25)
 
-
 ### Bug Fixes
 
-* **ts:** add miss parsed option project ([d489e19](https://github.com/solid-soda/scripts/commit/d489e19))
-
-
+- **ts:** add miss parsed option project ([d489e19](https://github.com/solid-soda/scripts/commit/d489e19))
 
 # Change Log
 
@@ -320,12 +253,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.6](https://github.com/solid-soda/scripts/compare/v1.1.5...v1.1.6) (2019-02-25)
 
-
 ### Bug Fixes
 
-* **ts:** add miss tslint ([3ca31e8](https://github.com/solid-soda/scripts/commit/3ca31e8))
-
-
+- **ts:** add miss tslint ([3ca31e8](https://github.com/solid-soda/scripts/commit/3ca31e8))
 
 # Change Log
 
@@ -333,12 +263,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.5](https://github.com/solid-soda/scripts/compare/v1.1.4...v1.1.5) (2019-02-25)
 
-
 ### Bug Fixes
 
-* **ts:** fix shadows vars for ts ([60c15d0](https://github.com/solid-soda/scripts/commit/60c15d0))
-
-
+- **ts:** fix shadows vars for ts ([60c15d0](https://github.com/solid-soda/scripts/commit/60c15d0))
 
 # Change Log
 
@@ -346,20 +273,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.4](https://github.com/solid-soda/scripts/compare/v1.1.3...v1.1.4) (2019-02-25)
 
-
-
 # Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [1.1.3](https://github.com/solid-soda/scripts/compare/v1.1.2...v1.1.3) (2019-02-24)
 
-
 ### Bug Fixes
 
-* **post-install:** fix husky locatins ([4cb4149](https://github.com/solid-soda/scripts/commit/4cb4149))
-
-
+- **post-install:** fix husky locatins ([4cb4149](https://github.com/solid-soda/scripts/commit/4cb4149))
 
 # Change Log
 
@@ -367,12 +289,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.2](https://github.com/solid-soda/scripts/compare/v1.1.1...v1.1.2) (2019-02-23)
 
-
 ### Bug Fixes
 
-* **commitlint:** fix typo ([baf7324](https://github.com/solid-soda/scripts/commit/baf7324))
-
-
+- **commitlint:** fix typo ([baf7324](https://github.com/solid-soda/scripts/commit/baf7324))
 
 # Change Log
 
@@ -380,12 +299,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.1](https://github.com/solid-soda/scripts/compare/v1.1.0...v1.1.1) (2019-02-23)
 
-
 ### Bug Fixes
 
-* **post-install:** ensure husky installed ([7cadb62](https://github.com/solid-soda/scripts/commit/7cadb62))
-
-
+- **post-install:** ensure husky installed ([7cadb62](https://github.com/solid-soda/scripts/commit/7cadb62))
 
 # Change Log
 
@@ -393,18 +309,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [1.1.0](https://github.com/solid-soda/scripts/compare/v1.0.7...v1.1.0) (2019-02-23)
 
-
 ### Bug Fixes
 
-* **init:** fix bug with postinstall in init ([6820d13](https://github.com/solid-soda/scripts/commit/6820d13))
-
+- **init:** fix bug with postinstall in init ([6820d13](https://github.com/solid-soda/scripts/commit/6820d13))
 
 ### Features
 
-* **commitlint:** inline config ([089a49b](https://github.com/solid-soda/scripts/commit/089a49b))
-* **lint-staged:** hide config ([8d3bd24](https://github.com/solid-soda/scripts/commit/8d3bd24))
-
-
+- **commitlint:** inline config ([089a49b](https://github.com/solid-soda/scripts/commit/089a49b))
+- **lint-staged:** hide config ([8d3bd24](https://github.com/solid-soda/scripts/commit/8d3bd24))
 
 # Change Log
 
@@ -412,12 +324,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.7](https://github.com/solid-soda/scripts/compare/v1.0.6...v1.0.7) (2019-02-23)
 
-
 ### Bug Fixes
 
-* **utils:** add new filter for ignore paths ([8ca3820](https://github.com/solid-soda/scripts/commit/8ca3820))
-
-
+- **utils:** add new filter for ignore paths ([8ca3820](https://github.com/solid-soda/scripts/commit/8ca3820))
 
 # Change Log
 
@@ -425,12 +334,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.6](https://github.com/solid-soda/scripts/compare/v1.0.5...v1.0.6) (2019-02-22)
 
-
 ### Bug Fixes
 
-* remove miss console log ([17f7cef](https://github.com/solid-soda/scripts/commit/17f7cef))
-
-
+- remove miss console log ([17f7cef](https://github.com/solid-soda/scripts/commit/17f7cef))
 
 # Change Log
 
@@ -438,12 +344,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.5](https://github.com/solid-soda/scripts/compare/v1.0.4...v1.0.5) (2019-02-22)
 
-
 ### Bug Fixes
 
-* **deps:** fix deps version ([2d8742d](https://github.com/solid-soda/scripts/commit/2d8742d))
-
-
+- **deps:** fix deps version ([2d8742d](https://github.com/solid-soda/scripts/commit/2d8742d))
 
 # Change Log
 
@@ -451,12 +354,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.4](https://github.com/solid-soda/scripts/compare/v1.0.3...v1.0.4) (2019-02-22)
 
-
 ### Bug Fixes
 
-* **deps:** specify exact typescript-eslint deps ([7fdeeb0](https://github.com/solid-soda/scripts/commit/7fdeeb0))
-
-
+- **deps:** specify exact typescript-eslint deps ([7fdeeb0](https://github.com/solid-soda/scripts/commit/7fdeeb0))
 
 # Change Log
 
@@ -464,12 +364,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.3](https://github.com/solid-soda/scripts/compare/v1.0.2...v1.0.3) (2019-02-22)
 
-
 ### Bug Fixes
 
-* remove postinstall script and yarn lock ([2419795](https://github.com/solid-soda/scripts/commit/2419795))
-
-
+- remove postinstall script and yarn lock ([2419795](https://github.com/solid-soda/scripts/commit/2419795))
 
 # Change Log
 
@@ -477,12 +374,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.2](https://github.com/solid-soda/scripts/compare/v1.0.1...v1.0.2) (2019-02-22)
 
-
 ### Bug Fixes
 
-* **init:** add publicConfig to init script ([e2ca55b](https://github.com/solid-soda/scripts/commit/e2ca55b))
-
-
+- **init:** add publicConfig to init script ([e2ca55b](https://github.com/solid-soda/scripts/commit/e2ca55b))
 
 # Change Log
 
@@ -490,12 +384,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.1](https://github.com/solid-soda/scripts/compare/v1.0.0...v1.0.1) (2019-02-22)
 
-
 ### Bug Fixes
 
-* **scripts:** fix postinstall script ([2712f3e](https://github.com/solid-soda/scripts/commit/2712f3e))
-
-
+- **scripts:** fix postinstall script ([2712f3e](https://github.com/solid-soda/scripts/commit/2712f3e))
 
 # Change Log
 
@@ -503,21 +394,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 # 1.0.0 (2019-02-22)
 
-
 ### Bug Fixes
 
-* **pretty:** isDerectory function now sync ([e94c101](https://github.com/solid-soda/scripts/commit/e94c101))
-* **pretty:** pretty function now async ([868b70b](https://github.com/solid-soda/scripts/commit/868b70b))
-
+- **pretty:** isDerectory function now sync ([e94c101](https://github.com/solid-soda/scripts/commit/e94c101))
+- **pretty:** pretty function now async ([868b70b](https://github.com/solid-soda/scripts/commit/868b70b))
 
 ### Features
 
-* **git:** add commitizen ([f071078](https://github.com/solid-soda/scripts/commit/f071078))
-* **init:** add init script ([95f5138](https://github.com/solid-soda/scripts/commit/95f5138))
-* **lint:** apply linters to itself and fix errors ([fcfc2cd](https://github.com/solid-soda/scripts/commit/fcfc2cd))
-* **release:** add release script ([6517cce](https://github.com/solid-soda/scripts/commit/6517cce))
-
+- **git:** add commitizen ([f071078](https://github.com/solid-soda/scripts/commit/f071078))
+- **init:** add init script ([95f5138](https://github.com/solid-soda/scripts/commit/95f5138))
+- **lint:** apply linters to itself and fix errors ([fcfc2cd](https://github.com/solid-soda/scripts/commit/fcfc2cd))
+- **release:** add release script ([6517cce](https://github.com/solid-soda/scripts/commit/6517cce))
 
 ### BREAKING CHANGES
 
-* **init:** new way of configuration
+- **init:** new way of configuration
