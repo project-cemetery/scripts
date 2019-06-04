@@ -28,8 +28,8 @@ const modifySettings = async (projectPath, ignoreFile) => {
   await ensureFile(vsCodeSettingsFilePath)
 
   const [tsCount, jsCount] = await Promise.all([
-    countFiles('ts|tsx', projectPath, ignoreFile),
-    countFiles('js|jsx', projectPath, ignoreFile),
+    countFiles(['ts', 'tsx'], projectPath, ignoreFile),
+    countFiles(['js', 'jsx'], projectPath, ignoreFile),
   ])
   const preferTs = tsCount > jsCount
   const rules = preferTs ? 'eslint-ts.js' : 'eslint-js.js'
