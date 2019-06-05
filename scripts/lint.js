@@ -29,9 +29,9 @@ module.exports = async ({ projectPath, args }) => {
   const { exts, plugins } = await defineProjectPlugins(projectPath)
 
   const [jsFilesExists, tsFilesExists, cssFilesExists] = await Promise.all([
-    filesAvailable(['js', 'jsx', ...exts.js]),
-    filesAvailable(['ts', 'tsx', ...exts.ts]),
-    filesAvailable(['css', ...exts.css]),
+    filesAvailable(exts.js),
+    filesAvailable(exts.ts),
+    filesAvailable(exts.css),
   ])
 
   const eslintPlugins = preparePlugins(plugins.eslint)
@@ -40,7 +40,7 @@ module.exports = async ({ projectPath, args }) => {
     ? spawn.sync(
         'eslint',
         [
-          `${projectPath}/**/*.{${createExtString(['js', 'jsx'], exts.js)}}`,
+          `${projectPath}/**/*.{${createExtString(exts.js)}}`,
           '-c',
           jsRcPath,
           '--ignore-path',
@@ -56,7 +56,7 @@ module.exports = async ({ projectPath, args }) => {
     ? spawn.sync(
         'eslint',
         [
-          `${projectPath}/**/*.{${createExtString(['ts', 'tsx'], exts.ts)}}`,
+          `${projectPath}/**/*.{${createExtString(exts.ts)}}`,
           '-c',
           tsRcPath,
           '--ignore-path',
@@ -72,7 +72,7 @@ module.exports = async ({ projectPath, args }) => {
     ? spawn.sync(
         'stylelint',
         [
-          `${projectPath}/**/*.{${createExtString(['css'], exts.css)}}`,
+          `${projectPath}/**/*.{${createExtString(exts.css)}}`,
           '--config',
           cssRcPath,
           '--ignore-path',

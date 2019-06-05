@@ -1,4 +1,4 @@
-const createExtString = (normal, additional) =>
+const createExtString = (normal, ...additional) =>
   [...normal, ...additional].join(',')
 
 module.exports = createExtString
