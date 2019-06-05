@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.11](https://github.com/solid-soda/scripts/compare/v1.11.10...v1.11.11) (2019-06-05)
+
+
+### Bug Fixes
+
+* **lint-staged:** fix scripts config ([ae0b36a](https://github.com/solid-soda/scripts/commit/ae0b36a))
+
+
+
 ### [1.11.10](https://github.com/solid-soda/scripts/compare/v1.11.9...v1.11.10) (2019-06-05)
 
 
