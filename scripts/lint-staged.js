@@ -21,6 +21,7 @@ module.exports = async ({ projectPath }) => {
       [`*.{${prettyExtensions}}`]: ['yarn soda pretty', 'git add'],
       [`*.{${lintExtensions}}`]: ['yarn soda lint', 'git add'],
     },
+    concurrent: false,
   }
 
   const varDir = path.join(__dirname, '../var')
