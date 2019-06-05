@@ -8,7 +8,7 @@ const createExtString = require('../utils/createExtString')
 const getPrettierExts = async projectPath => {
   const { exts } = await defineProjectPlugins(projectPath)
 
-  return createExtString(exts)
+  return createExtString(exts.pretty)
 }
 
 module.exports = async ({ projectPath, args }) => {
