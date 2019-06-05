@@ -1,3 +1,13 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.11.6](https://github.com/solid-soda/scripts/compare/v1.11.5...v1.11.6) (2019-06-05)
+
+### Bug Fixes
+
+- fix bug with many headers in changelog ([5f0c304](https://github.com/solid-soda/scripts/commit/5f0c304))
+
 ## [1.11.5](https://github.com/solid-soda/scripts/compare/v1.11.4...v1.11.5) (2019-06-05)
 
 ### Bug Fixes
