@@ -9,7 +9,12 @@ module.exports = async ({ projectPath }) => {
   const { exts } = await defineProjectPlugins(projectPath)
 
   const prettyExtensions = createExtString(exts.pretty)
-  const lintExtensions = createExtString([], ...exts.js, ...exts.ts, ...exts.css)
+  const lintExtensions = createExtString(
+    [],
+    ...exts.js,
+    ...exts.ts,
+    ...exts.css,
+  )
 
   const config = {
     linters: {

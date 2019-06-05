@@ -1,4 +1,4 @@
-const fse = require('fs-extra')
+const fs = require('fs')
 const path = require('path')
 
 const isDirectory = dirPath => {
@@ -11,7 +11,7 @@ const isDirectory = dirPath => {
 }
 
 module.exports = (projectPath, ignoreFile) =>
-  fse
+  fs
     .readFileSync(ignoreFile)
     .toString()
     .split('\n')

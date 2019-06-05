@@ -1,7 +1,6 @@
 const find = require('find')
 const fse = require('fs-extra')
 
-
 const projectWithDependency = async (projectPath, dependency) => {
   const files = await new Promise(resolve =>
     find.file(

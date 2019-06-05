@@ -14,7 +14,7 @@ const checkSvelteProject = async projectPath => {
       eslint: [],
     },
   }
-  
+
   const [haveEslintPlugin, haveSvelte, havePrettierPLugin] = await Promise.all([
     projectWithDependency(projectPath, 'eslint-plugin-svelte3'),
     projectWithDependency(projectPath, 'svelte'),
