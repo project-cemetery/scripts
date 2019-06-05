@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.5](https://github.com/solid-soda/scripts/compare/v1.11.4...v1.11.5) (2019-06-05)
+
+### Bug Fixes
+
+- add docker file to ignore on prettier ([2926677](https://github.com/solid-soda/scripts/commit/2926677))
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 ## [1.11.4](https://github.com/solid-soda/scripts/compare/v1.11.3...v1.11.4) (2019-06-04)
 
 ### Bug Fixes
