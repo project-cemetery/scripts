@@ -3,7 +3,7 @@ const find = require('find')
 const ignoreToStirng = require('../utils/ignoreToString')
 
 // We must skip typings
-const filterTypings = file => !file.includes('d.ts')
+const filterTypings = file => !file.endsWith('d.ts')
 
 const countFiles = (exts, projectPath, ignoreFile) => {
   const extString = exts.join('|')
