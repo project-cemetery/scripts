@@ -1,8 +1,6 @@
 const find = require('find')
-const fs = require('fs')
-const util = require('util')
+const fse = require('fs-extra')
 
-const readFile = util.promisify(fs.readFile)
 
 const projectWithDependency = async (projectPath, dependency) => {
   const files = await new Promise(resolve =>
@@ -13,7 +11,7 @@ const projectWithDependency = async (projectPath, dependency) => {
     ),
   )
 
-  const contents = await Promise.all(files.map(name => readFile(name)))
+  const contents = await Promise.all(files.map(name => fse.readFile(name)))
 
   const haveDependency = contents
     .map(content => JSON.parse(content))

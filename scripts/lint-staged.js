@@ -1,12 +1,9 @@
 const path = require('path')
 const spawn = require('cross-spawn')
-const fs = require('fs')
-const { promisify } = require('util')
+const fse = require('fs-extra')
 
 const defineProjectPlugins = require('../utils/defineProjectPlugins')
 const createExtString = require('../utils/createExtString')
-
-const writeFile = promisify(fs.writeFile)
 
 module.exports = async ({ projectPath }) => {
   const { exts } = await defineProjectPlugins(projectPath)
@@ -21,9 +18,11 @@ module.exports = async ({ projectPath }) => {
     },
   }
 
-  const rcPath = path.join(__dirname, '../var/lint-staged.json')
+  const varDir = path.join(__dirname, '../var')
+  const rcPath = path.join(varDir, 'lint-staged.json')
 
-  await writeFile(rcPath, JSON.stringify(config))
+  await fse.ensureDir(varDir)
+  await fse.writeFile(rcPath, JSON.stringify(config))
 
   return spawn.sync('lint-staged', ['--config', rcPath], { stdio: 'inherit' })
 }

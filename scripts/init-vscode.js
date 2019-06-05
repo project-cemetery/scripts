@@ -1,31 +1,26 @@
-const fs = require('fs-extra')
+const fse = require('fs-extra')
 const path = require('path')
-const util = require('util')
 const editJsonFile = require('edit-json-file')
 
 const countFiles = require('../utils/countFiles')
 
-const ensureFile = util.promisify(fs.ensureFile)
-const readFile = util.promisify(fs.readFile)
-const writeFile = util.promisify(fs.writeFile)
-
 const escapeEslintParams = async filePath => {
-  const fileContent = await readFile(filePath)
+  const fileContent = await fse.readFile(filePath)
   const newContent = fileContent.toString().replace(/eslint./g, 'eslint')
 
-  await writeFile(filePath, newContent)
+  await fse.writeFile(filePath, newContent)
 }
 
 const unescapeEslintParams = async filePath => {
-  const fileContent = await readFile(filePath)
+  const fileContent = await fse.readFile(filePath)
   const newContent = fileContent.toString().replace(/eslint/g, 'eslint.')
 
-  await writeFile(filePath, newContent)
+  await fse.writeFile(filePath, newContent)
 }
 
 const modifySettings = async (projectPath, ignoreFile) => {
   const vsCodeSettingsFilePath = path.join(projectPath, '.vscode/settings.json')
-  await ensureFile(vsCodeSettingsFilePath)
+  await fse.ensureFile(vsCodeSettingsFilePath)
 
   const [tsCount, jsCount] = await Promise.all([
     countFiles(['ts', 'tsx'], projectPath, ignoreFile),
