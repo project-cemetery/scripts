@@ -17,8 +17,8 @@ module.exports = async ({ projectPath }) => {
     linters: {
       [`*.{${prettyExtensions}}`]: ['yarn soda pretty', 'git add'],
       [`*.{${jsExtensions}}`]: ['yarn soda lint --js', 'git add'],
-      [`*.{${tsExtensions}}`]: ['yarn soda lint --css', 'git add'],
-      [`*.{${cssExtensions}}`]: ['yarn soda lint --ts', 'git add'],
+      [`*.{${tsExtensions}}`]: ['yarn soda lint --ts', 'git add'],
+      [`*.{${cssExtensions}}`]: ['yarn soda lint --css', 'git add'],
     },
     concurrent: false,
   }
