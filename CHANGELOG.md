@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.13](https://github.com/solid-soda/scripts/compare/v1.11.12...v1.11.13) (2019-06-07)
+
+
+### Bug Fixes
+
+* **lint-staged:** fix mess flags ([69c3e6e](https://github.com/solid-soda/scripts/commit/69c3e6e))
+
+
+
 ### [1.11.12](https://github.com/solid-soda/scripts/compare/v1.11.11...v1.11.12) (2019-06-07)
 
 
