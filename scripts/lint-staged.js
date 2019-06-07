@@ -9,17 +9,16 @@ module.exports = async ({ projectPath }) => {
   const { exts } = await defineProjectPlugins(projectPath)
 
   const prettyExtensions = createExtString(exts.pretty)
-  const lintExtensions = createExtString(
-    [],
-    ...exts.js,
-    ...exts.ts,
-    ...exts.css,
-  )
+  const jsExtensions = createExtString(exts.js)
+  const tsExtensions = createExtString(exts.ts)
+  const cssExtensions = createExtString(exts.css)
 
   const config = {
     linters: {
       [`*.{${prettyExtensions}}`]: ['yarn soda pretty', 'git add'],
-      [`*.{${lintExtensions}}`]: ['yarn soda lint', 'git add'],
+      [`*.{${jsExtensions}}`]: ['yarn soda lint --js', 'git add'],
+      [`*.{${tsExtensions}}`]: ['yarn soda lint --css', 'git add'],
+      [`*.{${cssExtensions}}`]: ['yarn soda lint --ts', 'git add'],
     },
     concurrent: false,
   }
