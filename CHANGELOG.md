@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.14](https://github.com/solid-soda/scripts/compare/v1.11.13...v1.11.14) (2019-06-26)
+
+
+### Bug Fixes
+
+* **config:** change exacutive-depts rule from err to warn ([3f56d6d](https://github.com/solid-soda/scripts/commit/3f56d6d))
+
+
+
 ### [1.11.13](https://github.com/solid-soda/scripts/compare/v1.11.12...v1.11.13) (2019-06-07)
 
 
