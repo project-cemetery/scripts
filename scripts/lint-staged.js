@@ -5,22 +5,29 @@ const fse = require('fs-extra')
 const defineProjectPlugins = require('../utils/defineProjectPlugins')
 const createExtString = require('../utils/createExtString')
 
-module.exports = async ({ projectPath }) => {
+const isFastMode = args => args.includes('--fast')
+
+module.exports = async ({ projectPath, args }) => {
   const { exts } = await defineProjectPlugins(projectPath)
 
-  const prettyExtensions = createExtString(exts.pretty)
-  const jsExtensions = createExtString(exts.js)
-  const tsExtensions = createExtString(exts.ts)
-  const cssExtensions = createExtString(exts.css)
-
   const config = {
-    linters: {
-      [`*.{${prettyExtensions}}`]: ['yarn soda pretty', 'git add'],
-      [`*.{${jsExtensions}}`]: ['yarn soda lint --js', 'git add'],
-      [`*.{${tsExtensions}}`]: ['yarn soda lint --ts', 'git add'],
-      [`*.{${cssExtensions}}`]: ['yarn soda lint --css', 'git add'],
-    },
+    linters: {},
     concurrent: false,
+  }
+  if (isFastMode(args)) {
+    // on commit run only prettier
+    const prettyExtensions = createExtString(exts.pretty)
+
+    config.linters[`*.{${prettyExtensions}}`] = ['yarn soda pretty', 'git add']
+  } else {
+    // on push run all checks
+    const jsExtensions = createExtString(exts.js)
+    const tsExtensions = createExtString(exts.ts)
+    const cssExtensions = createExtString(exts.css)
+
+    config.linters[`*.{${jsExtensions}}`] = ['yarn soda lint --js']
+    config.linters[`*.{${tsExtensions}}`] = ['yarn soda lint --ts']
+    config.linters[`*.{${cssExtensions}}`] = ['yarn soda lint --css']
   }
 
   const varDir = path.join(__dirname, '../var')
