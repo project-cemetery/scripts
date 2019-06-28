@@ -1,13 +1,16 @@
 const nanomerge = require('nanomerge')
 
+const { getAllPackages } = require('./getAllPackages')
 const projectWithDependency = require('./projectWithDependency')
 
 const checkSvelteProject = async projectPath => {
+  const packageFiles = await getAllPackages(projectPath)
+
   const settings = {
     exts: {
       js: ['js', 'jsx'],
       ts: ['ts', 'tsx'],
-      css: ['css', 'svelte'],
+      css: ['css'],
       pretty: ['js', 'jsx', 'ts', 'tsx', 'css', 'json'],
     },
     plugins: {
@@ -16,10 +19,14 @@ const checkSvelteProject = async projectPath => {
   }
 
   const [haveEslintPlugin, haveSvelte, havePrettierPLugin] = await Promise.all([
-    projectWithDependency(projectPath, 'eslint-plugin-svelte3'),
-    projectWithDependency(projectPath, 'svelte'),
-    projectWithDependency(projectPath, 'prettier-plugin-svelte'),
+    projectWithDependency(packageFiles, 'eslint-plugin-svelte3'),
+    projectWithDependency(packageFiles, 'svelte'),
+    projectWithDependency(packageFiles, 'prettier-plugin-svelte'),
   ])
+
+  if (haveSvelte) {
+    settings.exts.css.push('svelte')
+  }
 
   if (haveEslintPlugin && haveSvelte) {
     settings.exts.js.push('svelte')
