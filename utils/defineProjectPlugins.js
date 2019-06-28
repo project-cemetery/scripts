@@ -1,9 +1,37 @@
 const nanomerge = require('nanomerge')
+const nanoclone = require('nanoclone')
 
 const { getAllPackages } = require('./getAllPackages')
 const projectWithDependency = require('./projectWithDependency')
 
-const checkSvelteProject = async projectPath => {
+const checkSvelteProject = async (packageFiles, originalSettings) => {
+  const settings = nanoclone(originalSettings)
+
+  const [haveEslintPlugin, haveSvelte, havePrettierPLugin] = await Promise.all([
+    projectWithDependency(packageFiles, 'eslint-plugin-svelte3'),
+    projectWithDependency(packageFiles, 'svelte'),
+    projectWithDependency(packageFiles, 'prettier-plugin-svelte'),
+  ])
+
+  if (!haveSvelte) {
+    return originalSettings
+  }
+
+  settings.exts.css.push('svelte')
+
+  if (haveEslintPlugin) {
+    settings.exts.js.push('svelte')
+    settings.plugins.eslint.push('svelte3')
+  }
+
+  if (havePrettierPLugin) {
+    settings.exts.pretty.push('svelte')
+  }
+
+  return settings
+}
+
+const defineProjectPlugins = async projectPath => {
   const packageFiles = await getAllPackages(projectPath)
 
   const settings = {
@@ -18,35 +46,11 @@ const checkSvelteProject = async projectPath => {
     },
   }
 
-  const [haveEslintPlugin, haveSvelte, havePrettierPLugin] = await Promise.all([
-    projectWithDependency(packageFiles, 'eslint-plugin-svelte3'),
-    projectWithDependency(packageFiles, 'svelte'),
-    projectWithDependency(packageFiles, 'prettier-plugin-svelte'),
+  const newSettings = await Promise.all([
+    checkSvelteProject(packageFiles, settings),
   ])
 
-  if (haveSvelte) {
-    settings.exts.css.push('svelte')
-  }
-
-  if (haveEslintPlugin && haveSvelte) {
-    settings.exts.js.push('svelte')
-    settings.plugins.eslint.push('svelte3')
-  }
-
-  if (havePrettierPLugin && haveSvelte) {
-    settings.exts.pretty.push('svelte')
-  }
-
-  return settings
-}
-
-const defineProjectPlugins = async projectPath => {
-  const settings = await Promise.all([
-    checkSvelteProject(projectPath),
-    checkSvelteProject(projectPath),
-  ])
-
-  return nanomerge(...settings)
+  return nanomerge(...newSettings)
 }
 
 module.exports = defineProjectPlugins

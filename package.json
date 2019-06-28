@@ -32,6 +32,7 @@
     "husky": "1",
     "lint-staged": "8",
     "lodash": "^4.17.11",
+    "nanoclone": "^0.2.1",
     "nanomerge": "^0.2.0",
     "prettier": "1",
     "standard-version": "^6.0.1",
