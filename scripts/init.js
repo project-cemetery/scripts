@@ -15,8 +15,8 @@ const modifyPackageJson = projectPath => {
 
   projectPackageJson.set('husky', {
     hooks: {
-      'pre-commit': 'yarn soda lint-staged --fast',
-      'pre-push': 'yarn soda lint-staged',
+      'pre-commit': 'yarn soda lint-staged',
+      'pre-push': 'yarn soda lint',
       'commit-msg': 'yarn soda commitlint',
     },
   })
