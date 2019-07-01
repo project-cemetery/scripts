@@ -21,6 +21,7 @@ const findFiles = async (projectPath, ignoreNames, targetName) => {
         if (nestedFound.length > 0) {
           foundFiles.push(nestedFound)
         }
+        return null
       }
 
       if (typeof targetName === 'string') {

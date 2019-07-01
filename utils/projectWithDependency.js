@@ -1,4 +1,11 @@
-const projectWithDependency = async (contents, dependency) => {
+const { getAllPackages } = require('./getAllPackages')
+
+const projectWithDependency = async (rawContents, dependency) => {
+  let contents = rawContents
+  if (typeof rawContents === 'string') {
+    contents = await getAllPackages(rawContents)
+  }
+
   const haveDependency = contents
     .map(content => JSON.parse(content))
     .map(info => {
