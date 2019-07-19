@@ -12,7 +12,7 @@ module.exports = async ({ projectPath }) => {
 
   const config = {
     linters: {
-      [`*.{${prettyExtensions}}`]: ['yarn soda pretty', 'git add'],
+      [`*.${prettyExtensions}`]: ['yarn soda pretty', 'git add'],
     },
     concurrent: false,
   }

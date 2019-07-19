@@ -22,7 +22,7 @@ module.exports = async ({ projectPath, args }) => {
     'prettier',
     [
       '--write',
-      `${projectPath}/{.,,!(${ignorePaths})/**}/*.{${exts}}`,
+      `${projectPath}/{.,,!(${ignorePaths})/**}/*.${exts}`,
       '--config',
       rcFile,
       '--plugin-search-dir=.',

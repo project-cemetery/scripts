@@ -52,7 +52,7 @@ module.exports = async ({ projectPath, args }) => {
       ? spawn.sync(
           'eslint',
           [
-            `${projectPath}/**/*.{${createExtString(exts.js)}}`,
+            `${projectPath}/**/*.${createExtString(exts.js)}`,
             '-c',
             jsRcPath,
             '--ignore-path',
@@ -69,7 +69,7 @@ module.exports = async ({ projectPath, args }) => {
       ? spawn.sync(
           'eslint',
           [
-            `${projectPath}/**/*.{${createExtString(exts.ts)}}`,
+            `${projectPath}/**/*.${createExtString(exts.ts)}`,
             '-c',
             tsRcPath,
             '--ignore-path',
@@ -86,7 +86,7 @@ module.exports = async ({ projectPath, args }) => {
       ? spawn.sync(
           'stylelint',
           [
-            `${projectPath}/**/*.{${createExtString(exts.css)}}`,
+            `${projectPath}/**/*.${createExtString(exts.css)}`,
             '--config',
             cssRcPath,
             '--ignore-path',
