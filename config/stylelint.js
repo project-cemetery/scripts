@@ -3,6 +3,12 @@ module.exports = {
   plugins: ['stylelint-order'],
   rules: {
     'selector-pseudo-class-no-unknown': null,
+    'no-descending-specificity': [
+      true,
+      {
+        severity: 'warning',
+      },
+    ],
     'at-rule-no-unknown': [
       true,
       {
