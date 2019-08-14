@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.2](https://github.com/solid-soda/scripts/compare/v1.13.1...v1.13.2) (2019-08-14)
+
+
+### Bug Fixes
+
+* fix bug with nested dirs in gitignore ([9ecbd69](https://github.com/solid-soda/scripts/commit/9ecbd69)), closes [#26](https://github.com/solid-soda/scripts/issues/26)
+
+
+
 ### [1.13.1](https://github.com/solid-soda/scripts/compare/v1.13.0...v1.13.1) (2019-08-14)
 
 
