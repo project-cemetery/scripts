@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.4](https://github.com/solid-soda/scripts/compare/v1.13.3...v1.13.4) (2019-08-14)
+
+
+### Bug Fixes
+
+* **lint:** fix using default eslint file ([c6de31a](https://github.com/solid-soda/scripts/commit/c6de31a))
+
+
+
 ### [1.13.3](https://github.com/solid-soda/scripts/compare/v1.13.2...v1.13.3) (2019-08-14)
 
 
