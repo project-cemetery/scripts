@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.3](https://github.com/solid-soda/scripts/compare/v1.13.2...v1.13.3) (2019-08-14)
+
+
+### Bug Fixes
+
+* ensure gitignore exist ([6b4977b](https://github.com/solid-soda/scripts/commit/6b4977b)), closes [#9](https://github.com/solid-soda/scripts/issues/9)
+
+
+
 ### [1.13.2](https://github.com/solid-soda/scripts/compare/v1.13.1...v1.13.2) (2019-08-14)
 
 
