@@ -5,7 +5,7 @@ const isDirectory = dirPath => {
   try {
     const t = fs.lstatSync(dirPath).isDirectory();
     return t;
-  } catch (e) {
+  } catch (error) {
     return false;
   }
 };

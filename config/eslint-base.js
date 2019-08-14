@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: ['unicorn'],
   rules: {
     'array-callback-return': ['error'],
     'consistent-return': ['error'],
@@ -185,5 +186,22 @@ module.exports = {
       'error',
       { functions: true, classes: true, variables: true },
     ],
+    'unicorn/catch-error-name': 'error',
+    'unicorn/error-message': 'error',
+    'unicorn/explicit-length-check': 'error',
+    'unicorn/new-for-builtins': 'error',
+    'unicorn/no-abusive-eslint-disable': 'error',
+    'unicorn/no-array-instanceof': 'error',
+    'unicorn/no-new-buffer': 'error',
+    'unicorn/no-unreadable-array-destructuring': 'error',
+    'unicorn/no-zero-fractions': 'error',
+    'unicorn/prefer-add-event-listener': 'error',
+    'unicorn/prefer-includes': 'error',
+    'unicorn/prefer-node-append': 'error',
+    'unicorn/prefer-node-remove': 'error',
+    'unicorn/prefer-query-selector': 'error',
+    'unicorn/prefer-starts-ends-with': 'error',
+    'unicorn/regex-shorthand': 'error',
+    'unicorn/throw-new-error': 'error',
   },
 };

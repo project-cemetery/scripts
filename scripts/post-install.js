@@ -7,7 +7,7 @@ module.exports = async () => {
     return spawn.sync('node', [huskyInstaller, 'install'], {
       stdio: 'inherit',
     });
-  } catch (e) {
+  } catch (error) {
     return { status: 0 };
   }
 };
