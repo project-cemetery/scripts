@@ -15,7 +15,6 @@ const functionScripts = [
   'init',
   'post-install',
   'commitlint',
-  'init-vscode',
 ];
 const processScripts = ['cz'];
 
