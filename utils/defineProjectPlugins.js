@@ -1,38 +1,38 @@
-const nanomerge = require('nanomerge')
-const nanoclone = require('nanoclone')
+const nanomerge = require('nanomerge');
+const nanoclone = require('nanoclone');
 
-const { getAllPackages } = require('./getAllPackages')
-const projectWithDependency = require('./projectWithDependency')
+const { getAllPackages } = require('./getAllPackages');
+const projectWithDependency = require('./projectWithDependency');
 
 const checkSvelteProject = async (packageFiles, originalSettings) => {
-  const settings = nanoclone(originalSettings)
+  const settings = nanoclone(originalSettings);
 
   const [haveEslintPlugin, haveSvelte, havePrettierPLugin] = await Promise.all([
     projectWithDependency(packageFiles, 'eslint-plugin-svelte3'),
     projectWithDependency(packageFiles, 'svelte'),
     projectWithDependency(packageFiles, 'prettier-plugin-svelte'),
-  ])
+  ]);
 
   if (!haveSvelte) {
-    return originalSettings
+    return originalSettings;
   }
 
-  settings.exts.css.push('svelte')
+  settings.exts.css.push('svelte');
 
   if (haveEslintPlugin) {
-    settings.exts.js.push('svelte')
-    settings.plugins.eslint.push('svelte3')
+    settings.exts.js.push('svelte');
+    settings.plugins.eslint.push('svelte3');
   }
 
   if (havePrettierPLugin) {
-    settings.exts.pretty.push('svelte')
+    settings.exts.pretty.push('svelte');
   }
 
-  return settings
-}
+  return settings;
+};
 
 const defineProjectPlugins = async projectPath => {
-  const packageFiles = await getAllPackages(projectPath)
+  const packageFiles = await getAllPackages(projectPath);
 
   const settings = {
     exts: {
@@ -44,13 +44,13 @@ const defineProjectPlugins = async projectPath => {
     plugins: {
       eslint: [],
     },
-  }
+  };
 
   const newSettings = await Promise.all([
     checkSvelteProject(packageFiles, settings),
-  ])
+  ]);
 
-  return nanomerge(...newSettings)
-}
+  return nanomerge(...newSettings);
+};
 
-module.exports = defineProjectPlugins
+module.exports = defineProjectPlugins;

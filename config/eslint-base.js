@@ -186,4 +186,4 @@ module.exports = {
       { functions: true, classes: true, variables: true },
     ],
   },
-}
+};

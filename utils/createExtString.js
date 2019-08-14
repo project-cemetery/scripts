@@ -1,10 +1,10 @@
 const createExtString = (normal, ...additional) => {
-  const all = [...normal, ...additional]
+  const all = [...normal, ...additional];
   if (all.length === 1) {
-    return all[0]
+    return all[0];
   }
 
-  return `{${all.join(',')}}`
-}
+  return `{${all.join(',')}}`;
+};
 
-module.exports = createExtString
+module.exports = createExtString;

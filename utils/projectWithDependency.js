@@ -1,27 +1,27 @@
-const { getAllPackages } = require('./getAllPackages')
+const { getAllPackages } = require('./getAllPackages');
 
 const projectWithDependency = async (rawContents, dependency) => {
-  let contents = rawContents
+  let contents = rawContents;
   if (typeof rawContents === 'string') {
-    contents = await getAllPackages(rawContents)
+    contents = await getAllPackages(rawContents);
   }
 
   const haveDependency = contents
     .map(content => JSON.parse(content))
     .map(info => {
-      const dependencies = info.dependencies || {}
-      const devDependencies = info.devDependencies || {}
+      const dependencies = info.dependencies || {};
+      const devDependencies = info.devDependencies || {};
 
       return {
         ...dependencies,
         ...devDependencies,
-      }
+      };
     })
     .map(dependencies => Object.keys(dependencies))
     .reduce((acc, cur) => [...acc, ...cur], [])
-    .includes(dependency)
+    .includes(dependency);
 
-  return haveDependency
-}
+  return haveDependency;
+};
 
-module.exports = projectWithDependency
+module.exports = projectWithDependency;

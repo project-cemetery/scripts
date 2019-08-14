@@ -1,17 +1,17 @@
-const path = require('path')
-const spawn = require('cross-spawn')
-const editJsonFile = require('edit-json-file')
+const path = require('path');
+const spawn = require('cross-spawn');
+const editJsonFile = require('edit-json-file');
 
 const modifyPackageJson = projectPath => {
   const projectPackageJson = editJsonFile(
     path.join(projectPath, 'package.json'),
-  )
+  );
 
-  projectPackageJson.unset('husky')
-  projectPackageJson.unset('lint-staged')
-  projectPackageJson.unset('commitlint')
-  projectPackageJson.unset('publishConfig')
-  projectPackageJson.unset('scripts.s')
+  projectPackageJson.unset('husky');
+  projectPackageJson.unset('lint-staged');
+  projectPackageJson.unset('commitlint');
+  projectPackageJson.unset('publishConfig');
+  projectPackageJson.unset('scripts.s');
 
   projectPackageJson.set('husky', {
     hooks: {
@@ -19,21 +19,21 @@ const modifyPackageJson = projectPath => {
       'pre-push': 'yarn soda lint',
       'commit-msg': 'yarn soda commitlint',
     },
-  })
+  });
   projectPackageJson.set('publishConfig', {
     access: 'public',
-  })
-  projectPackageJson.set('scripts.s', 'yarn soda')
+  });
+  projectPackageJson.set('scripts.s', 'yarn soda');
 
-  projectPackageJson.save()
-}
+  projectPackageJson.save();
+};
 
 module.exports = async ({ projectPath, args = [] }) => {
-  modifyPackageJson(projectPath)
+  modifyPackageJson(projectPath);
 
   if (args.includes('--vscode')) {
-    spawn.sync('yarn', ['soda', 'init-vscode'], { stdio: 'inherit' })
+    spawn.sync('yarn', ['soda', 'init-vscode'], { stdio: 'inherit' });
   }
 
-  return spawn.sync('yarn', ['soda', 'post-install'], { stdio: 'inherit' })
-}
+  return spawn.sync('yarn', ['soda', 'post-install'], { stdio: 'inherit' });
+};

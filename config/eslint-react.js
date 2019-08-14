@@ -11,4 +11,4 @@ module.exports = {
     'react/prop-types': 0,
     'react-hooks/rules-of-hooks': 'error',
   },
-}
+};
