@@ -58,6 +58,7 @@ module.exports = async ({ projectPath, args }) => {
       ? spawn.sync(
           'eslint',
           [
+            '--no-eslintrc',
             `${projectPath}/**/*.${createExtString(exts.js)}`,
             '-c',
             jsRcPath,
@@ -75,6 +76,7 @@ module.exports = async ({ projectPath, args }) => {
       ? spawn.sync(
           'eslint',
           [
+            '--no-eslintrc',
             `${projectPath}/**/*.${createExtString(exts.ts)}`,
             '-c',
             tsRcPath,
