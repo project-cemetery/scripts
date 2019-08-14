@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/solid-soda/scripts/compare/v1.12.8...v1.13.0) (2019-08-14)
+
+
+### Features
+
+* **pretty:** add semicolons by prettier ([0a31d4f](https://github.com/solid-soda/scripts/commit/0a31d4f))
+
+
+
 ### [1.12.8](https://github.com/solid-soda/scripts/compare/v1.12.7...v1.12.8) (2019-08-09)
 
 
