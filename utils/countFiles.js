@@ -1,4 +1,4 @@
-const ignoreToStirng = require('../utils/ignoreToString');
+const ignoreToPartOfRegexp = require('./ignoreToPartOfRegexp');
 const { findFiles } = require('./findFiles');
 
 // We must skip typings
@@ -6,7 +6,7 @@ const filterTypings = file => !file.endsWith('d.ts');
 
 const countFiles = (exts, projectPath, ignoreFile) => {
   const extString = exts.join('|');
-  const ignorePaths = ignoreToStirng(projectPath, ignoreFile);
+  const ignorePaths = ignoreToPartOfRegexp(projectPath, ignoreFile);
 
   return findFiles(
     projectPath,

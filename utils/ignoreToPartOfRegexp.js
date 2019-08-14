@@ -17,4 +17,5 @@ module.exports = (projectPath, ignoreFile) =>
     .split('\n')
     .filter(ignorePath => isDirectory(path.resolve(projectPath, ignorePath)))
     .filter(ignorePath => ignorePath.length > 0)
+    .map(ignorePath => `${ignorePath}/`)
     .join('|');
