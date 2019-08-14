@@ -90,6 +90,8 @@ module.exports = async ({ projectPath }) => {
 
   const ignoreFile = path.join(projectPath, '.gitignore');
 
+  await fse.ensureFile(ignoreFile);
+
   await Promise.all([
     initEslint(projectPath, ignoreFile),
     initStylelint(projectPath, ignoreFile),
