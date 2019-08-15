@@ -210,6 +210,7 @@ module.exports = {
           'module',
           '/^@shared/',
           '/^$/',
+          '/^&/',
           '/^@app/',
           '/^@back/',
           '/^@front/',
