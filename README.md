@@ -5,6 +5,10 @@
 
 Speed up the creation and maintenance of your JS applications. Zero configuration way to use modern code-quality tools.
 
++ **Zero-config.** Any tool already configured inside.
++ **Universal.** Supports TS, React, and can be used with any tech.
++ **Uniform.** Config can't be modified (all projects have the same configs).
+
 ## TL;DR
 
 ```sh
@@ -85,14 +89,18 @@ Command runs [Standard Version](https://github.com/conventional-changelog/standa
 
 ### TypeScript
 
-TypeScript support out of the box
+TypeScript support out of the box, just add `tsconfig.json` to root of your project.
 
 ### React
 
-React/JSX support out of the box
+React/JSX support out of the box, just add react package to you project.
 
 ### Svelte
 
 - Install [prettier-plugin-svelte](https://github.com/UnwrittenFun/prettier-plugin-svelte)
 - Install [eslint-plugin-svelte3](https://github.com/sveltejs/eslint-plugin-svelte3)
 - Enjoy!
+
+## Limitations
+
+1. Only one `.gitignore`. Your project must contain exactly one `.gitignore` file in root. Sorry, we works on it.
