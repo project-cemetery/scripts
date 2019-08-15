@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const path = require('path');
 const { bootstrap } = require('commitizen/dist/cli/git-cz');
+const path = require('path');
 
 const projectPath = process.argv[2];
 

@@ -24,6 +24,7 @@
     "cz-conventional-changelog": "2",
     "edit-json-file": "1.2.1",
     "eslint": "5",
+    "eslint-plugin-import-helpers": "^1.0.2",
     "eslint-plugin-react": "7",
     "eslint-plugin-react-hooks": "1",
     "eslint-plugin-react-hooks-breadhead": "^1.0.0",

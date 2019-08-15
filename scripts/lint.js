@@ -1,11 +1,11 @@
 const spawn = require('cross-spawn');
-const path = require('path');
 const { flatMap } = require('lodash');
+const path = require('path');
 
 const countFiles = require('../utils/countFiles');
-const projectWithDependency = require('../utils/projectWithDependency');
-const defineProjectPlugins = require('../utils/defineProjectPlugins');
 const createExtString = require('../utils/createExtString');
+const defineProjectPlugins = require('../utils/defineProjectPlugins');
+const projectWithDependency = require('../utils/projectWithDependency');
 
 const preparePlugins = plugins =>
   flatMap(plugins, plugin => ['--plugin', plugin]);

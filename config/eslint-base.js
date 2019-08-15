@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['unicorn'],
+  plugins: ['unicorn', 'eslint-plugin-import-helpers'],
   rules: {
     'array-callback-return': ['error'],
     'consistent-return': ['error'],
@@ -203,5 +203,22 @@ module.exports = {
     'unicorn/prefer-starts-ends-with': 'error',
     'unicorn/regex-shorthand': 'error',
     'unicorn/throw-new-error': 'error',
+    'import-helpers/order-imports': [
+      'warn',
+      {
+        // example configuration
+        newlinesBetween: 'always',
+        groups: [
+          'module',
+          '/^@shared/',
+          '/^$/',
+          '/^@app/',
+          '/^@back/',
+          '/^@front/',
+          ['parent', 'sibling', 'index'],
+        ],
+        alphabetize: { order: 'asc', ignoreCase: true },
+      },
+    ],
   },
 };

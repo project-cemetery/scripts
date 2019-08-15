@@ -1,11 +1,11 @@
-const path = require('path');
-const fse = require('fs-extra');
 const spawn = require('cross-spawn');
 const editJsonFile = require('edit-json-file');
+const fse = require('fs-extra');
+const path = require('path');
 
-const projectWithDependency = require('../utils/projectWithDependency');
 const countFiles = require('../utils/countFiles');
 const defineProjectPlugins = require('../utils/defineProjectPlugins');
+const projectWithDependency = require('../utils/projectWithDependency');
 
 const modifyPackageJson = projectPath => {
   const projectPackageJson = editJsonFile(

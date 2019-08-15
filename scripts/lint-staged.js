@@ -1,9 +1,9 @@
-const path = require('path');
 const spawn = require('cross-spawn');
 const fse = require('fs-extra');
+const path = require('path');
 
-const defineProjectPlugins = require('../utils/defineProjectPlugins');
 const createExtString = require('../utils/createExtString');
+const defineProjectPlugins = require('../utils/defineProjectPlugins');
 
 module.exports = async ({ projectPath }) => {
   const { exts } = await defineProjectPlugins(projectPath);

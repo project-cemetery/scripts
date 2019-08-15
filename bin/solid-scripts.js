@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const path = require('path');
 const spawn = require('cross-spawn');
+const path = require('path');
 
 const script = process.argv[2];
 const args = process.argv.slice(3);

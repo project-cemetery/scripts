@@ -1,5 +1,5 @@
-const nanomerge = require('nanomerge');
 const nanoclone = require('nanoclone');
+const nanomerge = require('nanomerge');
 
 const { getAllPackages } = require('./getAllPackages');
 const projectWithDependency = require('./projectWithDependency');

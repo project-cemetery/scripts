@@ -1,6 +1,6 @@
 const fse = require('fs-extra');
-const { join } = require('path');
 const { flatten } = require('lodash');
+const { join } = require('path');
 
 const findFiles = async (projectPath, ignoreNames, targetName) => {
   const foundFiles = [];

@@ -1,5 +1,5 @@
-const ignoreToPartOfRegexp = require('./ignoreToPartOfRegexp');
 const { findFiles } = require('./findFiles');
+const ignoreToPartOfRegexp = require('./ignoreToPartOfRegexp');
 
 // We must skip typings
 const filterTypings = file => !file.endsWith('d.ts');

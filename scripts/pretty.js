@@ -1,8 +1,8 @@
 const spawn = require('cross-spawn');
 const path = require('path');
 
-const defineProjectPlugins = require('../utils/defineProjectPlugins');
 const createExtString = require('../utils/createExtString');
+const defineProjectPlugins = require('../utils/defineProjectPlugins');
 
 const getPrettierExts = async projectPath => {
   const { exts } = await defineProjectPlugins(projectPath);
