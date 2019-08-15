@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/solid-soda/scripts/compare/v1.13.4...v1.14.0) (2019-08-15)
+
+
+### Features
+
+* **line:** ass new eslint rules ([24c7376](https://github.com/solid-soda/scripts/commit/24c7376)), closes [#10](https://github.com/solid-soda/scripts/issues/10)
+* **lint:** add import sotring and grouping ([c5e1ad4](https://github.com/solid-soda/scripts/commit/c5e1ad4)), closes [#7](https://github.com/solid-soda/scripts/issues/7)
+
+
+
 ### [1.13.4](https://github.com/solid-soda/scripts/compare/v1.13.3...v1.13.4) (2019-08-14)
 
 
