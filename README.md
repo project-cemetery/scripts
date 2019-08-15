@@ -1,5 +1,8 @@
 # @solid-soda/scripts
 
+<img src="https://raw.githubusercontent.com/solid-soda/assets/master/logo.png" align="right"
+     alt="Solid Soda logo" width="160" height="160">
+
 Speed up the creation and maintenance of your JS applications. Zero configuration way to use modern code-quality tools.
 
 ## TL;DR
