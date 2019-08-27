@@ -5,6 +5,7 @@ const path = require('path');
 const countFiles = require('../utils/countFiles');
 const createExtString = require('../utils/createExtString');
 const defineProjectPlugins = require('../utils/defineProjectPlugins');
+const { IGNORE_PATTERN } = require('../utils/ignore');
 const projectWithDependency = require('../utils/projectWithDependency');
 
 const preparePlugins = plugins =>
@@ -64,6 +65,8 @@ module.exports = async ({ projectPath, args }) => {
             jsRcPath,
             '--ignore-path',
             ignoreFile,
+            '--ignore-pattern',
+            IGNORE_PATTERN,
             ...eslintPlugins,
             ...clearArgs,
           ],
