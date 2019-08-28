@@ -208,6 +208,8 @@ module.exports = {
         newlinesBetween: 'always',
         groups: [
           'module',
+          '/^app/',
+          '/^lib/',
           '/^@shared/',
           '/^$/',
           '/^&/',
