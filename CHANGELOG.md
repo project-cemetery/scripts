@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.5](https://github.com/solid-soda/scripts/compare/v1.14.4...v1.14.5) (2019-08-28)
+
+
+### Bug Fixes
+
+* **lint:** fix decorators parsing and add ignore to ts linting ([b380ec2](https://github.com/solid-soda/scripts/commit/b380ec2))
+
+
+
 ### [1.14.4](https://github.com/solid-soda/scripts/compare/v1.14.3...v1.14.4) (2019-08-28)
 
 
