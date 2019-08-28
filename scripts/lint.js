@@ -85,6 +85,8 @@ module.exports = async ({ projectPath, args }) => {
             tsRcPath,
             '--ignore-path',
             ignoreFile,
+            '--ignore-pattern',
+            IGNORE_PATTERN,
             ...eslintPlugins,
             ...clearArgs,
           ],
