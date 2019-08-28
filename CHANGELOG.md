@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.4](https://github.com/solid-soda/scripts/compare/v1.14.3...v1.14.4) (2019-08-28)
+
+
+### Bug Fixes
+
+* add miss path for import sorting ([09f06d6](https://github.com/solid-soda/scripts/commit/09f06d6))
+
+
+
 ### [1.14.3](https://github.com/solid-soda/scripts/compare/v1.14.2...v1.14.3) (2019-08-27)
 
 
