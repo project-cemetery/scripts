@@ -4,6 +4,7 @@ const path = require('path');
 
 const createExtString = require('../utils/createExtString');
 const defineProjectPlugins = require('../utils/defineProjectPlugins');
+const { ALLOW_PATTERN } = require('../utils/ignore');
 
 module.exports = async ({ projectPath }) => {
   const { exts } = await defineProjectPlugins(projectPath);
@@ -12,7 +13,7 @@ module.exports = async ({ projectPath }) => {
 
   const config = {
     linters: {
-      [`*.${prettyExtensions}`]: ['yarn soda pretty', 'git add'],
+      [`${ALLOW_PATTERN}.${prettyExtensions}`]: ['yarn soda pretty', 'git add'],
     },
     concurrent: false,
   };

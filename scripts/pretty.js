@@ -15,20 +15,22 @@ module.exports = async ({ projectPath, args }) => {
   const ignoreFile = path.join(projectPath, '.gitignore');
   const rcFile = path.join(__dirname, '../config/prettier.js');
 
+  const paths = args.length > 0;
+
   const exts = await getPrettierExts(projectPath);
 
   const result = spawn.sync(
     'prettier',
     [
       '--write',
-      `${projectPath}/**/${ALLOW_PATTERN}.${exts}`,
+      !paths && `${projectPath}/**/${ALLOW_PATTERN}.${exts}`,
       '--config',
       rcFile,
       '--ignore-path',
       ignoreFile,
       '--plugin-search-dir=.',
       ...args,
-    ],
+    ].filter(Boolean),
     { stdio: 'inherit' },
   );
 
