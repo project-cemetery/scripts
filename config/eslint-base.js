@@ -218,7 +218,7 @@ module.exports = {
           '/^@front/',
           ['parent', 'sibling', 'index'],
         ],
-        alphabetize: { order: 'asc', ignoreCase: true },
+        alphabetize: { order: 'ignore', ignoreCase: true },
       },
     ],
   },
