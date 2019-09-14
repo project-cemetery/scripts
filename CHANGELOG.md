@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.7](https://github.com/solid-soda/scripts/compare/v1.14.6...v1.14.7) (2019-09-14)
+
+
+### Bug Fixes
+
+* **lint:** disable incorrect rule for sorting imports ([0b64171](https://github.com/solid-soda/scripts/commit/0b64171))
+
+
+
 ### [1.14.6](https://github.com/solid-soda/scripts/compare/v1.14.5...v1.14.6) (2019-09-10)
 
 
