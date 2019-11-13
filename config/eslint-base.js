@@ -204,18 +204,19 @@ module.exports = {
     'import-helpers/order-imports': [
       'warn',
       {
-        // example configuration
         newlinesBetween: 'always',
         groups: [
           'module',
-          '/^app/',
-          '/^lib/',
-          '/^@shared/',
-          '/^$/',
-          '/^&/',
-          '/^@app/',
-          '/^@back/',
-          '/^@front/',
+          [
+            '/^app/',
+            '/^lib/',
+            '/^@shared/',
+            '/^$/',
+            '/^&/',
+            '/^@app/',
+            '/^@back/',
+            '/^@front/',
+          ],
           ['parent', 'sibling', 'index'],
         ],
         alphabetize: { order: 'ignore', ignoreCase: true },
