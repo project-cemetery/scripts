@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.8](https://github.com/solid-soda/scripts/compare/v1.14.7...v1.14.8) (2019-11-13)
+
+
+### Bug Fixes
+
+* **lint:** fix grouping of internal modules ([87c62df](https://github.com/solid-soda/scripts/commit/87c62df))
+
+
+
 ### [1.14.7](https://github.com/solid-soda/scripts/compare/v1.14.6...v1.14.7) (2019-09-14)
 
 
