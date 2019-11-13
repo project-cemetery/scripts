@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.14.9](https://github.com/solid-soda/scripts/compare/v1.14.8...v1.14.9) (2019-11-13)
+
+
+### Bug Fixes
+
+* **lint:** add more grouping options ([a3c57ba](https://github.com/solid-soda/scripts/commit/a3c57ba))
+
+
+
 ### [1.14.8](https://github.com/solid-soda/scripts/compare/v1.14.7...v1.14.8) (2019-11-13)
 
 
