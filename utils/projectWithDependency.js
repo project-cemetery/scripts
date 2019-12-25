@@ -11,10 +11,12 @@ const projectWithDependency = async (rawContents, dependency) => {
     .map(info => {
       const dependencies = info.dependencies || {};
       const devDependencies = info.devDependencies || {};
+      const peerDependencies = info.peerDependencies || {};
 
       return {
         ...dependencies,
         ...devDependencies,
+        ...peerDependencies,
       };
     })
     .map(dependencies => Object.keys(dependencies))
