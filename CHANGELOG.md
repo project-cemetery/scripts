@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.1](https://github.com/solid-soda/scripts/compare/v1.15.0...v1.15.1) (2019-12-25)
+
+
+### Bug Fixes
+
+* use peerDependencies for defining plugins ([d01e51d](https://github.com/solid-soda/scripts/commit/d01e51d))
+
+
+
 ## [1.15.0](https://github.com/solid-soda/scripts/compare/v1.14.9...v1.15.0) (2019-12-11)
 
 
