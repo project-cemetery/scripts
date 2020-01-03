@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.15.2](https://github.com/solid-soda/scripts/compare/v1.15.1...v1.15.2) (2020-01-03)
+
+
+### Bug Fixes
+
+* **lint:** fix bug with unused vars in for-of loops ([ea26ffb](https://github.com/solid-soda/scripts/commit/ea26ffb))
+
+
+
 ### [1.15.1](https://github.com/solid-soda/scripts/compare/v1.15.0...v1.15.1) (2019-12-25)
 
 
