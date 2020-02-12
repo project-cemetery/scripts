@@ -138,6 +138,7 @@ module.exports = {
     'no-prototype-builtins': 'error',
     'no-sparse-arrays': 'error',
     'no-template-curly-in-string': 'error',
+    curly: 'error',
     'no-unreachable': 'error',
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
