@@ -5,6 +5,7 @@ node_js:
 cache: yarn
 script: yarn s lint
 deploy:
+  edge: true
   provider: npm
   email: igor@kamyshev.me
   api_key:
