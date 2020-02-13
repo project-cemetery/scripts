@@ -139,6 +139,7 @@ module.exports = {
     'no-sparse-arrays': 'error',
     'no-template-curly-in-string': 'error',
     curly: 'error',
+    'no-shadow': 'error',
     'no-unreachable': 'error',
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',

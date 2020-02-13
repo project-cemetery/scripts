@@ -5,18 +5,10 @@ module.exports = {
     sourceType: 'module',
     project: 'tsconfig.json',
   },
-  plugins: ['@typescript-eslint', '@typescript-eslint/tslint'],
+  plugins: ['@typescript-eslint'],
   extends: ['./eslint-base.js'],
   rules: {
     'no-empty-function': ['error', { allow: ['constructors'] }],
     'react/prop-types': 0,
-    '@typescript-eslint/tslint/config': [
-      'error',
-      {
-        rules: {
-          'no-shadowed-variable': true,
-        },
-      },
-    ],
   },
 };
