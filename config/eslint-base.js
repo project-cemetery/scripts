@@ -18,12 +18,7 @@ module.exports = {
     'no-fallthrough': 'error',
     'no-floating-decimal': 'error',
     'no-global-assign': ['error'],
-    'no-implicit-coercion': [
-      'error',
-      {
-        boolean: false,
-      },
-    ],
+    'no-implicit-coercion': ['error'],
     'no-implied-eval': 'error',
     'no-iterator': 'error',
     'no-labels': ['error'],
