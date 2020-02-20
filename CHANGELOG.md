@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.1](https://github.com/solid-soda/scripts/compare/v1.19.0...v1.19.1) (2020-02-20)
+
+
+### Bug Fixes
+
+* **fixpack:** add more specific rule for lint-staged ([c43a893](https://github.com/solid-soda/scripts/commit/c43a893))
+
+
+
 ## [1.19.0](https://github.com/solid-soda/scripts/compare/v1.18.0...v1.19.0) (2020-02-20)
 
 
