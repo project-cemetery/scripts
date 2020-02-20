@@ -15,6 +15,7 @@ const functionScripts = [
   'init',
   'post-install',
   'commitlint',
+  'fixpack',
 ];
 const processScripts = ['cz'];
 

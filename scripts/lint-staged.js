@@ -14,6 +14,7 @@ module.exports = async ({ projectPath }) => {
   const config = {
     linters: {
       [`${ALLOW_PATTERN}.${prettyExtensions}`]: ['yarn soda pretty', 'git add'],
+      '*': ['yarn soda fixpack', 'git add'],
     },
     concurrent: false,
   };
