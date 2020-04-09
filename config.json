@@ -1,5 +1,5 @@
 {
     "aliases": {
-        "config": ["prettier"]
+        "all": ["prettier"]
     }
 }

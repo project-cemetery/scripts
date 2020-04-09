@@ -1,20 +1,28 @@
-const { json, install } = require('mrm-core');
+const { json, install, packageJson } = require('mrm-core');
 
 function task() {
-  const oldFile = json('prettier.config.js')
+  // generate config
+  const CONFIG_FILE = '.prettierrc'
+  const oldConfig = json(CONFIG_FILE)
 
-  if (oldFile.exists()) {
-    oldFile.delete()
+  if (oldConfig.exists()) {
+    oldConfig.delete()
   }
 
-  const file = json('prettier.config.js')
-  file.set({
+  const config = json(CONFIG_FILE)
+  config.set({
     trailingComma: 'all',
     singleQuote: true,
   })
 
-  install('eslint');
-  file.save()
+  config.save()
+
+  // dependencies
+  install('prettier');
+
+  // scripts
+  const package = packageJson()
+  package.setScript('pretty', 'prettier --write .')
 }
 
 task.description = 'Sync Prettier config';
