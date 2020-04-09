@@ -36,6 +36,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "mrm-core",
         "npm:4.1.0"
+      ],
+      [
+        "nanomerge",
+        "npm:0.2.0"
       ]
     ],
     "locationBlacklistData": [
@@ -46,7 +50,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@yarnpkg/pnpify", "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"],
-            ["mrm-core", "npm:4.1.0"]
+            ["mrm-core", "npm:4.1.0"],
+            ["nanomerge", "npm:0.2.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -57,7 +62,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@solid-soda/scripts", "workspace:."],
             ["@yarnpkg/pnpify", "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"],
-            ["mrm-core", "npm:4.1.0"]
+            ["mrm-core", "npm:4.1.0"],
+            ["nanomerge", "npm:0.2.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -501,6 +507,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["split-lines", "npm:2.0.0"],
             ["strip-bom", "npm:4.0.0"],
             ["webpack-merge", "npm:4.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["nanoclone", [
+        ["npm:0.1.5", {
+          "packageLocation": "./.yarn/cache/nanoclone-npm-0.1.5-d36c5657f4-2.zip/node_modules/nanoclone/",
+          "packageDependencies": [
+            ["nanoclone", "npm:0.1.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["nanomerge", [
+        ["npm:0.2.0", {
+          "packageLocation": "./.yarn/cache/nanomerge-npm-0.2.0-47917e8127-2.zip/node_modules/nanomerge/",
+          "packageDependencies": [
+            ["nanomerge", "npm:0.2.0"],
+            ["nanoclone", "npm:0.1.5"]
           ],
           "linkType": "HARD",
         }]

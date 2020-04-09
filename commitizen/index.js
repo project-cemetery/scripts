@@ -13,7 +13,7 @@ function task() {
                 }
             }
         })
-        .appendScript('commit', 'git-cz')
+        .setScript('commit', 'git-cz')
         .save()
 }
 

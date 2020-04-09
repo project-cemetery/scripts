@@ -1,5 +1,5 @@
 {
     "aliases": {
-        "all": ["prettier", "commitizen"]
+        "all": ["prettier", "commitizen", "eslint"]
     }
 }
