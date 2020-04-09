@@ -1,12 +1,13 @@
 {
   "name": "@solid-soda/scripts",
-  "version": "2.0.0-alpha.8",
+  "version": "2.0.0-alpha.9",
   "author": "Igor Kamyshev <igor@kamyshev.me>",
   "license": "MIT",
   "main": "config.json",
   "files": [
     "config.json",
-    "*/index.js"
+    "*/index.js",
+    "*/config/*"
   ],
   "repository": "git@github.com:solid-soda/scripts.git",
   "dependencies": {
