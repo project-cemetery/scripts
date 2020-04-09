@@ -2,7 +2,7 @@ const { install, packageJson } = require('mrm-core');
 
 function task() {
     // dependencies
-    install(['cz-conventional-changelog']);
+    install(['commitizen', 'cz-conventional-changelog']);
 
     // config
     packageJson()
