@@ -15,7 +15,8 @@ function task() {
 
   // scripts
   const package = packageJson()
-  package.appendScript('pretty', 'prettier --write .')
+  package.setScript('pretty', 'prettier --write .')
+  package.save()
 }
 
 task.description = 'Sync Prettier config';
