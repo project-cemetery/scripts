@@ -5,50 +5,9 @@
   "bin": {
     "soda": "./bin/solid-scripts.js"
   },
-  "dependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
-    "babel-eslint": "^10.1.0",
-    "commitizen": "^4.0.3",
-    "cross-spawn": "^7.0.1",
-    "cz-conventional-changelog": "^3.1.0",
-    "edit-json-file": "^1.4.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import-helpers": "^1.0.2",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^3.0.0",
-    "eslint-plugin-unicorn": "^18.0.1",
-    "fixpack": "^3.0.5",
-    "fs-extra": "^8.0.1",
-    "husky": "4",
-    "lint-staged": "10",
-    "lodash": "^4.17.11",
-    "nanoclone": "^0.2.1",
-    "nanomerge": "^0.2.0",
-    "prettier": "2",
-    "standard-version": "7",
-    "stylelint": "^13.2.1",
-    "stylelint-config-recess-order": "^2.0.4",
-    "stylelint-config-recommended": "^3.0.0",
-    "typescript": "3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn soda lint-staged",
-      "pre-push": "yarn soda lint",
-      "commit-msg": "yarn soda commitlint"
-    }
-  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
-  "repository": "git@github.com:solid-soda/scripts.git",
-  "scripts": {
-    "postinstall": "yarn soda post-install",
-    "s": "yarn soda",
-    "soda": "node ./bin/solid-scripts.js"
-  }
+  "repository": "git@github.com:solid-soda/scripts.git"
 }
