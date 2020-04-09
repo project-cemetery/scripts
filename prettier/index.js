@@ -2,14 +2,7 @@ const { json, install, packageJson } = require('mrm-core');
 
 function task() {
   // generate config
-  const CONFIG_FILE = '.prettierrc'
-  const oldConfig = json(CONFIG_FILE)
-
-  if (oldConfig.exists()) {
-    oldConfig.delete()
-  }
-
-  const config = json(CONFIG_FILE)
+  const config = json('.prettierrc')
   config.set({
     trailingComma: 'all',
     singleQuote: true,
@@ -22,7 +15,7 @@ function task() {
 
   // scripts
   const package = packageJson()
-  package.setScript('pretty', 'prettier --write .')
+  package.appendScript('pretty', 'prettier --write .')
 }
 
 task.description = 'Sync Prettier config';
