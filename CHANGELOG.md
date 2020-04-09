@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/solid-soda/scripts/compare/v1.19.1...v1.20.0) (2020-04-09)
+
+
+### Features
+
+* **commmon:** bump all deps ([9bd706b](https://github.com/solid-soda/scripts/commit/9bd706b391721e464694ee0916580d08b665e49b))
+
 ### [1.19.1](https://github.com/solid-soda/scripts/compare/v1.19.0...v1.19.1) (2020-02-20)
 
 
