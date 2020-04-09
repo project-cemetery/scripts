@@ -1,4 +1,4 @@
-const { packageJson, json, install } = require('mrm-core');
+const { packageJson, json, install, uninstall } = require('mrm-core');
 const nanomerge = require('nanomerge')
 
 const baseConfig = require('./config/eslint-base')
@@ -13,15 +13,17 @@ const reactDependencies = ['eslint-plugin-react', 'eslint-plugin-react-hooks']
 
 function task() {
     const package = packageJson()
+    
+    const packageHasDependency = (dependency) => Boolean(package.get(`dependencies.${dependency}`) || package.get(`devDependencies.${dependency}`))
 
-    const hasTypeScript = Boolean(package.get('dependencies.typescript'))
+    const hasTypeScript = packageHasDependency('typescript')
     const languageConfig =  hasTypeScript ? tsConfig : jsConfig
     const languageDependencies = hasTypeScript ? tsDependencies : jsDependencies
 
     let additionalConfig = {}
     const additionalDependencies = []
 
-    const hasReact = Boolean(package.get('dependencies.react'))
+    const hasReact = packageHasDependency('react')
     if (hasReact) {
         additionalConfig = nanomerge(additionalConfig, reactConfig)
         additionalDependencies.push(...reactDependencies)
@@ -35,10 +37,11 @@ function task() {
         .save()
 
     // dependencies
+    uninstall([...jsDependencies, ...tsDependencies, ...reactDependencies])
     install([...baseDependencies, ...languageDependencies, ...additionalDependencies]);
 
     // scripts
-    packageJson()
+    package
         .setScript('lint:code', 'eslint .')
         .save()
 }
