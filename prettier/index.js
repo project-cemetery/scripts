@@ -2,21 +2,20 @@ const { json, install, packageJson } = require('mrm-core');
 
 function task() {
   // generate config
-  const config = json('.prettierrc')
-  config.set({
-    trailingComma: 'all',
-    singleQuote: true,
-  })
-
-  config.save()
+  json('.prettierrc')
+    .set({
+      trailingComma: 'all',
+      singleQuote: true,
+    })
+    .save()
 
   // dependencies
   install('prettier');
 
   // scripts
-  const package = packageJson()
-  package.setScript('pretty', 'prettier --write .')
-  package.save()
+  packageJson()
+    .setScript('pretty', 'prettier --write .')
+    .save()
 }
 
 task.description = 'Sync Prettier config';
