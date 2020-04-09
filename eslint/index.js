@@ -1,4 +1,4 @@
-const { packageJson, json } = require('mrm-core');
+const { packageJson, json, install } = require('mrm-core');
 const nanomerge = require('nanomerge')
 
 const baseConfig = require('./config/eslint-base')
