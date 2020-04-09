@@ -12,11 +12,8 @@ module.exports = async ({ projectPath }) => {
   const prettyExtensions = createExtString(exts.pretty);
 
   const config = {
-    linters: {
-      [`${ALLOW_PATTERN}.${prettyExtensions}`]: ['yarn soda pretty', 'git add'],
-      'package.json': ['yarn soda fixpack', 'git add'],
-    },
-    concurrent: false,
+    [`${ALLOW_PATTERN}.${prettyExtensions}`]: ['yarn soda pretty', 'git add'],
+    'package.json': ['yarn soda fixpack', 'git add'],
   };
 
   const varDir = path.join(__dirname, '../var');
@@ -25,5 +22,9 @@ module.exports = async ({ projectPath }) => {
   await fse.ensureDir(varDir);
   await fse.writeFile(rcPath, JSON.stringify(config));
 
-  return spawn.sync('lint-staged', ['--config', rcPath], { stdio: 'inherit' });
+  return spawn.sync(
+    'lint-staged',
+    ['--config', rcPath, '--concurrent', false],
+    { stdio: 'inherit' },
+  );
 };

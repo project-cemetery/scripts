@@ -2,7 +2,7 @@ const { findFiles } = require('./findFiles');
 const ignoreToPartOfRegexp = require('./ignoreToPartOfRegexp');
 
 // We must skip typings
-const filterTypings = file => !file.endsWith('d.ts');
+const filterTypings = (file) => !file.endsWith('d.ts');
 
 const countFiles = (exts, projectPath, ignoreFile) => {
   const extString = exts.join('|');
@@ -12,7 +12,7 @@ const countFiles = (exts, projectPath, ignoreFile) => {
     projectPath,
     ['node_modules', '.git'],
     new RegExp(`^((?!${ignorePaths}).)*(${extString})$`),
-  ).then(files => files.filter(filterTypings).length);
+  ).then((files) => files.filter(filterTypings).length);
 };
 
 module.exports = countFiles;

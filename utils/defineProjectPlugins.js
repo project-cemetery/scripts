@@ -31,7 +31,7 @@ const checkSvelteProject = async (packageFiles, originalSettings) => {
   return settings;
 };
 
-const defineProjectPlugins = async projectPath => {
+const defineProjectPlugins = async (projectPath) => {
   const packageFiles = await getAllPackages(projectPath);
 
   const settings = {

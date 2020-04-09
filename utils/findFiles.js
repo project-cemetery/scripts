@@ -7,10 +7,10 @@ const findFiles = async (projectPath, ignoreNames, targetName) => {
   const files = await fse.readdir(projectPath);
 
   await Promise.all(
-    files.map(async rawName => {
+    files.map(async (rawName) => {
       const name = join(projectPath, rawName);
 
-      if (ignoreNames.some(ignoreName => name.includes(ignoreName))) {
+      if (ignoreNames.some((ignoreName) => name.includes(ignoreName))) {
         return null;
       }
 

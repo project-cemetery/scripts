@@ -7,8 +7,8 @@ const projectWithDependency = async (rawContents, dependency) => {
   }
 
   const haveDependency = contents
-    .map(content => JSON.parse(content))
-    .map(info => {
+    .map((content) => JSON.parse(content))
+    .map((info) => {
       const dependencies = info.dependencies || {};
       const devDependencies = info.devDependencies || {};
       const peerDependencies = info.peerDependencies || {};
@@ -19,7 +19,7 @@ const projectWithDependency = async (rawContents, dependency) => {
         ...peerDependencies,
       };
     })
-    .map(dependencies => Object.keys(dependencies))
+    .map((dependencies) => Object.keys(dependencies))
     .reduce((acc, cur) => [...acc, ...cur], [])
     .includes(dependency);
 

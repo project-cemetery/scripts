@@ -5,7 +5,7 @@ const createExtString = require('../utils/createExtString');
 const defineProjectPlugins = require('../utils/defineProjectPlugins');
 const { ALLOW_PATTERN } = require('../utils/ignore');
 
-const getPrettierExts = async projectPath => {
+const getPrettierExts = async (projectPath) => {
   const { exts } = await defineProjectPlugins(projectPath);
 
   return createExtString(exts.pretty);

@@ -8,8 +8,8 @@ const defineProjectPlugins = require('../utils/defineProjectPlugins');
 const { IGNORE_PATTERN } = require('../utils/ignore');
 const projectWithDependency = require('../utils/projectWithDependency');
 
-const preparePlugins = plugins =>
-  flatMap(plugins, plugin => ['--plugin', plugin]);
+const preparePlugins = (plugins) =>
+  flatMap(plugins, (plugin) => ['--plugin', plugin]);
 
 const ONLY_CSS = '--css';
 const ONLY_JS = '--js';
@@ -20,12 +20,12 @@ const ONLY_ARGS = [ONLY_CSS, ONLY_JS, ONLY_TS];
 module.exports = async ({ projectPath, args }) => {
   const ignoreFile = path.join(projectPath, '.gitignore');
 
-  const only = args.find(arg => ONLY_ARGS.includes(arg));
-  const clearArgs = args.filter(arg => !ONLY_ARGS.includes(arg));
+  const only = args.find((arg) => ONLY_ARGS.includes(arg));
+  const clearArgs = args.filter((arg) => !ONLY_ARGS.includes(arg));
 
-  const needRun = type => !only || only === type;
+  const needRun = (type) => !only || only === type;
 
-  const filesAvailable = async exts => {
+  const filesAvailable = async (exts) => {
     const count = await countFiles(exts, projectPath, ignoreFile);
     return count > 0;
   };

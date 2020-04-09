@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const isDirectory = dirPath => {
+const isDirectory = (dirPath) => {
   try {
     const t = fs.lstatSync(dirPath).isDirectory();
     return t;
@@ -15,7 +15,7 @@ module.exports = (projectPath, ignoreFile) =>
     .readFileSync(ignoreFile)
     .toString()
     .split('\n')
-    .filter(ignorePath => isDirectory(path.resolve(projectPath, ignorePath)))
-    .filter(ignorePath => ignorePath.length > 0)
-    .map(ignorePath => `${ignorePath}/`)
+    .filter((ignorePath) => isDirectory(path.resolve(projectPath, ignorePath)))
+    .filter((ignorePath) => ignorePath.length > 0)
+    .map((ignorePath) => `${ignorePath}/`)
     .join('|');

@@ -7,7 +7,7 @@ const countFiles = require('../utils/countFiles');
 const defineProjectPlugins = require('../utils/defineProjectPlugins');
 const projectWithDependency = require('../utils/projectWithDependency');
 
-const modifyPackageJson = projectPath => {
+const modifyPackageJson = (projectPath) => {
   const projectPackageJson = editJsonFile(
     path.join(projectPath, 'package.json'),
   );
