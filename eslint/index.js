@@ -3,6 +3,7 @@ const nanomerge = require('nanomerge')
 const { difference } = require('lodash')
 
 const overwrite = require('../utils/overwrite')
+const hasDependency = require('../utils/hasDependency')
 
 const baseConfig = require('./config/eslint-base')
 const jsConfig = require('./config/eslint-js')
@@ -17,7 +18,7 @@ const reactDependencies = ['eslint-plugin-react', 'eslint-plugin-react-hooks']
 function task() {
     const package = packageJson()
     
-    const packageHasDependency = (dependency) => Boolean(package.get(`dependencies.${dependency}`) || package.get(`devDependencies.${dependency}`))
+    const packageHasDependency = hasDependency(package)
 
     const hasTypeScript = packageHasDependency('typescript')
     const languageConfig =  hasTypeScript ? tsConfig : jsConfig
