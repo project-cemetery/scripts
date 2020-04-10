@@ -1,6 +1,6 @@
 {
   "name": "@solid-soda/scripts",
-  "version": "2.0.0-alpha.25",
+  "version": "2.0.0-alpha.26",
   "author": "Igor Kamyshev <igor@kamyshev.me>",
   "license": "MIT",
   "main": "config.json",
@@ -14,7 +14,7 @@
   ],
   "bin": {
     "soda": "./bin/solid-scripts.js",
-    "@solid-soda/scripts": "./bin/solid-scripts.js x"
+    "@solid-soda/scripts": "./bin/solid-scripts.js"
   },
   "repository": "git@github.com:solid-soda/scripts.git",
   "dependencies": {
