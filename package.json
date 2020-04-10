@@ -1,6 +1,6 @@
 {
   "name": "@solid-soda/scripts",
-  "version": "2.0.0-alpha.21",
+  "version": "2.0.0-alpha.22",
   "author": "Igor Kamyshev <igor@kamyshev.me>",
   "license": "MIT",
   "main": "config.json",
@@ -9,11 +9,17 @@
     "*/index.js",
     "*/config/*",
     "*/utils/*",
+    "bin/*",
     "utils/*"
   ],
+  "bin": {
+    "soda": "./bin/solid-scripts.js"
+  },
   "repository": "git@github.com:solid-soda/scripts.git",
   "dependencies": {
     "@yarnpkg/pnpify": "^2.0.0-rc.20",
+    "command-line-args": "^5.1.1",
+    "cross-spawn": "^7.0.2",
     "lodash": "^4.17.15",
     "mrm-core": "^4.1.0",
     "nanomerge": "^0.2.0"
