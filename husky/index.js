@@ -2,10 +2,19 @@ const { install, packageJson, json } = require('mrm-core');
 
 const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
+const clearConfigs = require('../utils/clearConfigs')
 
 const EXTS = ['tsx','ts','js','jsx','scss','css','js','json','md']
 
 function task() {
+    clearConfigs({
+        files: ['.huskyrc.js', 'husky.config.js'],
+    })
+    clearConfigs({
+        files: ['lint-staged.config.js'],
+        packageJsonPath: 'lint-staged'
+    })
+
     // dependencies
     install(['husky', 'lint-staged']);
 

@@ -2,12 +2,18 @@ const { json, install, packageJson } = require('mrm-core');
 
 const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
+const clearConfigs = require('../utils/clearConfigs')
 
 const baseConfig = require('./config/stylelint-base')
 
 const EXTS = ['css']
 
 function task() {
+    clearConfigs({
+        files: ['.stylelintrc.json', '.stylelintrc.yaml', '.stylelintrc.yml', '.stylelintrc.js', 'stylelint.config.js'],
+        packageJsonPath: 'stylelint',
+    })
+
     // generate config
     overwrite(json, '.stylelintrc')
         .merge(baseConfig)

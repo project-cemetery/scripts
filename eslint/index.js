@@ -4,6 +4,7 @@ const { difference } = require('lodash')
 
 const overwrite = require('../utils/overwrite')
 const hasDependency = require('../utils/hasDependency')
+const clearConfigs = require('../utils/clearConfigs')
 
 const baseConfig = require('./config/eslint-base')
 const jsConfig = require('./config/eslint-js')
@@ -16,6 +17,12 @@ const tsDependencies = ['@typescript-eslint/eslint-plugin', '@typescript-eslint/
 const reactDependencies = ['eslint-plugin-react', 'eslint-plugin-react-hooks']
 
 function task() {
+    clearConfigs({
+        files: ['.eslintrc.js', '.eslintrc.cjs', '.eslintrc.yaml', '.eslintrc.yml', '.eslintrc.json'],
+        packageJsonPath: 'eslintConfig'
+    })
+
+    // prepare
     const package = packageJson()
     
     const packageHasDependency = hasDependency(package)

@@ -1,7 +1,14 @@
 const { install, json } = require('mrm-core');
+
 const overwrite = require('../utils/overwrite')
+const clearConfigs = require('../utils/clearConfigs')
 
 function task() {
+    clearConfigs({
+        files: ['commitlint.config.js', '.commitlintrc.js', '.commitlintrc.json', '.commitlintrc.yml'],
+        packageJsonPath: 'commitlint',
+    })
+
     // dependencies
     install(['@commitlint/cli', '@commitlint/config-conventional']);
 

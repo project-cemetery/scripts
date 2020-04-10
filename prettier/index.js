@@ -1,8 +1,14 @@
 const { json, install, packageJson } = require('mrm-core');
 
 const overwrite = require('../utils/overwrite')
+const clearConfigs = require('../utils/clearConfigs')
 
 function task() {
+  clearConfigs({
+    files: ['.prettierrc.json', '.prettierrc.yml', '.prettierrc.yaml', '.prettierrc.js', 'prettier.config.js', '.prettierrc.toml'],
+    packageJsonPath: 'prettier'
+  })
+
   // generate config
   overwrite(json, '.prettierrc')
     .set({
