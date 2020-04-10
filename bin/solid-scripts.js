@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const commandLineArgs = require('command-line-args')
+const spawn = require('cross-spawn')
 
 const definitions = [
     { name: 'command', defaultOption: true }
