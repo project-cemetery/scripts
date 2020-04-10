@@ -34,10 +34,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"
       ],
       [
-        "command-line-args",
-        "npm:5.1.1"
-      ],
-      [
         "cross-spawn",
         "npm:7.0.2"
       ],
@@ -62,7 +58,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@yarnpkg/pnpify", "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"],
-            ["command-line-args", "npm:5.1.1"],
             ["cross-spawn", "npm:7.0.2"],
             ["lodash", "npm:4.17.15"],
             ["mrm-core", "npm:4.1.0"],
@@ -77,7 +72,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@solid-soda/scripts", "workspace:."],
             ["@yarnpkg/pnpify", "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"],
-            ["command-line-args", "npm:5.1.1"],
             ["cross-spawn", "npm:7.0.2"],
             ["lodash", "npm:4.17.15"],
             ["mrm-core", "npm:4.1.0"],
@@ -180,15 +174,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["array-back", [
-        ["npm:3.1.0", {
-          "packageLocation": "./.yarn/cache/array-back-npm-3.1.0-a52d25f5a3-2.zip/node_modules/array-back/",
-          "packageDependencies": [
-            ["array-back", "npm:3.1.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["babel-code-frame", [
         ["npm:6.26.0", {
           "packageLocation": "./.yarn/cache/babel-code-frame-npm-6.26.0-9f86717636-2.zip/node_modules/babel-code-frame/",
@@ -248,19 +233,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/color-name-npm-1.1.4-025792b0ea-2.zip/node_modules/color-name/",
           "packageDependencies": [
             ["color-name", "npm:1.1.4"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["command-line-args", [
-        ["npm:5.1.1", {
-          "packageLocation": "./.yarn/cache/command-line-args-npm-5.1.1-92462f89bb-2.zip/node_modules/command-line-args/",
-          "packageDependencies": [
-            ["command-line-args", "npm:5.1.1"],
-            ["array-back", "npm:3.1.0"],
-            ["find-replace", "npm:3.0.0"],
-            ["lodash.camelcase", "npm:4.3.0"],
-            ["typical", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -374,16 +346,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/extend-npm-3.0.2-e1ca07ac54-2.zip/node_modules/extend/",
           "packageDependencies": [
             ["extend", "npm:3.0.2"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["find-replace", [
-        ["npm:3.0.0", {
-          "packageLocation": "./.yarn/cache/find-replace-npm-3.0.0-686bd07d28-2.zip/node_modules/find-replace/",
-          "packageDependencies": [
-            ["find-replace", "npm:3.0.0"],
-            ["array-back", "npm:3.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -520,15 +482,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.15-566d9324f7-2.zip/node_modules/lodash/",
           "packageDependencies": [
             ["lodash", "npm:4.17.15"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["lodash.camelcase", [
-        ["npm:4.3.0", {
-          "packageLocation": "./.yarn/cache/lodash.camelcase-npm-4.3.0-bf268e3bf0-2.zip/node_modules/lodash.camelcase/",
-          "packageDependencies": [
-            ["lodash.camelcase", "npm:4.3.0"]
           ],
           "linkType": "HARD",
         }]
@@ -819,15 +772,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["supports-color", "npm:7.1.0"],
             ["has-flag", "npm:4.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["typical", [
-        ["npm:4.0.0", {
-          "packageLocation": "./.yarn/cache/typical-npm-4.0.0-2255d8d515-2.zip/node_modules/typical/",
-          "packageDependencies": [
-            ["typical", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
