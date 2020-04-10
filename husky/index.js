@@ -13,6 +13,7 @@ function task() {
         .merge({
             [`*.{${EXTS.join(',')}}`]: ['prettier --write'],
         })
+        .save()
 
     packageJson()
         .merge({
