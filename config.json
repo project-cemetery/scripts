@@ -1,5 +1,6 @@
 {
     "aliases": {
-        "main": ["prettier", "commitizen", "commitlint", "eslint", "husky"]
+        "main": ["prettier", "commitizen", "commitlint", "eslint", "husky"],
+        "styles": ["stylelint"]
     }
 }
