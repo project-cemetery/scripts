@@ -27,14 +27,14 @@ yarn s pretty
 ## Install
 
 ```sh
-yarn add -D @solid-soda/scripts
+yarn add -D @solid-soda/scripts@1
 yarn soda init
 ```
 
 Or if you prefer `npm`:
 
 ```sh
-npm install --save-dev @solid-soda/scripts
+npm install --save-dev @solid-soda/scripts@1
 npm run soda init
 ```
 
