@@ -18,7 +18,7 @@ function task() {
 
     // scripts
     packageJson()
-        .setScript('lint:styles', `stylelint ./**/*.${createExtString(EXTS)}`)
+        .setScript('lint:styles', `stylelint "./**/*.${createExtString(EXTS)}"`)
         .save()
 }
 
