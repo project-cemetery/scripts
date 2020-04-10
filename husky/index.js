@@ -1,6 +1,7 @@
 const { install, packageJson, json } = require('mrm-core');
 
 const overwrite = require('../utils/overwrite')
+const createExtString = require('../utils/createExtString')
 
 const EXTS = ['tsx','ts','js','jsx','scss','css','js','json','md']
 
@@ -11,7 +12,7 @@ function task() {
     // config
     overwrite(json, '.lintstagedrc')
         .merge({
-            [`*.{${EXTS.join(',')}}`]: ['prettier --write'],
+            [`*.{${createExtString(EXTS)}}`]: ['prettier --write'],
         })
         .save()
 
