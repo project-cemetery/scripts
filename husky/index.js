@@ -11,7 +11,7 @@ function task() {
     // config
     overwrite(json, '.lintstagedrc')
         .merge({
-            [`*.{${EXTS.json(',')}}`]: ['prettier --write'],
+            [`*.{${EXTS.join(',')}}`]: ['prettier --write'],
         })
 
     packageJson()
