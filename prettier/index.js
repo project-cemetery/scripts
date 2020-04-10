@@ -20,6 +20,7 @@ function task() {
 
   overwrite(lines, '.prettierignore')
     .add(['.yarn', 'node_modules', '.pnp.js', '.vscode'])
+    .save()
 
   // dependencies
   install('prettier');
