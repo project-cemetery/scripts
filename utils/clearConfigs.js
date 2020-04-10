@@ -6,7 +6,7 @@ const clearConfigs = ({ files, packageJsonPath } = {}) => {
     }
 
     if (packageJsonPath) {
-        packageJson.unset(packageJsonPath)
+        packageJson().unset(packageJsonPath)
     }
 }
 
