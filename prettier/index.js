@@ -1,8 +1,10 @@
 const { json, install, packageJson } = require('mrm-core');
 
+const overwrite = require('../utils/overwrite')
+
 function task() {
   // generate config
-  json('.prettierrc')
+  overwrite(json, '.prettierrc')
     .set({
       trailingComma: 'all',
       singleQuote: true,

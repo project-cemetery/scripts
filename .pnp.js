@@ -34,6 +34,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"
       ],
       [
+        "lodash",
+        "npm:4.17.15"
+      ],
+      [
         "mrm-core",
         "npm:4.1.0"
       ],
@@ -50,6 +54,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@yarnpkg/pnpify", "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"],
+            ["lodash", "npm:4.17.15"],
             ["mrm-core", "npm:4.1.0"],
             ["nanomerge", "npm:0.2.0"]
           ],
@@ -62,6 +67,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@solid-soda/scripts", "workspace:."],
             ["@yarnpkg/pnpify", "virtual:6063171168978a5a01e6465942000fcb105c49573b586f08e5abbe6d59ed65216656511fc65db04750e301d2d08e2396074d32e1e4c0b345e11656d917fb7a92#npm:2.0.0-rc.20"],
+            ["lodash", "npm:4.17.15"],
             ["mrm-core", "npm:4.1.0"],
             ["nanomerge", "npm:0.2.0"]
           ],

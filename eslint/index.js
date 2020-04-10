@@ -1,5 +1,8 @@
 const { packageJson, json, install, uninstall } = require('mrm-core');
 const nanomerge = require('nanomerge')
+const { difference } = require('lodash')
+
+const overwrite = require('../utils/overwrite')
 
 const baseConfig = require('./config/eslint-base')
 const jsConfig = require('./config/eslint-js')
@@ -30,15 +33,20 @@ function task() {
     }
 
     // generate config
-    json('.eslintrc')
+    overwrite(json, '.eslintrc')
         .merge(baseConfig)
         .merge(languageConfig)
         .merge(additionalConfig)
         .save()
 
     // dependencies
-    uninstall([...jsDependencies, ...tsDependencies, ...reactDependencies])
-    install([...baseDependencies, ...languageDependencies, ...additionalDependencies]);
+    const allDependencies = [...jsDependencies, ...tsDependencies, ...reactDependencies]
+    const installDependencies = [...baseDependencies, ...languageDependencies, ...additionalDependencies]
+
+    const uninstallDependencies = difference(allDependencies, installDependencies)
+    uninstall(uninstallDependencies)
+
+    install(installDependencies);
 
     // scripts
     package

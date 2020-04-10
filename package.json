@@ -1,17 +1,19 @@
 {
   "name": "@solid-soda/scripts",
-  "version": "2.0.0-alpha.11",
+  "version": "2.0.0-alpha.12",
   "author": "Igor Kamyshev <igor@kamyshev.me>",
   "license": "MIT",
   "main": "config.json",
   "files": [
     "config.json",
     "*/index.js",
-    "*/config/*"
+    "*/config/*",
+    "utils/*"
   ],
   "repository": "git@github.com:solid-soda/scripts.git",
   "dependencies": {
     "@yarnpkg/pnpify": "^2.0.0-rc.20",
+    "lodash": "^4.17.15",
     "mrm-core": "^4.1.0",
     "nanomerge": "^0.2.0"
   }
