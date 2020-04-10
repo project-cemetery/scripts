@@ -14,7 +14,10 @@ const options = commandLineArgs(definitions, { stopAtFirstUnknown: true });
 switch (options.command) {
     case 'init':
     case 'update':
-        update()
+        update({ withSelf: true })
+        break
+    case 'x':
+        update({ withSelf: false })
         break
     default:
         invoke()

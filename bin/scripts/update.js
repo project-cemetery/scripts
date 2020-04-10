@@ -2,8 +2,12 @@ const spawn = require('cross-spawn');
 
 const invoke = require('./invoke')
 
-const update = () => {
-    const packages = ['mrm', '@solid-soda/scripts']
+const update = ({ withSelf } = {}) => {
+    const packages = ['mrm']
+
+    if (withSelf) {
+        packages.push('@solid-soda/scripts')
+    }
 
     spawn.sync(
         'npm',
