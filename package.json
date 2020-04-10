@@ -12,15 +12,15 @@
     "bin/*",
     "utils/*"
   ],
-  "bin": {
-    "@solid-soda/scripts": "./bin/solid-scripts.js"
-  },
+  "bin": "./bin/solid-scripts.js",
   "repository": "git@github.com:solid-soda/scripts.git",
   "dependencies": {
-    "@yarnpkg/pnpify": "^2.0.0-rc.20",
     "cross-spawn": "^7.0.2",
     "lodash": "^4.17.15",
     "mrm-core": "^4.1.0",
     "nanomerge": "^0.2.0"
+  },
+  "devDependencies": {
+    "@yarnpkg/pnpify": "^2.0.0-rc.20"
   }
 }
