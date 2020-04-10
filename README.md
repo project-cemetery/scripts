@@ -12,7 +12,7 @@ Speed up the creation and maintenance of your JS applications. Zero configuratio
 ## TL;DR
 
 ```sh
-yarn add -D @solid-soda/scripts
+yarn add -D @solid-soda/scripts@1
 yarn soda init
 
 yarn s lint
