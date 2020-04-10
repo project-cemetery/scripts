@@ -3,6 +3,7 @@ const { json, install, packageJson } = require('mrm-core');
 const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
 const clearConfigs = require('../utils/clearConfigs')
+const generateExecuteScript = require('../utils/generateExecuteScripts')
 
 const baseConfig = require('./config/stylelint-base')
 
@@ -24,7 +25,7 @@ function task() {
 
     // scripts
     packageJson()
-        .setScript('lint:styles', `stylelint "./**/*.${createExtString(EXTS)}"`)
+        .setScript('lint:styles', generateExecuteScript(`stylelint "./**/*.${createExtString(EXTS)}"`))
         .save()
 }
 

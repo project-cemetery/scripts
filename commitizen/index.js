@@ -1,5 +1,7 @@
 const { install, packageJson } = require('mrm-core');
 
+const generateExecuteScript = require('../utils/generateExecuteScripts')
+
 function task() {
     // dependencies
     install(['commitizen', 'cz-conventional-changelog']);
@@ -13,7 +15,7 @@ function task() {
                 }
             }
         })
-        .setScript('commit', 'git-cz')
+        .setScript('commit', generateExecuteScript('git-cz'))
         .save()
 }
 

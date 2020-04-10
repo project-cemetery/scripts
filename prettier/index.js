@@ -1,7 +1,8 @@
-const { json, install, packageJson } = require('mrm-core');
+const { json, install, packageJson, lines } = require('mrm-core');
 
 const overwrite = require('../utils/overwrite')
 const clearConfigs = require('../utils/clearConfigs')
+const generateExecuteScript = require('../utils/generateExecuteScripts')
 
 function task() {
   clearConfigs({
@@ -17,12 +18,15 @@ function task() {
     })
     .save()
 
+  overwrite(lines, '.prettierignore')
+    .add(['.yarn', 'node_modules', '.pnp.js', '.vscode'])
+
   // dependencies
   install('prettier');
 
   // scripts
   packageJson()
-    .setScript('pretty', 'prettier --write .')
+    .setScript('pretty', generateExecuteScript('prettier --write .'))
     .save()
 }
 

@@ -3,6 +3,7 @@ const { install, packageJson, json } = require('mrm-core');
 const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
 const clearConfigs = require('../utils/clearConfigs')
+const generateExecuteScript = require('../utils/generateExecuteScripts')
 
 const EXTS = ['tsx','ts','js','jsx','scss','css','js','json','md']
 
@@ -21,7 +22,7 @@ function task() {
     // config
     overwrite(json, '.lintstagedrc')
         .merge({
-            [`*.{${createExtString(EXTS)}}`]: ['prettier --write'],
+            [`*.{${createExtString(EXTS)}}`]: [generateExecuteScript('prettier --write')],
         })
         .save()
 
@@ -29,7 +30,7 @@ function task() {
         .merge({
             husky: {
                 hooks: {
-                    "pre-commit": "lint-staged",
+                    "pre-commit": generateExecuteScript("lint-staged"),
                     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
                 }
             }
