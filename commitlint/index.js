@@ -6,7 +6,7 @@ function task() {
     install(['@commitlint/cli', '@commitlint/config-conventional']);
 
     // config
-    overwrite(json, '.commitlintrc.json')
+    overwrite(json, '.commitlintrc')
         .merge({
             extends: ['@commitlint/config-conventional']
         })
