@@ -52,6 +52,18 @@ If you have some styles in the repo, we will add extra script:
 
 Also, this library setups `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `Husky` (to run Prettier and Commitlint).
 
+## Migration guide
+
+For upgrading from version **1.x.x**, you must do some simple actions:
+1. remove `@solid-soda/scripts` dependency from the project
+2. run `@solid-soda/scripts` in your repository
+
+For example:
+```sh
+npm uninstall @solid-soda/scripts
+npx @solid-soda/scripts
+```
+
 ## Acknowledgements
 
 This project based on [mrm](https://github.com/sapegin/mrm) and setup configs for [Commitizen](http://commitizen.github.io/cz-cli/), [Commitlint](https://commitlint.js.org/#/), [ESLint](https://eslint.org), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), [Prettier](https://prettier.io), [Stylelint](https://stylelint.io).
