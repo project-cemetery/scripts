@@ -4,6 +4,7 @@ const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
 const clearConfigs = require('../utils/clearConfigs')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
+const withVersions = require('../utils/withVersions')
 
 const baseConfig = require('./config/stylelint-base')
 
@@ -25,7 +26,7 @@ function task(params) {
         .save()
 
     // dependencies
-    install(['stylelint', 'stylelint-config-recess-order', 'stylelint-config-recommended']);
+    install(...withVersions(['stylelint', 'stylelint-config-recess-order', 'stylelint-config-recommended']));
 
     // scripts
     packageJson()

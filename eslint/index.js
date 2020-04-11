@@ -10,6 +10,7 @@ const jsConfig = require('./config/eslint-js')
 const tsConfig = require('./config/eslint-ts')
 const reactConfig = require('./config/eslint-react')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
+const withVersions = require('../utils/withVersions')
 
 const baseDependencies = ['eslint', 'eslint-plugin-import-helpers', 'eslint-plugin-unicorn']
 const jsDependencies = ['babel-eslint']
@@ -54,7 +55,7 @@ function task() {
     const uninstallDependencies = difference(allDependencies, installDependencies)
     uninstall(uninstallDependencies)
 
-    install(installDependencies);
+    install(...withVersions(installDependencies));
 
     // scripts
     package

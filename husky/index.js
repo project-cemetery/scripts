@@ -4,6 +4,7 @@ const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
 const clearConfigs = require('../utils/clearConfigs')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
+const withVersions = require('../utils/withVersions')
 
 const EXTS = ['tsx','ts','js','jsx','scss','css','js','json','md']
 
@@ -17,7 +18,7 @@ function task() {
     })
 
     // dependencies
-    install(['husky', 'lint-staged']);
+    install(...withVersions(['husky', 'lint-staged']));
 
     // config
     overwrite(json, '.lintstagedrc')

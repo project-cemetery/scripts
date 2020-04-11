@@ -3,6 +3,7 @@ const { json, install, packageJson, lines } = require('mrm-core');
 const overwrite = require('../utils/overwrite')
 const clearConfigs = require('../utils/clearConfigs')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
+const withVersions = require('../utils/withVersions')
 
 function task() {
   clearConfigs({
@@ -23,7 +24,7 @@ function task() {
     .save()
 
   // dependencies
-  install('prettier');
+  install(...withVersions(['prettier']));
 
   // scripts
   packageJson()

@@ -2,6 +2,7 @@ const { install, json } = require('mrm-core');
 
 const overwrite = require('../utils/overwrite')
 const clearConfigs = require('../utils/clearConfigs')
+const withVersions = require('../utils/withVersions')
 
 function task() {
     clearConfigs({
@@ -10,7 +11,7 @@ function task() {
     })
 
     // dependencies
-    install(['@commitlint/cli', '@commitlint/config-conventional']);
+    install(...withVersions(['@commitlint/cli', '@commitlint/config-conventional']));
 
     // config
     overwrite(json, '.commitlintrc')

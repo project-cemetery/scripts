@@ -1,10 +1,11 @@
 const { install, packageJson } = require('mrm-core');
 
 const generateExecuteScript = require('../utils/generateExecuteScripts')
+const withVersions = require('../utils/withVersions')
 
 function task() {
     // dependencies
-    install(['commitizen', 'cz-conventional-changelog']);
+    install(...withVersions(['commitizen', 'cz-conventional-changelog']));
 
     // config
     packageJson()

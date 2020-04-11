@@ -2,7 +2,7 @@ const { install, packageJson } = require('mrm-core');
 
 const clearConfigs = require('../utils/clearConfigs')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
-
+const withVersions = require('../utils/withVersions')
 
 function task(params) {
     if (!params.release) {
@@ -15,7 +15,7 @@ function task(params) {
     })
 
     // dependencies
-    install('standard-version');
+    install(...withVersions(['standard-version']));
 
     // scripts
     packageJson()
