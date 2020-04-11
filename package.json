@@ -1,6 +1,6 @@
 {
   "name": "@solid-soda/scripts",
-  "version": "2.0.0-alpha.33",
+  "version": "2.0.0-alpha.34",
   "author": "Igor Kamyshev <igor@kamyshev.me>",
   "license": "MIT",
   "main": "config.json",
@@ -18,7 +18,9 @@
     "lint:code": "echo 0"
   },
   "dependencies": {
+    "chalk": "^4.0.0",
     "cross-spawn": "^7.0.2",
+    "inquirer": "^7.1.0",
     "lodash": "^4.17.15",
     "mrm-core": "^4.1.0",
     "nanomerge": "^0.2.0"
