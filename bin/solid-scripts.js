@@ -6,9 +6,15 @@ const chalk = require('chalk');
 const { version } = require('../package.json')
 
 print = (text = '', color = (v) => v) => console.log(color(`${text}`))
-const getMrmArgs = (presets = []) => [
-    ...(presets.concat('main')), '--preset', '@solid-soda/scripts',
-]
+
+const getMrmArgs = (presets = []) => {
+    const configs = presets.map(preset => `--config${preset}: true`)
+
+    return [
+        'main', '--preset', '@solid-soda/scripts', ...configs,
+    ]
+}
+
 const spawnArgs = { stdio: 'inherit' }
 
 const fullArgs = process.argv.join('')
