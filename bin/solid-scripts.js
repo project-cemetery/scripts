@@ -66,7 +66,7 @@ const invoke = async () => {
     print('Start scripts generation, it takes a few seconds...', chalk.blue)
     print()
 
-    const mrmArgs = getMrmArgs(answers)
+    const mrmArgs = getMrmArgs(answers.additional)
 
     if (globalMrm) {
         spawn.sync(
