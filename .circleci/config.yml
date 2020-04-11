@@ -7,7 +7,7 @@ workflows:
   build:
     jobs:
       - yarn-berry/local:
-          name: Running ESLint
+          name: eslint
           command: "lint:code"
           filters:
             branches:
@@ -22,4 +22,4 @@ workflows:
             tags:
               only: /.*/
           requires:
-            - "Running ESLint"
+            - "eslint"
