@@ -50,6 +50,9 @@ Some scripts will be added to your `package.json`:
 If you have some styles in the repo, we will add extra script:
 + `lint:styles` — runs Styleslint and preform static analysis of styles
 
+If you want to release repo by git-tags, we will add ont more script:
++ `release` — runs Standard Version, updates CHANGELOG.md, bump version in `package.json` and created git-tag
+
 Also, this library setups `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `Husky` (to run Prettier and Commitlint).
 
 ## Migration guide
