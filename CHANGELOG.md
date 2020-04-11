@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/solid-soda/scripts/compare/v1.20.0...v2.0.0) (2020-04-11)
+
+Brand new @solid-soda/scrips!
+
+### Highlights
+
++ support `yarn@berry` 🦁
++ your configs is your configs, we don't hide them 🌚
++ nice CLI 🧉
++ totaly rewritten 🤓
++ no conflicts with other tools 👌
+
 ## [1.20.0](https://github.com/solid-soda/scripts/compare/v1.19.1...v1.20.0) (2020-04-09)
 
 
