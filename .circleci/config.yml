@@ -22,4 +22,4 @@ workflows:
             tags:
               only: /.*/
           requires:
-            - yarn-berry/local
+            - "Running ESLint"
