@@ -1,6 +1,5 @@
 const { packageJson, json, install, uninstall } = require('mrm-core');
-const nanomerge = require('nanomerge')
-const { difference } = require('lodash')
+const { difference, merge } = require('lodash')
 
 const overwrite = require('../utils/overwrite')
 const hasDependency = require('../utils/hasDependency')
@@ -37,7 +36,7 @@ function task() {
 
     const hasReact = packageHasDependency('react')
     if (hasReact) {
-        additionalConfig = nanomerge(additionalConfig, reactConfig)
+        additionalConfig = merge(additionalConfig, reactConfig)
         additionalDependencies.push(...reactDependencies)
     }
 

@@ -14,7 +14,6 @@ __metadata:
     inquirer: ^7.1.0
     lodash: ^4.17.15
     mrm-core: ^4.1.0
-    nanomerge: ^0.2.0
   bin:
     scripts: ./bin/solid-scripts.js
   languageName: unknown
@@ -559,22 +558,6 @@ __metadata:
   version: 0.0.8
   resolution: "mute-stream@npm:0.0.8"
   checksum: 2/315c40f463ec31deee54c5b8779207feb6b63dd4c58fe0f84ad46abdd6dac1ada578d53efde4a47b0ae4d29d453d35bb39ecdd98ee9ebf538929039a3a9945df
-  languageName: node
-  linkType: hard
-
-"nanoclone@npm:^0.1.5":
-  version: 0.1.5
-  resolution: "nanoclone@npm:0.1.5"
-  checksum: 2/3b423d05431895811c56f14ce1d98246a106587807080243b482d679706367e7dbc382d4f48589540cf2d45adeb18e4e25df73c4f54812175530600469652aee
-  languageName: node
-  linkType: hard
-
-"nanomerge@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "nanomerge@npm:0.2.0"
-  dependencies:
-    nanoclone: ^0.1.5
-  checksum: 2/152dada785bd45ae0356d66f851227ee6c072ea0dc707d97899d4821e8a52f72ce3b1b93e8e7c9905346384341e0365884235d247dea3e6df0d7fa7b9e9bcf6a
   languageName: node
   linkType: hard
 

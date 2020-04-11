@@ -52,10 +52,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "mrm-core",
         "npm:4.1.0"
-      ],
-      [
-        "nanomerge",
-        "npm:0.2.0"
       ]
     ],
     "locationBlacklistData": [
@@ -70,8 +66,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-spawn", "npm:7.0.2"],
             ["inquirer", "npm:7.1.0"],
             ["lodash", "npm:4.17.15"],
-            ["mrm-core", "npm:4.1.0"],
-            ["nanomerge", "npm:0.2.0"]
+            ["mrm-core", "npm:4.1.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -86,8 +81,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-spawn", "npm:7.0.2"],
             ["inquirer", "npm:7.1.0"],
             ["lodash", "npm:4.17.15"],
-            ["mrm-core", "npm:4.1.0"],
-            ["nanomerge", "npm:0.2.0"]
+            ["mrm-core", "npm:4.1.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -694,25 +688,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mute-stream-npm-0.0.8-489a7d6c2b-2.zip/node_modules/mute-stream/",
           "packageDependencies": [
             ["mute-stream", "npm:0.0.8"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["nanoclone", [
-        ["npm:0.1.5", {
-          "packageLocation": "./.yarn/cache/nanoclone-npm-0.1.5-d36c5657f4-2.zip/node_modules/nanoclone/",
-          "packageDependencies": [
-            ["nanoclone", "npm:0.1.5"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["nanomerge", [
-        ["npm:0.2.0", {
-          "packageLocation": "./.yarn/cache/nanomerge-npm-0.2.0-47917e8127-2.zip/node_modules/nanomerge/",
-          "packageDependencies": [
-            ["nanomerge", "npm:0.2.0"],
-            ["nanoclone", "npm:0.1.5"]
           ],
           "linkType": "HARD",
         }]
