@@ -7,6 +7,7 @@ workflows:
   build:
     jobs:
       - yarn-berry/local:
+          name: Running ESLint
           command: "lint:code"
           filters:
             branches:
