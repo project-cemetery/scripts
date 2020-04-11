@@ -5,7 +5,7 @@
 
 Speed up the creation and maintenance of your JS applications. Zero configuration way to use modern code-quality tools.
 
-+ **Zero-config.** Any tool already configured for you.
++ **Zero-config.** Any tool is already configured for you.
 + **Universal.** Supports TS, React, and can be used with any tech.
 + **Uniform.** Config can be shared (all projects have the same configs).
 
@@ -23,12 +23,12 @@ npx @solid-soda/scripts
 
 ## Motivation
 
-1. Before start to code we must set-up ESLint, Stylelint, Prettier, Commitizen, etc. We can to automate all this. Machines have to suffer.
-2. New lint rule adding is a hell. We provide the one source of true for any project. Just run `@solid-soda/scripts` more time in your project directory.
+1. Before start to code we must set-up ESLint, Stylelint, Prettier, Commitizen, etc. We can to automate all of this. Machines have to suffer.
+2. New lint rule adding is a hell. We provide the one source of true for any project. Just run `@solid-soda/scripts` in your project directory.
 
 ## Usage
 
-Just run scripts in directory with your project.
+Just run scripts in a directory with your project.
 
 If you use `yarn@berry`, just run:
 ```sh
@@ -53,11 +53,11 @@ If you have some styles in the repo, we will add extra script:
 If you want to release repo by git-tags, we will add ont more script:
 + `release` — runs Standard Version, updates CHANGELOG.md, bump version in `package.json` and created git-tag
 
-Also, this library setups `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `Husky` (to run Prettier and Commitlint).
+Also, this library sets up `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `Husky` (to run Prettier and Commitlint).
 
 ## Migration guide
 
-For upgrading from version **1.x.x**, you must do some simple actions:
+Upgrading from version **1.x.x**, you must do some simple actions:
 1. remove `@solid-soda/scripts` dependency from the project
 2. run `@solid-soda/scripts` in your repository
 
