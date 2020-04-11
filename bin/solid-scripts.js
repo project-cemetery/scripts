@@ -8,10 +8,12 @@ const { version } = require('../package.json')
 print = (text = '', color = (v) => v) => console.log(color(`${text}`))
 
 const getMrmArgs = (presets = []) => {
-    const configs = presets.map(preset => `--config${preset}: true`)
+    const configs = presets.map(preset => `--config:${preset}`)
+
+    const path = __dirname.replace('/bin', '')
 
     return [
-        'main', '--preset', '@solid-soda/scripts', ...configs,
+        'all', `--dir=${path}`, ...configs,
     ]
 }
 
@@ -19,10 +21,10 @@ const spawnArgs = { stdio: 'inherit' }
 
 const fullArgs = process.argv.join('')
 const isNpx = fullArgs.includes('npm') && fullArgs.includes('npx')
-const isDlx = fullArgs.includes('yarn') && fullArgs.includes('berry')
+const isDlx = fullArgs.includes('yarn') && (fullArgs.includes('berry') || fullArgs.includes('unplugged'))
 
 const invoke = async () => {
-    print(`Hello, it is @solid-soda/scripts v.${version}`, chalk.blue.bold)
+    print(`Hello, it is @solid-soda/scripts v${version}`, chalk.blue.bold)
     print('We ask you a few questions for setup scripts in your project', chalk.blue)
     print()
 
@@ -102,6 +104,7 @@ const invoke = async () => {
         )
     }
 
+    print()
     print('All done, enjoy! 🥑', chalk.blue)
     print()
 }

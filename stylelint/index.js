@@ -9,8 +9,11 @@ const baseConfig = require('./config/stylelint-base')
 
 const EXTS = ['css']
 
-function task(config) {
-    console.log(config)
+function task(params) {
+    if (!params.styles) {
+        return
+    }
+
     clearConfigs({
         files: ['.stylelintrc.json', '.stylelintrc.yaml', '.stylelintrc.yml', '.stylelintrc.js', 'stylelint.config.js'],
         packageJsonPath: 'stylelint',
