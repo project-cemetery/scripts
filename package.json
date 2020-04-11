@@ -15,6 +15,7 @@
   "bin": "./bin/solid-scripts.js",
   "repository": "git@github.com:solid-soda/scripts.git",
   "scripts": {
+    "prepare": "echo 'Already prepared'",
     "lint:code": "echo 0"
   },
   "preferUnplugged": true,
