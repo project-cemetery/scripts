@@ -11,11 +11,15 @@ const tsConfig = require('./config/eslint-ts')
 const reactConfig = require('./config/eslint-react')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
 const withVersions = require('../utils/withVersions')
+const createExtString = require('../utils/createExtString')
 
 const baseDependencies = ['eslint', 'eslint-plugin-import-helpers', 'eslint-plugin-unicorn']
 const jsDependencies = ['babel-eslint']
 const tsDependencies = ['@typescript-eslint/eslint-plugin', '@typescript-eslint/parser']
 const reactDependencies = ['eslint-plugin-react', 'eslint-plugin-react-hooks']
+
+const jsExtensions = ['js', 'jsx']
+const tsExtensions = ['ts', 'tsx']
 
 function task() {
     clearConfigs({
@@ -31,6 +35,7 @@ function task() {
     const hasTypeScript = packageHasDependency('typescript')
     const languageConfig =  hasTypeScript ? tsConfig : jsConfig
     const languageDependencies = hasTypeScript ? tsDependencies : jsDependencies
+    const languageExtensions = hasTypeScript ? tsExtensions : jsExtensions
 
     let additionalConfig = {}
     const additionalDependencies = []
@@ -59,7 +64,7 @@ function task() {
 
     // scripts
     package
-        .setScript('lint:code', generateExecuteScript('eslint .'))
+        .setScript('lint:code', generateExecuteScript(`eslint "./**/*.${createExtString(languageExtensions)}"`))
         .save()
 }
 
