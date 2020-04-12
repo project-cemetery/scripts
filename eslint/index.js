@@ -14,7 +14,7 @@ const jsConfig = require('./config/eslint-js')
 const tsConfig = require('./config/eslint-ts')
 const reactConfig = require('./config/eslint-react')
 
-const baseDependencies = ['eslint', 'eslint-plugin-import', 'eslint-config-airbnb-base', 'eslint-plugin-import-helpers', 'eslint-plugin-unicorn', 'eslint-config-prettier']
+const baseDependencies = ['eslint', 'eslint-plugin-import', 'eslint-config-airbnb-base', 'eslint-plugin-import-helpers', 'eslint-plugin-unicorn', 'eslint-config-prettier', 'eslint-import-resolver-node']
 const jsDependencies = ['babel-eslint']
 const tsDependencies = ['@typescript-eslint/eslint-plugin', '@typescript-eslint/parser']
 const reactDependencies = ['eslint-plugin-react', 'eslint-plugin-react-hooks']
