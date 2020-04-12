@@ -3,7 +3,7 @@ const { install, packageJson, json } = require('mrm-core');
 const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
 const clearConfigs = require('../utils/clearConfigs')
-const generateExecuteScript = require('../utils/generateExecuteScripts')
+const generateExecuteScript = require('../utils/generateExecuteScript')
 const withVersions = require('../utils/withVersions')
 
 const EXTS = ['tsx', 'ts', 'js', 'jsx', 'scss', 'css', 'js', 'json', 'md']
@@ -13,7 +13,7 @@ function task() {
         files: ['.huskyrc.js', 'husky.config.js'],
     })
     clearConfigs({
-        files: ['lint-staged.config.js'],
+        files: ['lint-staged.config.js', '.lintstagedrc'],
         packageJsonPath: 'lint-staged'
     })
 
@@ -28,10 +28,13 @@ function task() {
         .save()
 
     packageJson()
+        .set('lint-staged', {
+            [`*.${createExtString(EXTS)}`]: [generateExecuteScript('prettier --write')]
+        })
         .set('husky.hooks',
             {
                 "pre-commit": generateExecuteScript("lint-staged"),
-                "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+                "commit-msg": generateExecuteScript("commitlint -E HUSKY_GIT_PARAMS")
             }
 
         )

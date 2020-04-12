@@ -3,7 +3,7 @@ const { json, install, packageJson, lines } = require('mrm-core');
 const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
 const clearConfigs = require('../utils/clearConfigs')
-const generateExecuteScript = require('../utils/generateExecuteScripts')
+const generateExecuteScript = require('../utils/generateExecuteScript')
 const withVersions = require('../utils/withVersions')
 const getDefaultIgnore = require('../utils/getDefaultIgnore')
 

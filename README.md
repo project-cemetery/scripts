@@ -48,7 +48,7 @@ Some scripts will be added to your `package.json`:
 + `lint:code` — runs ESLint and preform static analysis of code
 
 If you have some styles in the repo, we will add extra script:
-+ `lint:styles` — runs Styleslint and preform static analysis of styles
++ `lint:styles` — runs Stylelint and preform static analysis of styles
 
 If you want to release repo by git-tags, we will add ont more script:
 + `release` — runs Standard Version, updates CHANGELOG.md, bump version in `package.json` and created git-tag

@@ -1,21 +1,17 @@
 const { install, packageJson } = require('mrm-core');
 
-const generateExecuteScript = require('../utils/generateExecuteScripts')
+const generateExecuteScript = require('../utils/generateExecuteScript')
 const withVersions = require('../utils/withVersions')
 
 function task() {
-    // dependencies
     install(...withVersions(['commitizen', 'cz-conventional-changelog']));
 
-    // config
     packageJson()
-        .merge({
-            config: {
-                commitizen: {
-                    path: "cz-conventional-changelog"
-                }
+        .set('config.commitizen',
+            {
+                path: "cz-conventional-changelog"
             }
-        })
+        )
         .setScript('commit', generateExecuteScript('git-cz'))
         .save()
 }
