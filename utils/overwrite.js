@@ -1,11 +1,11 @@
 const overwrite = (creator, name) => {
-    const oldFile = creator(name)
+  const oldFile = creator(name);
 
-    oldFile.delete()
+  oldFile.delete();
 
-    const newFile = creator(name)
+  const newFile = creator(name);
 
-    return newFile
-}
+  return newFile;
+};
 
-module.exports = overwrite
+module.exports = overwrite;

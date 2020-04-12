@@ -1,12 +1,12 @@
 module.exports = {
-    extends: ['plugin:react/recommended'],
-    plugins: ['react-hooks'],
-    settings: {
-        react: {
-            version: 'detect',
-        },
+  extends: ['plugin:react/recommended'],
+  plugins: ['react-hooks'],
+  settings: {
+    react: {
+      version: 'detect',
     },
-    rules: {
-        'react/prop-types': 0,
-    },
+  },
+  rules: {
+    'react/prop-types': 0,
+  },
 };

@@ -1,20 +1,26 @@
-const { json, install, packageJson, lines } = require('mrm-core');
+const { install, packageJson, lines } = require('mrm-core');
 
-const overwrite = require('../utils/overwrite')
-const clear = require('../utils/clear')
-const generateExecuteScript = require('../utils/generateExecuteScript')
-const withVersions = require('../utils/withVersions')
-const getDefaultIgnore = require('../utils/getDefaultIgnore')
+const overwrite = require('../utils/overwrite');
+const clear = require('../utils/clear');
+const generateExecuteScript = require('../utils/generateExecuteScript');
+const withVersions = require('../utils/withVersions');
+const getDefaultIgnore = require('../utils/getDefaultIgnore');
 
 function task() {
   clear({
-    files: ['.prettierrc', '.prettierrc.json', '.prettierrc.yml', '.prettierrc.yaml', '.prettierrc.js', 'prettier.config.js', '.prettierrc.toml'],
-    packageJsonPath: 'prettier'
-  })
+    files: [
+      '.prettierrc',
+      '.prettierrc.json',
+      '.prettierrc.yml',
+      '.prettierrc.yaml',
+      '.prettierrc.js',
+      'prettier.config.js',
+      '.prettierrc.toml',
+    ],
+    packageJsonPath: 'prettier',
+  });
 
-  overwrite(lines, '.prettierignore')
-    .add(getDefaultIgnore())
-    .save()
+  overwrite(lines, '.prettierignore').add(getDefaultIgnore()).save();
 
   install(...withVersions(['prettier']));
 
@@ -24,9 +30,9 @@ function task() {
       trailingComma: 'all',
       singleQuote: true,
     })
-    .save()
+    .save();
 }
 
 task.description = 'Sync Prettier config';
 
-module.exports = task
+module.exports = task;

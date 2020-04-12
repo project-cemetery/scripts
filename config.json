@@ -1,5 +1,14 @@
 {
-    "aliases": {
-        "all": ["migrate", "prettier", "commitlint", "commitizen", "husky", "eslint", "stylelint", "standard-version"]
-    }
+  "aliases": {
+    "all": [
+      "migrate",
+      "prettier",
+      "commitlint",
+      "commitizen",
+      "husky",
+      "eslint",
+      "stylelint",
+      "standard-version"
+    ]
+  }
 }

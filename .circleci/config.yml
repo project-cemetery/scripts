@@ -1,14 +1,14 @@
 version: 2.1
 orbs:
   yarn-berry: checkmoney/yarn-berry@1.0.0
-  npm: checkmoney/npm@1.0.0
+  npm: checkmoney/npm@1.1.0
 workflows:
   version: 2
   build:
     jobs:
       - yarn-berry/local:
           name: eslint
-          command: "lint:code"
+          command: 'lint:code'
           filters:
             branches:
               only: /.*/
@@ -22,4 +22,4 @@ workflows:
             tags:
               only: /.*/
           requires:
-            - "eslint"
+            - 'eslint'

@@ -8,359 +8,240 @@ Brand new @solid-soda/scrips!
 
 ### Highlights
 
-+ support `yarn@berry` 🦁
-+ your configs is your configs, we don't hide them 🌚
-+ nice CLI 🧉
-+ totaly rewritten 🤓
-+ no conflicts with other tools 👌
+- support `yarn@berry` 🦁
+- your configs is your configs, we don't hide them 🌚
+- nice CLI 🧉
+- totaly rewritten 🤓
+- no conflicts with other tools 👌
 
 ## [1.20.0](https://github.com/solid-soda/scripts/compare/v1.19.1...v1.20.0) (2020-04-09)
 
-
 ### Features
 
-* **commmon:** bump all deps ([9bd706b](https://github.com/solid-soda/scripts/commit/9bd706b391721e464694ee0916580d08b665e49b))
+- **commmon:** bump all deps ([9bd706b](https://github.com/solid-soda/scripts/commit/9bd706b391721e464694ee0916580d08b665e49b))
 
 ### [1.19.1](https://github.com/solid-soda/scripts/compare/v1.19.0...v1.19.1) (2020-02-20)
 
-
 ### Bug Fixes
 
-* **fixpack:** add more specific rule for lint-staged ([c43a893](https://github.com/solid-soda/scripts/commit/c43a893))
-
-
+- **fixpack:** add more specific rule for lint-staged ([c43a893](https://github.com/solid-soda/scripts/commit/c43a893))
 
 ## [1.19.0](https://github.com/solid-soda/scripts/compare/v1.18.0...v1.19.0) (2020-02-20)
 
-
 ### Features
 
-* **fixpack:** add fixing package.json ([42138ed](https://github.com/solid-soda/scripts/commit/42138ed))
-
-
+- **fixpack:** add fixing package.json ([42138ed](https://github.com/solid-soda/scripts/commit/42138ed))
 
 ## [1.18.0](https://github.com/solid-soda/scripts/compare/v1.17.0...v1.18.0) (2020-02-18)
 
-
 ### Features
 
-* **lint:** disable double cast for boolean ([50d52ce](https://github.com/solid-soda/scripts/commit/50d52ce))
-
-
+- **lint:** disable double cast for boolean ([50d52ce](https://github.com/solid-soda/scripts/commit/50d52ce))
 
 ## [1.17.0](https://github.com/solid-soda/scripts/compare/v1.16.1...v1.17.0) (2020-02-13)
 
-
 ### Features
 
-* **lint:** remove deprecated tslint bridge ([15cda49](https://github.com/solid-soda/scripts/commit/15cda49))
-
-
+- **lint:** remove deprecated tslint bridge ([15cda49](https://github.com/solid-soda/scripts/commit/15cda49))
 
 ### [1.16.1](https://github.com/solid-soda/scripts/compare/v1.16.0...v1.16.1) (2020-02-12)
 
-
-
 ## [1.16.0](https://github.com/solid-soda/scripts/compare/v1.15.2...v1.16.0) (2020-02-12)
-
 
 ### Features
 
-* **lint:** add curly rule ([7f561b6](https://github.com/solid-soda/scripts/commit/7f561b6))
-
-
+- **lint:** add curly rule ([7f561b6](https://github.com/solid-soda/scripts/commit/7f561b6))
 
 ### [1.15.2](https://github.com/solid-soda/scripts/compare/v1.15.1...v1.15.2) (2020-01-03)
 
-
 ### Bug Fixes
 
-* **lint:** fix bug with unused vars in for-of loops ([ea26ffb](https://github.com/solid-soda/scripts/commit/ea26ffb))
-
-
+- **lint:** fix bug with unused vars in for-of loops ([ea26ffb](https://github.com/solid-soda/scripts/commit/ea26ffb))
 
 ### [1.15.1](https://github.com/solid-soda/scripts/compare/v1.15.0...v1.15.1) (2019-12-25)
 
-
 ### Bug Fixes
 
-* use peerDependencies for defining plugins ([d01e51d](https://github.com/solid-soda/scripts/commit/d01e51d))
-
-
+- use peerDependencies for defining plugins ([d01e51d](https://github.com/solid-soda/scripts/commit/d01e51d))
 
 ## [1.15.0](https://github.com/solid-soda/scripts/compare/v1.14.9...v1.15.0) (2019-12-11)
 
-
 ### Features
 
-* bump eslint stuff ([6e9d5cf](https://github.com/solid-soda/scripts/commit/6e9d5cf))
-
-
+- bump eslint stuff ([6e9d5cf](https://github.com/solid-soda/scripts/commit/6e9d5cf))
 
 ### [1.14.9](https://github.com/solid-soda/scripts/compare/v1.14.8...v1.14.9) (2019-11-13)
 
-
 ### Bug Fixes
 
-* **lint:** add more grouping options ([a3c57ba](https://github.com/solid-soda/scripts/commit/a3c57ba))
-
-
+- **lint:** add more grouping options ([a3c57ba](https://github.com/solid-soda/scripts/commit/a3c57ba))
 
 ### [1.14.8](https://github.com/solid-soda/scripts/compare/v1.14.7...v1.14.8) (2019-11-13)
 
-
 ### Bug Fixes
 
-* **lint:** fix grouping of internal modules ([87c62df](https://github.com/solid-soda/scripts/commit/87c62df))
-
-
+- **lint:** fix grouping of internal modules ([87c62df](https://github.com/solid-soda/scripts/commit/87c62df))
 
 ### [1.14.7](https://github.com/solid-soda/scripts/compare/v1.14.6...v1.14.7) (2019-09-14)
 
-
 ### Bug Fixes
 
-* **lint:** disable incorrect rule for sorting imports ([0b64171](https://github.com/solid-soda/scripts/commit/0b64171))
-
-
+- **lint:** disable incorrect rule for sorting imports ([0b64171](https://github.com/solid-soda/scripts/commit/0b64171))
 
 ### [1.14.6](https://github.com/solid-soda/scripts/compare/v1.14.5...v1.14.6) (2019-09-10)
 
-
-
 ### [1.14.5](https://github.com/solid-soda/scripts/compare/v1.14.4...v1.14.5) (2019-08-28)
-
 
 ### Bug Fixes
 
-* **lint:** fix decorators parsing and add ignore to ts linting ([b380ec2](https://github.com/solid-soda/scripts/commit/b380ec2))
-
-
+- **lint:** fix decorators parsing and add ignore to ts linting ([b380ec2](https://github.com/solid-soda/scripts/commit/b380ec2))
 
 ### [1.14.4](https://github.com/solid-soda/scripts/compare/v1.14.3...v1.14.4) (2019-08-28)
 
-
 ### Bug Fixes
 
-* add miss path for import sorting ([09f06d6](https://github.com/solid-soda/scripts/commit/09f06d6))
-
-
+- add miss path for import sorting ([09f06d6](https://github.com/solid-soda/scripts/commit/09f06d6))
 
 ### [1.14.3](https://github.com/solid-soda/scripts/compare/v1.14.2...v1.14.3) (2019-08-27)
 
-
 ### Bug Fixes
 
-* add ignore files starts from double undescore ([cdd769e](https://github.com/solid-soda/scripts/commit/cdd769e))
-
-
+- add ignore files starts from double undescore ([cdd769e](https://github.com/solid-soda/scripts/commit/cdd769e))
 
 ### [1.14.2](https://github.com/solid-soda/scripts/compare/v1.14.1...v1.14.2) (2019-08-15)
 
-
 ### Bug Fixes
 
-* **lint:** add new path strat rule ([62b8bed](https://github.com/solid-soda/scripts/commit/62b8bed))
-
-
+- **lint:** add new path strat rule ([62b8bed](https://github.com/solid-soda/scripts/commit/62b8bed))
 
 ### [1.14.1](https://github.com/solid-soda/scripts/compare/v1.14.0...v1.14.1) (2019-08-15)
 
-
 ### Bug Fixes
 
-* **lint:** remove confusing rules ([93069a6](https://github.com/solid-soda/scripts/commit/93069a6))
-
-
+- **lint:** remove confusing rules ([93069a6](https://github.com/solid-soda/scripts/commit/93069a6))
 
 ## [1.14.0](https://github.com/solid-soda/scripts/compare/v1.13.4...v1.14.0) (2019-08-15)
 
-
 ### Features
 
-* **line:** ass new eslint rules ([24c7376](https://github.com/solid-soda/scripts/commit/24c7376)), closes [#10](https://github.com/solid-soda/scripts/issues/10)
-* **lint:** add import sotring and grouping ([c5e1ad4](https://github.com/solid-soda/scripts/commit/c5e1ad4)), closes [#7](https://github.com/solid-soda/scripts/issues/7)
-
-
+- **line:** ass new eslint rules ([24c7376](https://github.com/solid-soda/scripts/commit/24c7376)), closes [#10](https://github.com/solid-soda/scripts/issues/10)
+- **lint:** add import sotring and grouping ([c5e1ad4](https://github.com/solid-soda/scripts/commit/c5e1ad4)), closes [#7](https://github.com/solid-soda/scripts/issues/7)
 
 ### [1.13.4](https://github.com/solid-soda/scripts/compare/v1.13.3...v1.13.4) (2019-08-14)
 
-
 ### Bug Fixes
 
-* **lint:** fix using default eslint file ([c6de31a](https://github.com/solid-soda/scripts/commit/c6de31a))
-
-
+- **lint:** fix using default eslint file ([c6de31a](https://github.com/solid-soda/scripts/commit/c6de31a))
 
 ### [1.13.3](https://github.com/solid-soda/scripts/compare/v1.13.2...v1.13.3) (2019-08-14)
 
-
 ### Bug Fixes
 
-* ensure gitignore exist ([6b4977b](https://github.com/solid-soda/scripts/commit/6b4977b)), closes [#9](https://github.com/solid-soda/scripts/issues/9)
-
-
+- ensure gitignore exist ([6b4977b](https://github.com/solid-soda/scripts/commit/6b4977b)), closes [#9](https://github.com/solid-soda/scripts/issues/9)
 
 ### [1.13.2](https://github.com/solid-soda/scripts/compare/v1.13.1...v1.13.2) (2019-08-14)
 
-
 ### Bug Fixes
 
-* fix bug with nested dirs in gitignore ([9ecbd69](https://github.com/solid-soda/scripts/commit/9ecbd69)), closes [#26](https://github.com/solid-soda/scripts/issues/26)
-
-
+- fix bug with nested dirs in gitignore ([9ecbd69](https://github.com/solid-soda/scripts/commit/9ecbd69)), closes [#26](https://github.com/solid-soda/scripts/issues/26)
 
 ### [1.13.1](https://github.com/solid-soda/scripts/compare/v1.13.0...v1.13.1) (2019-08-14)
 
-
 ### Bug Fixes
 
-* **config:** fix eslint config for ide ([4e91569](https://github.com/solid-soda/scripts/commit/4e91569))
-
-
+- **config:** fix eslint config for ide ([4e91569](https://github.com/solid-soda/scripts/commit/4e91569))
 
 ## [1.13.0](https://github.com/solid-soda/scripts/compare/v1.12.8...v1.13.0) (2019-08-14)
 
-
 ### Features
 
-* **pretty:** add semicolons by prettier ([0a31d4f](https://github.com/solid-soda/scripts/commit/0a31d4f))
-
-
+- **pretty:** add semicolons by prettier ([0a31d4f](https://github.com/solid-soda/scripts/commit/0a31d4f))
 
 ### [1.12.8](https://github.com/solid-soda/scripts/compare/v1.12.7...v1.12.8) (2019-08-09)
 
-
-
 ### [1.12.7](https://github.com/solid-soda/scripts/compare/v1.12.6...v1.12.7) (2019-08-06)
-
-
 
 ### [1.12.6](https://github.com/solid-soda/scripts/compare/v1.12.5...v1.12.6) (2019-07-19)
 
-
 ### Bug Fixes
 
-* fix bug with one extension in path ([3e26a50](https://github.com/solid-soda/scripts/commit/3e26a50))
-
-
+- fix bug with one extension in path ([3e26a50](https://github.com/solid-soda/scripts/commit/3e26a50))
 
 ### [1.12.5](https://github.com/solid-soda/scripts/compare/v1.12.4...v1.12.5) (2019-07-01)
 
-
 ### Bug Fixes
 
-* **lint-staged:** fix bug with lint-staged and pre-push ([2b5b2fb](https://github.com/solid-soda/scripts/commit/2b5b2fb))
-
-
+- **lint-staged:** fix bug with lint-staged and pre-push ([2b5b2fb](https://github.com/solid-soda/scripts/commit/2b5b2fb))
 
 ### [1.12.4](https://github.com/solid-soda/scripts/compare/v1.12.3...v1.12.4) (2019-07-01)
 
-
 ### Bug Fixes
 
-* fix bug with linting ([64684f0](https://github.com/solid-soda/scripts/commit/64684f0))
-
-
+- fix bug with linting ([64684f0](https://github.com/solid-soda/scripts/commit/64684f0))
 
 ### [1.12.3](https://github.com/solid-soda/scripts/compare/v1.12.2...v1.12.3) (2019-06-28)
 
-
-
 ### [1.12.2](https://github.com/solid-soda/scripts/compare/v1.12.1...v1.12.2) (2019-06-28)
-
-
 
 ### [1.12.1](https://github.com/solid-soda/scripts/compare/v1.12.0...v1.12.1) (2019-06-28)
 
-
-
 ## [1.12.0](https://github.com/solid-soda/scripts/compare/v1.11.15...v1.12.0) (2019-06-28)
-
 
 ### Features
 
-* **lint-staged:** make pre-commit hook faster and add pre-push hook ([485d159](https://github.com/solid-soda/scripts/commit/485d159))
-
-
+- **lint-staged:** make pre-commit hook faster and add pre-push hook ([485d159](https://github.com/solid-soda/scripts/commit/485d159))
 
 ### [1.11.15](https://github.com/solid-soda/scripts/compare/v1.11.14...v1.11.15) (2019-06-26)
 
-
-
 ### [1.11.14](https://github.com/solid-soda/scripts/compare/v1.11.13...v1.11.14) (2019-06-26)
-
 
 ### Bug Fixes
 
-* **config:** change exacutive-depts rule from err to warn ([3f56d6d](https://github.com/solid-soda/scripts/commit/3f56d6d))
-
-
+- **config:** change exacutive-depts rule from err to warn ([3f56d6d](https://github.com/solid-soda/scripts/commit/3f56d6d))
 
 ### [1.11.13](https://github.com/solid-soda/scripts/compare/v1.11.12...v1.11.13) (2019-06-07)
 
-
 ### Bug Fixes
 
-* **lint-staged:** fix mess flags ([69c3e6e](https://github.com/solid-soda/scripts/commit/69c3e6e))
-
-
+- **lint-staged:** fix mess flags ([69c3e6e](https://github.com/solid-soda/scripts/commit/69c3e6e))
 
 ### [1.11.12](https://github.com/solid-soda/scripts/compare/v1.11.11...v1.11.12) (2019-06-07)
 
-
 ### Bug Fixes
 
-* **lint-staged:** fix lint on lint-staged ([eb4a938](https://github.com/solid-soda/scripts/commit/eb4a938))
-
-
+- **lint-staged:** fix lint on lint-staged ([eb4a938](https://github.com/solid-soda/scripts/commit/eb4a938))
 
 ### [1.11.11](https://github.com/solid-soda/scripts/compare/v1.11.10...v1.11.11) (2019-06-05)
 
-
 ### Bug Fixes
 
-* **lint-staged:** fix scripts config ([ae0b36a](https://github.com/solid-soda/scripts/commit/ae0b36a))
-
-
+- **lint-staged:** fix scripts config ([ae0b36a](https://github.com/solid-soda/scripts/commit/ae0b36a))
 
 ### [1.11.10](https://github.com/solid-soda/scripts/compare/v1.11.9...v1.11.10) (2019-06-05)
 
-
 ### Bug Fixes
 
-* **utils:** fix typing checking ([8567616](https://github.com/solid-soda/scripts/commit/8567616))
-* replace async fileRead by sync ([2bff26a](https://github.com/solid-soda/scripts/commit/2bff26a))
-
-
+- **utils:** fix typing checking ([8567616](https://github.com/solid-soda/scripts/commit/8567616))
+- replace async fileRead by sync ([2bff26a](https://github.com/solid-soda/scripts/commit/2bff26a))
 
 ### [1.11.9](https://github.com/solid-soda/scripts/compare/v1.11.8...v1.11.9) (2019-06-05)
 
-
 ### Bug Fixes
 
-* **prettier:** fix typo ([e805638](https://github.com/solid-soda/scripts/commit/e805638))
-
-
+- **prettier:** fix typo ([e805638](https://github.com/solid-soda/scripts/commit/e805638))
 
 ### [1.11.8](https://github.com/solid-soda/scripts/compare/v1.11.7...v1.11.8) (2019-06-05)
 
-
 ### Bug Fixes
 
-* **lint-staged:** fix lint-staged config generation ([8e4dda3](https://github.com/solid-soda/scripts/commit/8e4dda3))
-
-
+- **lint-staged:** fix lint-staged config generation ([8e4dda3](https://github.com/solid-soda/scripts/commit/8e4dda3))
 
 ### [1.11.7](https://github.com/solid-soda/scripts/compare/v1.11.6...v1.11.7) (2019-06-05)
 
-
 ### Bug Fixes
 
-* fix bug with broken lint-staged ([5ce5588](https://github.com/solid-soda/scripts/commit/5ce5588))
-* remove old lint-staged config ([24e6fd9](https://github.com/solid-soda/scripts/commit/24e6fd9))
-
-
+- fix bug with broken lint-staged ([5ce5588](https://github.com/solid-soda/scripts/commit/5ce5588))
+- remove old lint-staged config ([24e6fd9](https://github.com/solid-soda/scripts/commit/24e6fd9))
 
 ### [1.11.6](https://github.com/solid-soda/scripts/compare/v1.11.5...v1.11.6) (2019-06-05)
 

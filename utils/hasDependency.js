@@ -1,3 +1,7 @@
-const hasDependency = (package) => (dependency) => Boolean(package.get(`dependencies.${dependency}`) || package.get(`devDependencies.${dependency}`))
+const hasDependency = (packageFile) => (dependency) =>
+  Boolean(
+    packageFile.get(`dependencies.${dependency}`) ||
+      packageFile.get(`devDependencies.${dependency}`),
+  );
 
-module.exports = hasDependency
+module.exports = hasDependency;
