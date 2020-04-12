@@ -1,45 +1,113 @@
 #!/usr/bin/env node
-const spawn = require('cross-spawn');
-const path = require('path');
 
-const script = process.argv[2];
-const args = process.argv.slice(3);
+const spawn = require('cross-spawn')
+const inquirer = require('inquirer');
+const chalk = require('chalk');
+const { version } = require('../package.json')
 
-const projectPath = process.cwd();
+print = (text = '', color = (v) => v) => console.log(color(`${text}`))
 
-const functionScripts = [
-  'lint',
-  'lint-staged',
-  'pretty',
-  'release',
-  'init',
-  'post-install',
-  'commitlint',
-  'fixpack',
-];
-const processScripts = ['cz'];
+const getMrmArgs = (presets = []) => {
+    const configs = presets.map(preset => `--config:${preset}`)
 
-if (functionScripts.includes(script)) {
-  const context = {
-    projectPath,
-    args,
-  };
+    const path = __dirname.replace('/bin', '')
 
-  require(path.join('../scripts', script))(context).then(({ status }) =>
-    process.exit(status),
-  );
+    return [
+        'all', `--dir=${path}`, ...configs,
+    ]
 }
 
-if (processScripts.includes(script)) {
-  const result = spawn.sync(
-    'node',
-    [require.resolve(path.join('../scripts', script)), projectPath, ...args],
-    { stdio: 'inherit' },
-  );
-  process.exit(result.status);
+const spawnArgs = { stdio: 'inherit' }
+
+const fullArgs = process.argv.join('')
+const isNpx = fullArgs.includes('npm') && fullArgs.includes('npx')
+const isDlx = fullArgs.includes('yarn') && (fullArgs.includes('berry') || fullArgs.includes('unplugged'))
+
+const invoke = async () => {
+    print(`Hello, it is @solid-soda/scripts v${version}`, chalk.blue.bold)
+    print('We ask you a few questions for setup scripts in your project', chalk.blue)
+    print()
+
+    const answers = await inquirer.prompt([
+        {
+            type: 'checkbox',
+            message: 'Select your project properties',
+            name: 'additional',
+            choices: [
+                {
+                    name: 'Has some styles (like css, scss)',
+                    value: 'styles'
+                },
+                {
+                    name: 'Can be released by git-tag',
+                    value: 'release'
+                },
+            ]
+        }
+    ])
+
+    print()
+    print("Thank you! Let's start setup 🧉", chalk.blue)
+    print()
+
+    let globalMrm = false
+    if (!isNpx && !isDlx) {
+        print("Seems like you aren't using npx or yarn-dlx", chalk.yellow)
+        print("We install some utils to global scope, sorry", chalk.yellow)
+
+        spawn.sync(
+            'npm',
+            [
+                'install',
+                '-g',
+                'mrm',
+            ],
+            spawnArgs,
+        )
+        globalMrm = true
+
+        print()
+        print('Utils installed globally', chalk.yellow)
+        print()
+    }
+
+    print('Start scripts generation, it takes a few seconds...', chalk.blue)
+    print()
+
+    const mrmArgs = getMrmArgs(answers.additional)
+
+    if (globalMrm) {
+        spawn.sync(
+            'mrm',
+            mrmArgs,
+            spawnArgs,
+        )
+    }
+
+    if (isDlx) {
+        spawn.sync(
+            'yarn',
+            [
+                'dlx', 'mrm', ...mrmArgs,
+            ],
+            spawnArgs,
+        )
+    }
+
+    if (isNpx) {
+        spawn.sync(
+            'npx',
+            [
+                'mrm', ...mrmArgs,
+            ],
+            spawnArgs,
+        )
+    }
+
+    print()
+    print('All done, enjoy! 🥑', chalk.blue)
+    print()
 }
 
-if (![...processScripts, ...functionScripts].includes(script)) {
-  console.log(`Unknown script "${script}".`);
-  process.exit(1);
-}
+invoke()
+

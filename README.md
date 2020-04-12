@@ -5,102 +5,65 @@
 
 Speed up the creation and maintenance of your JS applications. Zero configuration way to use modern code-quality tools.
 
-+ **Zero-config.** Any tool already configured inside.
++ **Zero-config.** Any tool is already configured for you.
 + **Universal.** Supports TS, React, and can be used with any tech.
-+ **Uniform.** Config can't be modified (all projects have the same configs).
++ **Uniform.** Config can be shared (all projects have the same configs).
 
 ## TL;DR
 
 ```sh
-yarn add -D @solid-soda/scripts@1
-yarn soda init
+yarn dlx @solid-soda/scripts
+```
 
-yarn s lint
-yarn s pretty
+or if you prefer `npm`
+
+```sh
+npx @solid-soda/scripts
 ```
 
 ## Motivation
 
-1. Before start to code we must set-up ESLint, Stylelint, Prettier, Commitizen, etc. We can to automate all this. Machines have to suffer.
-2. New lint rule adding is a hell. We provide the one source of true for any project. Just bump `@solid-soda/scripts` in your project.
+1. Before start to code we must set-up ESLint, Stylelint, Prettier, Commitizen, etc. We can to automate all of this. Machines have to suffer.
+2. New lint rule adding is a hell. We provide the one source of true for any project. Just run `@solid-soda/scripts` in your project directory.
 
-## Install
+## Usage
 
+Just run scripts in a directory with your project.
+
+If you use `yarn@berry`, just run:
 ```sh
-yarn add -D @solid-soda/scripts@1
-yarn soda init
+yarn dlx @solid-soda/scripts
 ```
 
-Or if you prefer `npm`:
-
+If you use `npm` of `yarn@classic`, just run:
 ```sh
-npm install --save-dev @solid-soda/scripts@1
-npm run soda init
+npx @solid-soda/scripts
 ```
 
-## Scripts
+It will generate all configs and put it to repository. Now, you can use any provided tool.
 
-`@solid-soda/scripts` provides many scripts for JS application maintaince.
+Some scripts will be added to your `package.json`:
++ `commit` — runs Commitizen and allow create nice commit messages
++ `pretty` — runs Prettier and format all code in the repo
++ `lint:code` — runs ESLint and preform static analysis of code
 
-### Linter
+If you have some styles in the repo, we will add extra script:
++ `lint:styles` — runs Stylelint and preform static analysis of styles
 
+If you want to release repo by git-tags, we will add ont more script:
++ `release` — runs Standard Version, updates CHANGELOG.md, bump version in `package.json` and created git-tag
+
+Also, this library sets up `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `Husky` (to run Prettier and Commitlint).
+
+## Migration guide
+
+Upgrading from version **1.x.x**, you must do one simple action: just run `@solid-soda/scripts` in your repository.
+
+For example:
 ```sh
-yarn soda lint
+npx @solid-soda/scripts
 ```
 
-It performs static analysis of your JS/TS code and stylesheets.
+## Acknowledgements
 
-Command runs [ESLint](https://eslint.org/) and [Stylelint](https://stylelint.io/) under the hood, but we don't allow to modify their configuration. One config to rule them all.
-
-This command allow `--fix` option to fix all fixable errors in your code.
-
-### Prettier
-
-```sh
-yarn soda pretty
-```
-
-It just formats the code.
-
-Command runs [Prettier](https://prettier.io/) with basic fancy configuration, we don't allow to modify it. One config to rule them all.
-
-### Commit creation
-
-```
-yarn soda cz
-```
-
-It starts nice CLI for creation commit with [conventional commit messages](https://www.conventionalcommits.org) rules.
-![CLI screenshot](./assets/add-commit.png)
-
-Command starts [Commitizen CLI](http://commitizen.github.io/cz-cli/), it uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) configuration and doesn't allow to modify it. One config to rule them all.
-
-### Release
-
-```
-yarn soda release
-```
-
-It bump version in `package.json`, generate `CHANGELOG.md` and create git tag, with [semver](https://semver.org/) and [conventional commit messages](https://www.conventionalcommits.org).
-
-Command runs [Standard Version](https://github.com/conventional-changelog/standard-version).
-
-## Languages and Frameworks
-
-### TypeScript
-
-TypeScript support out of the box, just add `tsconfig.json` to root of your project.
-
-### React
-
-React/JSX support out of the box, just add react package to you project.
-
-### Svelte
-
-- Install [prettier-plugin-svelte](https://github.com/UnwrittenFun/prettier-plugin-svelte)
-- Install [eslint-plugin-svelte3](https://github.com/sveltejs/eslint-plugin-svelte3)
-- Enjoy!
-
-## Limitations
-
-1. Only one `.gitignore`. Your project must contain exactly one `.gitignore` file in root. Sorry, we works on it.
+This project based on [mrm](https://github.com/sapegin/mrm) and setup configs for [Commitizen](http://commitizen.github.io/cz-cli/), [Commitlint](https://commitlint.js.org/#/), [ESLint](https://eslint.org), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), [Prettier](https://prettier.io), [Stylelint](https://stylelint.io).
