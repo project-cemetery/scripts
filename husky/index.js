@@ -6,7 +6,7 @@ const clearConfigs = require('../utils/clearConfigs')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
 const withVersions = require('../utils/withVersions')
 
-const EXTS = ['tsx','ts','js','jsx','scss','css','js','json','md']
+const EXTS = ['tsx', 'ts', 'js', 'jsx', 'scss', 'css', 'js', 'json', 'md']
 
 function task() {
     clearConfigs({
@@ -28,14 +28,13 @@ function task() {
         .save()
 
     packageJson()
-        .merge({
-            husky: {
-                hooks: {
-                    "pre-commit": generateExecuteScript("lint-staged"),
-                    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-                }
+        .set('husky.hooks',
+            {
+                "pre-commit": generateExecuteScript("lint-staged"),
+                "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
             }
-        })
+
+        )
         .save()
 }
 

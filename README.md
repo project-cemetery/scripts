@@ -57,13 +57,10 @@ Also, this library sets up `lint-staged` (prettify all staged files), `Commitlin
 
 ## Migration guide
 
-Upgrading from version **1.x.x**, you must do some simple actions:
-1. remove `@solid-soda/scripts` dependency from the project
-2. run `@solid-soda/scripts` in your repository
+Upgrading from version **1.x.x**, you must do one simple action: just run `@solid-soda/scripts` in your repository.
 
 For example:
 ```sh
-npm uninstall @solid-soda/scripts
 npx @solid-soda/scripts
 ```
 
