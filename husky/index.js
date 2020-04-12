@@ -23,7 +23,7 @@ function task() {
     // config
     overwrite(json, '.lintstagedrc')
         .merge({
-            [`*.{${createExtString(EXTS)}}`]: [generateExecuteScript('prettier --write')],
+            [`*.${createExtString(EXTS)}`]: [generateExecuteScript('prettier --write')],
         })
         .save()
 
