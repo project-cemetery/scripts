@@ -7,6 +7,8 @@ module.exports = {
     },
     plugins: ['@typescript-eslint'],
     rules: {
+      'no-unused-vars': 0,
+      'no-useless-constructor': 0,
       'no-empty-function': ['error', { allow: ['constructors'] }],
       'react/prop-types': 0,
     },
