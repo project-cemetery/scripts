@@ -53,7 +53,7 @@ function task() {
         .save()
 
     overwrite(lines, '.eslintignore')
-        .add(...getDefaultIgnore())
+        .add(getDefaultIgnore())
         .save();
 
     // dependencies
