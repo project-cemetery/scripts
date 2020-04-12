@@ -28,9 +28,7 @@ function task() {
     })
 
     // prepare
-    const package = packageJson()
-    
-    const packageHasDependency = hasDependency(package)
+    const packageHasDependency = hasDependency(packageJson())
 
     const hasTypeScript = packageHasDependency('typescript')
     const languageConfig =  hasTypeScript ? tsConfig : jsConfig
@@ -54,7 +52,7 @@ function task() {
         .save()
 
     // dependencies
-    const allDependencies = [...jsDependencies, ...tsDependencies, ...reactDependencies]
+    const allDependencies = [...baseDependencies, ...jsDependencies, ...tsDependencies, ...reactDependencies]
     const installDependencies = [...baseDependencies, ...languageDependencies, ...additionalDependencies]
 
     const uninstallDependencies = difference(allDependencies, installDependencies)
@@ -63,7 +61,7 @@ function task() {
     install(...withVersions(installDependencies));
 
     // scripts
-    package
+    packageJson()
         .setScript('lint:code', generateExecuteScript(`eslint "./**/*.${createExtString(languageExtensions)}"`))
         .save()
 }
