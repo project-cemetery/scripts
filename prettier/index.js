@@ -4,6 +4,7 @@ const overwrite = require('../utils/overwrite')
 const clearConfigs = require('../utils/clearConfigs')
 const generateExecuteScript = require('../utils/generateExecuteScripts')
 const withVersions = require('../utils/withVersions')
+const getDefaultIgnore = require('../utils/getDefaultIgnore')
 
 function task() {
   clearConfigs({
@@ -20,7 +21,7 @@ function task() {
     .save()
 
   overwrite(lines, '.prettierignore')
-    .add(['.yarn', 'node_modules', '.pnp.js', '.vscode'])
+    .add(getDefaultIgnore())
     .save()
 
   // dependencies

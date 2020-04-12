@@ -1,17 +1,19 @@
-const { packageJson, json, install, uninstall } = require('mrm-core');
+const { packageJson, json, install, uninstall, lines } = require('mrm-core');
 const { difference, merge } = require('lodash')
 
 const overwrite = require('../utils/overwrite')
 const hasDependency = require('../utils/hasDependency')
 const clearConfigs = require('../utils/clearConfigs')
+const generateExecuteScript = require('../utils/generateExecuteScripts')
+const withVersions = require('../utils/withVersions')
+const createExtString = require('../utils/createExtString')
+const getDefaultIgnore = require('../utils/getDefaultIgnore')
+const overwrite = require('../utils/overwrite')
 
 const baseConfig = require('./config/eslint-base')
 const jsConfig = require('./config/eslint-js')
 const tsConfig = require('./config/eslint-ts')
 const reactConfig = require('./config/eslint-react')
-const generateExecuteScript = require('../utils/generateExecuteScripts')
-const withVersions = require('../utils/withVersions')
-const createExtString = require('../utils/createExtString')
 
 const baseDependencies = ['eslint', 'eslint-plugin-import-helpers', 'eslint-plugin-unicorn']
 const jsDependencies = ['babel-eslint']
@@ -50,6 +52,10 @@ function task() {
         .merge(languageConfig)
         .merge(additionalConfig)
         .save()
+
+    overwrite(lines, '.eslintignore')
+        .add(...getDefaultIgnore())
+        .save();
 
     // dependencies
     const allDependencies = [...baseDependencies, ...jsDependencies, ...tsDependencies, ...reactDependencies]
