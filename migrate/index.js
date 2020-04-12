@@ -14,6 +14,7 @@ function task() {
         'https://github.com/solid-soda/scripts',
         `Scripts sets up by @solid-soda/scripts v${version}`
     )
+    .save()
 }
 
 task.description = 'Migrate from @solid-soda/scripts v1.x.x';
