@@ -8,7 +8,6 @@ const generateExecuteScript = require('../utils/generateExecuteScripts')
 const withVersions = require('../utils/withVersions')
 const createExtString = require('../utils/createExtString')
 const getDefaultIgnore = require('../utils/getDefaultIgnore')
-const overwrite = require('../utils/overwrite')
 
 const baseConfig = require('./config/eslint-base')
 const jsConfig = require('./config/eslint-js')
