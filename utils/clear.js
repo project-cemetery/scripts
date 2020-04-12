@@ -1,6 +1,6 @@
 const { packageJson, deleteFiles } = require('mrm-core');
 
-const clearConfigs = ({ files, packageJsonPath } = {}) => {
+const clear = ({ files, packageJsonPath } = {}) => {
     if (Array.isArray(files) && files.length > 0) {
         deleteFiles(files)
     }
@@ -10,4 +10,4 @@ const clearConfigs = ({ files, packageJsonPath } = {}) => {
     }
 }
 
-module.exports = clearConfigs
+module.exports = clear

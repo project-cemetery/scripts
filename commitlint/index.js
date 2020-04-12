@@ -1,11 +1,11 @@
 const { install, packageJson } = require('mrm-core');
 
-const clearConfigs = require('../utils/clearConfigs')
+const clear = require('../utils/clear')
 const withVersions = require('../utils/withVersions')
 const generateExecuteScript = require('../utils/generateExecuteScript')
 
 function task() {
-    clearConfigs({
+    clear({
         files: ['.commitlintrc', 'commitlint.config.js', '.commitlintrc.js', '.commitlintrc.json', '.commitlintrc.yml'],
         packageJsonPath: 'commitlint',
     })

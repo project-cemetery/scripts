@@ -1,6 +1,6 @@
 const { install, packageJson } = require('mrm-core');
 
-const clearConfigs = require('../utils/clearConfigs')
+const clear = require('../utils/clear')
 const generateExecuteScript = require('../utils/generateExecuteScript')
 const withVersions = require('../utils/withVersions')
 
@@ -9,15 +9,13 @@ function task(params) {
         return
     }
 
-    clearConfigs({
+    clear({
         files: ['.versionrc', '.versionrc.json', '.versionrc.js'],
         packageJsonPath: 'standard-version',
     })
 
-    // dependencies
     install(...withVersions(['standard-version']));
 
-    // scripts
     packageJson()
         .setScript('release', generateExecuteScript("standard-version"))
         .save();

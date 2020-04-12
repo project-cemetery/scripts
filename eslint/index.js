@@ -3,7 +3,7 @@ const { difference, merge } = require('lodash')
 
 const overwrite = require('../utils/overwrite')
 const hasDependency = require('../utils/hasDependency')
-const clearConfigs = require('../utils/clearConfigs')
+const clear = require('../utils/clear')
 const generateExecuteScript = require('../utils/generateExecuteScript')
 const withVersions = require('../utils/withVersions')
 const createExtString = require('../utils/createExtString')
@@ -23,7 +23,7 @@ const jsExtensions = ['js', 'jsx']
 const tsExtensions = ['ts', 'tsx']
 
 function task() {
-    clearConfigs({
+    clear({
         files: ['.eslintrc.js', '.eslintrc.cjs', '.eslintrc.yaml', '.eslintrc.yml', '.eslintrc.json'],
         packageJsonPath: 'eslintConfig'
     })

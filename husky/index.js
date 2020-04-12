@@ -1,31 +1,22 @@
 const { install, packageJson, json } = require('mrm-core');
 
-const overwrite = require('../utils/overwrite')
 const createExtString = require('../utils/createExtString')
-const clearConfigs = require('../utils/clearConfigs')
+const clear = require('../utils/clear')
 const generateExecuteScript = require('../utils/generateExecuteScript')
 const withVersions = require('../utils/withVersions')
 
 const EXTS = ['tsx', 'ts', 'js', 'jsx', 'scss', 'css', 'js', 'json', 'md']
 
 function task() {
-    clearConfigs({
+    clear({
         files: ['.huskyrc.js', 'husky.config.js'],
     })
-    clearConfigs({
+    clear({
         files: ['lint-staged.config.js', '.lintstagedrc'],
         packageJsonPath: 'lint-staged'
     })
 
-    // dependencies
     install(...withVersions(['husky', 'lint-staged']));
-
-    // config
-    overwrite(json, '.lintstagedrc')
-        .merge({
-            [`*.${createExtString(EXTS)}`]: [generateExecuteScript('prettier --write')],
-        })
-        .save()
 
     packageJson()
         .set('lint-staged', {
