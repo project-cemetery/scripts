@@ -10,7 +10,7 @@ function task() {
 
     markdown('README.md')
     .addBadge(
-        `https://img.shields.io/static/v1?label=@solid-soda/scripts&message=${version}`,
+        `https://img.shields.io/static/v1?label=@solid-soda/scripts&message=${version}&color=75ddf4`,
         'https://github.com/solid-soda/scripts',
         `Scripts sets up by @solid-soda/scripts v${version}`
     )
