@@ -3,12 +3,15 @@ module.exports = {
   extends: ['airbnb-base', 'plugin:unicorn/recommended', 'prettier'],
   rules: {
     'no-undef': 0,
-    'unicorn/filename-case': 0,
+    'no-restricted-syntax': 0,
     'class-methods-use-this': 0,
+    'unicorn/prefer-spread': 0,
+    'unicorn/filename-case': 0,
     'unicorn/prevent-abbreviations': 0,
     'unicorn/prefer-query-selector': 0,
     'unicorn/prefer-number-properties': 0,
     'import/no-unresolved': 0,
+    'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
     'import/extensions': 0,
     'import-helpers/order-imports': [
