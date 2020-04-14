@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/solid-soda/scripts/compare/v1.20.0...v2.1.0) (2020-04-14)
+
+### Features
+
+- **eslint:** disable confuse eslint rules (some of unicorn and airbnb) ([d89f99f](https://github.com/solid-soda/scripts/commit/d89f99f5838baae1463ba71525ea52637a677b01))
+- version 2 here ([51ceca7](https://github.com/solid-soda/scripts/commit/51ceca7760e5d83568a9acef8df306b0217a4a38))
+
 ## [2.0.0](https://github.com/solid-soda/scripts/compare/v1.20.0...v2.0.0) (2020-04-11)
 
 Brand new @solid-soda/scrips!
