@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/solid-soda/scripts/compare/v2.1.0...v2.1.1) (2020-05-25)
+
+### Bug Fixes
+
+- **eslint:** fix eslint-import-resolver-node version ([5f589f8](https://github.com/solid-soda/scripts/commit/5f589f895ca74fee22dece55d9a82973d743257a))
+
 ## [2.1.0](https://github.com/solid-soda/scripts/compare/v1.20.0...v2.1.0) (2020-04-14)
 
 ### Features
