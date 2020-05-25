@@ -16,6 +16,7 @@ const PACKAGE_VERSIONS = {
   'eslint-plugin-import': '^2.20.2',
   'eslint-config-airbnb-base': '^14.1.0',
   'eslint-config-prettier': '^6.10.1',
+  'eslint-import-resolver-node ': '^0.3.3',
   husky: '^4.2.5',
   'lint-staged': '^10.1.3',
   prettier: '^2.0.4',
