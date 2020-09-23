@@ -18,7 +18,6 @@ const baseDependencies = [
   'eslint-plugin-import',
   'eslint-config-airbnb-base',
   'eslint-plugin-import-helpers',
-  'eslint-plugin-unicorn',
   'eslint-config-prettier',
   'eslint-import-resolver-node',
 ];

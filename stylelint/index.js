@@ -33,6 +33,7 @@ function task(params) {
   install(
     ...withVersions([
       'stylelint',
+      'stylelint-order',
       'stylelint-config-recess-order',
       'stylelint-config-recommended',
     ]),
