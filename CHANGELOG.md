@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/solid-soda/scripts/compare/v2.2.0...v2.3.0) (2020-12-29)
+
+### Features
+
+- use latest versions of installed packages ([a0229ff](https://github.com/solid-soda/scripts/commit/a0229ff38af6aa4db09d9c915309e83f31a2eab6))
+
 ## [2.2.0](https://github.com/solid-soda/scripts/compare/v2.1.1...v2.2.0) (2020-09-23)
 
 ### Features
