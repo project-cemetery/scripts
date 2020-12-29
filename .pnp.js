@@ -103,7 +103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "mrm-core",
-        "npm:4.1.0"
+        "npm:4.3.0"
       ],
       [
         "prettier",
@@ -139,7 +139,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inquirer", "npm:7.1.0"],
             ["lint-staged", "npm:10.1.3"],
             ["lodash", "npm:4.17.15"],
-            ["mrm-core", "npm:4.1.0"],
+            ["mrm-core", "npm:4.3.0"],
             ["prettier", "npm:2.0.4"],
             ["standard-version", "npm:7.1.0"]
           ],
@@ -512,7 +512,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inquirer", "npm:7.1.0"],
             ["lint-staged", "npm:10.1.3"],
             ["lodash", "npm:4.17.15"],
-            ["mrm-core", "npm:4.1.0"],
+            ["mrm-core", "npm:4.3.0"],
             ["prettier", "npm:2.0.4"],
             ["standard-version", "npm:7.1.0"]
           ],
@@ -973,6 +973,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/buffer-from-npm-1.1.1-22917b8ed8-2.zip/node_modules/buffer-from/",
           "packageDependencies": [
             ["buffer-from", "npm:1.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["builtins", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/builtins-npm-1.0.3-f09d2d57f2-2.zip/node_modules/builtins/",
+          "packageDependencies": [
+            ["builtins", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -4185,17 +4194,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mrm-core", [
-        ["npm:4.1.0", {
-          "packageLocation": "./.yarn/cache/mrm-core-npm-4.1.0-d2519f7098-2.zip/node_modules/mrm-core/",
+        ["npm:4.3.0", {
+          "packageLocation": "./.yarn/cache/mrm-core-npm-4.3.0-5899798cf4-2.zip/node_modules/mrm-core/",
           "packageDependencies": [
-            ["mrm-core", "npm:4.1.0"],
+            ["mrm-core", "npm:4.3.0"],
             ["babel-code-frame", "npm:6.26.0"],
             ["comment-json", "npm:2.4.2"],
             ["detect-indent", "npm:6.0.0"],
             ["editorconfig", "npm:0.15.3"],
             ["find-up", "npm:4.1.0"],
             ["fs-extra", "npm:8.1.0"],
-            ["js-yaml", "npm:3.13.1"],
             ["kleur", "npm:3.0.3"],
             ["listify", "npm:1.0.0"],
             ["lodash", "npm:4.17.15"],
@@ -4206,7 +4214,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["smpltmpl", "npm:1.0.2"],
             ["split-lines", "npm:2.0.0"],
             ["strip-bom", "npm:4.0.0"],
-            ["webpack-merge", "npm:4.2.2"]
+            ["validate-npm-package-name", "npm:3.0.0"],
+            ["webpack-merge", "npm:4.2.2"],
+            ["yaml", "npm:2.0.0-1"]
           ],
           "linkType": "HARD",
         }]
@@ -6229,6 +6239,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["validate-npm-package-name", [
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/validate-npm-package-name-npm-3.0.0-e44c263962-2.zip/node_modules/validate-npm-package-name/",
+          "packageDependencies": [
+            ["validate-npm-package-name", "npm:3.0.0"],
+            ["builtins", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["webpack-merge", [
         ["npm:4.2.2", {
           "packageLocation": "./.yarn/cache/webpack-merge-npm-4.2.2-f98139a8eb-2.zip/node_modules/webpack-merge/",
@@ -6366,6 +6386,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["yaml", "npm:1.8.3"],
             ["@babel/runtime", "npm:7.9.2"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.0.0-1", {
+          "packageLocation": "./.yarn/cache/yaml-npm-2.0.0-1-230a208429-2.zip/node_modules/yaml/",
+          "packageDependencies": [
+            ["yaml", "npm:2.0.0-1"]
           ],
           "linkType": "HARD",
         }]
