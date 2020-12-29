@@ -5,7 +5,6 @@ const overwrite = require('../utils/overwrite');
 const hasDependency = require('../utils/hasDependency');
 const clear = require('../utils/clear');
 const generateExecuteScript = require('../utils/generateExecuteScript');
-const withVersions = require('../utils/withVersions');
 const createExtString = require('../utils/createExtString');
 const getDefaultIgnore = require('../utils/getDefaultIgnore');
 const baseConfig = require('./config/eslint-base');
@@ -88,7 +87,7 @@ function task() {
   );
   uninstall(uninstallDependencies);
 
-  install(...withVersions(installDependencies));
+  install(...installDependencies);
 
   // scripts
   packageJson()

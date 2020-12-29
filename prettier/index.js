@@ -3,7 +3,6 @@ const { install, packageJson, lines } = require('mrm-core');
 const overwrite = require('../utils/overwrite');
 const clear = require('../utils/clear');
 const generateExecuteScript = require('../utils/generateExecuteScript');
-const withVersions = require('../utils/withVersions');
 const getDefaultIgnore = require('../utils/getDefaultIgnore');
 
 function task() {
@@ -22,7 +21,7 @@ function task() {
 
   overwrite(lines, '.prettierignore').add(getDefaultIgnore()).save();
 
-  install(...withVersions(['prettier']));
+  install('prettier');
 
   packageJson()
     .setScript('pretty', generateExecuteScript('prettier --write .'))

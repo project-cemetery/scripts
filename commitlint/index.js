@@ -1,7 +1,6 @@
 const { install, packageJson } = require('mrm-core');
 
 const clear = require('../utils/clear');
-const withVersions = require('../utils/withVersions');
 const generateExecuteScript = require('../utils/generateExecuteScript');
 
 function task() {
@@ -16,9 +15,7 @@ function task() {
     packageJsonPath: 'commitlint',
   });
 
-  install(
-    ...withVersions(['@commitlint/cli', '@commitlint/config-conventional']),
-  );
+  install('@commitlint/cli', '@commitlint/config-conventional');
 
   packageJson()
     .set('commitlint', {

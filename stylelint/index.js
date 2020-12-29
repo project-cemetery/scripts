@@ -4,7 +4,6 @@ const overwrite = require('../utils/overwrite');
 const createExtString = require('../utils/createExtString');
 const clear = require('../utils/clear');
 const generateExecuteScript = require('../utils/generateExecuteScript');
-const withVersions = require('../utils/withVersions');
 const getDefaultIgnore = require('../utils/getDefaultIgnore');
 const baseConfig = require('./config/stylelint-base');
 
@@ -31,12 +30,10 @@ function task(params) {
   overwrite(lines, '.stylelintignore').add(getDefaultIgnore()).save();
 
   install(
-    ...withVersions([
-      'stylelint',
-      'stylelint-order',
-      'stylelint-config-recess-order',
-      'stylelint-config-recommended',
-    ]),
+    'stylelint',
+    'stylelint-order',
+    'stylelint-config-recess-order',
+    'stylelint-config-recommended',
   );
 
   packageJson()
