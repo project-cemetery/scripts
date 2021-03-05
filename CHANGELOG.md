@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.2](https://github.com/solid-soda/scripts/compare/v2.3.1...v2.3.2) (2021-03-05)
+
+### Bug Fixes
+
+- **deps:** upgrade mrm ([bcf405b](https://github.com/solid-soda/scripts/commit/bcf405bf08ba6238be60f8d4199f7caa88673360))
+
 ### [2.3.1](https://github.com/solid-soda/scripts/compare/v2.3.0...v2.3.1) (2020-12-29)
 
 ### Bug Fixes
