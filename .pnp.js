@@ -103,7 +103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "mrm-core",
-        "npm:4.3.0"
+        "npm:4.7.0"
       ],
       [
         "prettier",
@@ -139,7 +139,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inquirer", "npm:7.1.0"],
             ["lint-staged", "npm:10.1.3"],
             ["lodash", "npm:4.17.15"],
-            ["mrm-core", "npm:4.3.0"],
+            ["mrm-core", "npm:4.7.0"],
             ["prettier", "npm:2.0.4"],
             ["standard-version", "npm:7.1.0"]
           ],
@@ -512,7 +512,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inquirer", "npm:7.1.0"],
             ["lint-staged", "npm:10.1.3"],
             ["lodash", "npm:4.17.15"],
-            ["mrm-core", "npm:4.3.0"],
+            ["mrm-core", "npm:4.7.0"],
             ["prettier", "npm:2.0.4"],
             ["standard-version", "npm:7.1.0"]
           ],
@@ -1855,6 +1855,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["deep-extend", [
+        ["npm:0.6.0", {
+          "packageLocation": "./.yarn/cache/deep-extend-npm-0.6.0-e182924219-2.zip/node_modules/deep-extend/",
+          "packageDependencies": [
+            ["deep-extend", "npm:0.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["deep-is", [
         ["npm:0.1.3", {
           "packageLocation": "./.yarn/cache/deep-is-npm-0.1.3-0941784645-2.zip/node_modules/deep-is/",
@@ -3143,6 +3152,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ini", "npm:1.3.5"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:1.3.8", {
+          "packageLocation": "./.yarn/cache/ini-npm-1.3.8-fb5040b4c0-2.zip/node_modules/ini/",
+          "packageDependencies": [
+            ["ini", "npm:1.3.8"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["inquirer", [
@@ -3724,10 +3740,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["listify", [
-        ["npm:1.0.0", {
-          "packageLocation": "./.yarn/cache/listify-npm-1.0.0-b9bc9224f0-2.zip/node_modules/listify/",
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/listify-npm-1.0.3-5d8005dc5e-2.zip/node_modules/listify/",
           "packageDependencies": [
-            ["listify", "npm:1.0.0"]
+            ["listify", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -4194,10 +4210,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mrm-core", [
-        ["npm:4.3.0", {
-          "packageLocation": "./.yarn/cache/mrm-core-npm-4.3.0-5899798cf4-2.zip/node_modules/mrm-core/",
+        ["npm:4.7.0", {
+          "packageLocation": "./.yarn/cache/mrm-core-npm-4.7.0-ce0c64d247-2.zip/node_modules/mrm-core/",
           "packageDependencies": [
-            ["mrm-core", "npm:4.3.0"],
+            ["mrm-core", "npm:4.7.0"],
             ["babel-code-frame", "npm:6.26.0"],
             ["comment-json", "npm:2.4.2"],
             ["detect-indent", "npm:6.0.0"],
@@ -4205,10 +4221,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["find-up", "npm:4.1.0"],
             ["fs-extra", "npm:8.1.0"],
             ["kleur", "npm:3.0.3"],
-            ["listify", "npm:1.0.0"],
+            ["listify", "npm:1.0.3"],
             ["lodash", "npm:4.17.15"],
             ["minimist", "npm:1.2.5"],
             ["prop-ini", "npm:0.0.2"],
+            ["rc", "npm:1.2.8"],
             ["readme-badger", "npm:0.3.0"],
             ["semver", "npm:6.3.0"],
             ["smpltmpl", "npm:1.0.2"],
@@ -4216,7 +4233,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-bom", "npm:4.0.0"],
             ["validate-npm-package-name", "npm:3.0.0"],
             ["webpack-merge", "npm:4.2.2"],
-            ["yaml", "npm:2.0.0-1"]
+            ["yaml", "npm:2.0.0-3"]
           ],
           "linkType": "HARD",
         }]
@@ -4917,6 +4934,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/quick-lru-npm-1.1.0-c6573eb93f-2.zip/node_modules/quick-lru/",
           "packageDependencies": [
             ["quick-lru", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["rc", [
+        ["npm:1.2.8", {
+          "packageLocation": "./.yarn/cache/rc-npm-1.2.8-d6768ac936-2.zip/node_modules/rc/",
+          "packageDependencies": [
+            ["rc", "npm:1.2.8"],
+            ["deep-extend", "npm:0.6.0"],
+            ["ini", "npm:1.3.8"],
+            ["minimist", "npm:1.2.5"],
+            ["strip-json-comments", "npm:2.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5900,6 +5930,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["strip-json-comments", [
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/strip-json-comments-npm-2.0.1-e7883b2d04-2.zip/node_modules/strip-json-comments/",
+          "packageDependencies": [
+            ["strip-json-comments", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:3.0.1", {
           "packageLocation": "./.yarn/cache/strip-json-comments-npm-3.0.1-e4be5b9ca1-2.zip/node_modules/strip-json-comments/",
           "packageDependencies": [
@@ -6389,10 +6426,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.0.0-1", {
-          "packageLocation": "./.yarn/cache/yaml-npm-2.0.0-1-230a208429-2.zip/node_modules/yaml/",
+        ["npm:2.0.0-3", {
+          "packageLocation": "./.yarn/cache/yaml-npm-2.0.0-3-31768e827d-2.zip/node_modules/yaml/",
           "packageDependencies": [
-            ["yaml", "npm:2.0.0-1"]
+            ["yaml", "npm:2.0.0-3"]
           ],
           "linkType": "HARD",
         }]

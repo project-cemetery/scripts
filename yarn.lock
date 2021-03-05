@@ -333,7 +333,7 @@ __metadata:
     inquirer: ^7.1.0
     lint-staged: ^10.1.3
     lodash: ^4.17.15
-    mrm-core: ^4.3.0
+    mrm-core: ^4.7.0
     prettier: ^2.0.4
     standard-version: ^7.1.0
   bin:
@@ -1552,6 +1552,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deep-extend@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "deep-extend@npm:0.6.0"
+  checksum: 2/856d7f52db152c19fc5a70439ea938461cfb9338a632496fe370050dc73d3291cd76fc6713f604a5c126612dee9cac0f6da1d4b88ba4b0caa4f7214345879b89
+  languageName: node
+  linkType: hard
+
 "deep-is@npm:~0.1.3":
   version: 0.1.3
   resolution: "deep-is@npm:0.1.3"
@@ -2740,6 +2747,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ini@npm:~1.3.0":
+  version: 1.3.8
+  resolution: "ini@npm:1.3.8"
+  checksum: 2/62189ce7ea44c5778e757e4232c581212e838f3c39e79d931bb9152fd4b9275f09fb20b96afdd60ba9f5d7996b92486cad6cc617fcb84ff4beedd1b33b86221e
+  languageName: node
+  linkType: hard
+
 "inquirer@npm:6.5.0":
   version: 6.5.0
   resolution: "inquirer@npm:6.5.0"
@@ -3260,9 +3274,9 @@ __metadata:
   linkType: hard
 
 "listify@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "listify@npm:1.0.0"
-  checksum: 2/a84b3acd5d0d67223643c0743f87be4e695f8337b21844cfdc005673594406955065898eb59c43e87ff5a4d6f44c7ccbcbd39a88d556be2b2d7be77d61743d20
+  version: 1.0.3
+  resolution: "listify@npm:1.0.3"
+  checksum: 2/a148607a762e79744339a3ed2ddedca0adad6463e2e69804862e2a1cb15155179723c3e2aa4a47efdece2aab0045b2e422dda0dc452d00a0b420920ccc4531dc
   languageName: node
   linkType: hard
 
@@ -3691,9 +3705,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mrm-core@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "mrm-core@npm:4.3.0"
+"mrm-core@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "mrm-core@npm:4.7.0"
   dependencies:
     babel-code-frame: ^6.26.0
     comment-json: ^2.2.0
@@ -3706,6 +3720,7 @@ __metadata:
     lodash: ^4.17.15
     minimist: ^1.2.0
     prop-ini: ^0.0.2
+    rc: ^1.2.8
     readme-badger: ^0.3.0
     semver: ^6.3.0
     smpltmpl: ^1.0.2
@@ -3714,7 +3729,7 @@ __metadata:
     validate-npm-package-name: ^3.0.0
     webpack-merge: ^4.2.2
     yaml: ^2.0.0-1
-  checksum: 2/49b01eb70a08ce48f45e51dfb7937f075fefc46b6d71e7dfd15af23049915300d556ff85efd717887eebe5f6de167629779ee2eadcd4a9ff895b748ccb8a8955
+  checksum: 2/e9b00c190dfb90a6d641e33411d7291d5bd8ae271febc040b1c3796b07205754973f457dee10ce11d0750d3bb78a4b4ac62086feefdcc645443312caf496eaa1
   languageName: node
   linkType: hard
 
@@ -4337,6 +4352,20 @@ __metadata:
   version: 1.1.0
   resolution: "quick-lru@npm:1.1.0"
   checksum: 2/b1e9e3561a5fa42df0ecacc53aa59e623f949f75ec9c70c7c7d0bec40beb070cad589a2c9f51ff625ab9d23503da0d3b829be9ec0bf743694ea6817d823c25ad
+  languageName: node
+  linkType: hard
+
+"rc@npm:^1.2.8":
+  version: 1.2.8
+  resolution: "rc@npm:1.2.8"
+  dependencies:
+    deep-extend: ^0.6.0
+    ini: ~1.3.0
+    minimist: ^1.2.0
+    strip-json-comments: ~2.0.1
+  bin:
+    rc: ./cli.js
+  checksum: 2/ea2b7f7cee201a67923a2240de594a5d9b59bd312b814b06536d3d609a416dfd6fb9b85ea2abfd3b8a4eb5ed33eaff946ee75a8f2b7fb10941073c5cfee6b7a5
   languageName: node
   linkType: hard
 
@@ -5274,6 +5303,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-json-comments@npm:~2.0.1":
+  version: 2.0.1
+  resolution: "strip-json-comments@npm:2.0.1"
+  checksum: 2/e60d99aa2849c27a04dce0620334f45822197df6b83664dd3746971e9a0a766d989dbb8d87f9cb7350725d2b5df401a2343222ad06e36a1ba7d62c6633267fcb
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^2.0.0":
   version: 2.0.0
   resolution: "supports-color@npm:2.0.0"
@@ -5696,9 +5732,9 @@ __metadata:
   linkType: hard
 
 "yaml@npm:^2.0.0-1":
-  version: 2.0.0-1
-  resolution: "yaml@npm:2.0.0-1"
-  checksum: 2/72b06754d1e801604c1b2008980b801e586d7647eafaed8bdaf66f4dda12d62846e43cfceea3fe38806454818ceb5c126fbc6ad0cce3f39526b54ac323593719
+  version: 2.0.0-3
+  resolution: "yaml@npm:2.0.0-3"
+  checksum: 2/fc142270799e224ec74022c4ba99efabac26d194fd75c8e682540b434b64e590854a3174b9ea8d014379612fab0b74c5e0a93f76c8880e4c03c92a13aa05d30d
   languageName: node
   linkType: hard
 
