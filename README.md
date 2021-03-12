@@ -1,6 +1,6 @@
 # @solid-soda/scripts
 
-[![Scripts sets up by @solid-soda/scripts v2.0.0-beta.19](https://img.shields.io/static/v1?label=@solid-soda/scripts&message=2.0.0-beta.19&color=75ddf4)](https://github.com/solid-soda/scripts)
+[![Scripts sets up by @solid-soda/scripts](https://img.shields.io/static/v1?label=@solid-soda/scripts&color=75ddf4)](https://github.com/solid-soda/scripts)
 
 <img src="https://raw.githubusercontent.com/solid-soda/assets/master/logo.png" align="right"
      alt="Solid Soda logo" width="160" height="160">
@@ -60,7 +60,7 @@ If you want to release repo by git-tags, we will add ont more script:
 
 - `release` — runs Standard Version, updates CHANGELOG.md, bump version in `package.json` and created git-tag
 
-Also, this library sets up `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `Husky` (to run Prettier and Commitlint).
+Also, this library sets up `lint-staged` (prettify all staged files), `Commitlint` (check commit messages by [Conventional Commits specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#specification)) and `simple-git-hooks` (to run Prettier and Commitlint).
 
 ## Migration guide
 
@@ -74,4 +74,4 @@ npx @solid-soda/scripts
 
 ## Acknowledgements
 
-This project based on [mrm](https://github.com/sapegin/mrm) and setup configs for [Commitizen](http://commitizen.github.io/cz-cli/), [Commitlint](https://commitlint.js.org/#/), [ESLint](https://eslint.org), [Husky](https://github.com/typicode/husky), [lint-staged](https://github.com/okonet/lint-staged), [Prettier](https://prettier.io), [Stylelint](https://stylelint.io).
+This project based on [mrm](https://github.com/sapegin/mrm) and setup configs for [Commitizen](http://commitizen.github.io/cz-cli/), [Commitlint](https://commitlint.js.org/#/), [ESLint](https://eslint.org), [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks), [lint-staged](https://github.com/okonet/lint-staged), [Prettier](https://prettier.io), [Stylelint](https://stylelint.io).

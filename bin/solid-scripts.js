@@ -19,7 +19,7 @@ const getMrmArgs = (presets = []) => {
 const spawnArgs = { stdio: 'inherit' };
 
 const fullArgs = process.argv.join('');
-const isNpx = fullArgs.includes('npm') && fullArgs.includes('npx');
+
 const isDlx =
   fullArgs.includes('yarn') &&
   (fullArgs.includes('berry') || fullArgs.includes('unplugged'));
@@ -54,33 +54,14 @@ const invoke = async () => {
   print("Thank you! Let's start setup 🧉", chalk.blue);
   print();
 
-  let globalMrm = false;
-  if (!isNpx && !isDlx) {
-    print("Seems like you aren't using npx or yarn-dlx", chalk.yellow);
-    print('We install some utils to global scope, sorry', chalk.yellow);
-
-    spawn.sync('npm', ['install', '-g', 'mrm'], spawnArgs);
-    globalMrm = true;
-
-    print();
-    print('Utils installed globally', chalk.yellow);
-    print();
-  }
-
   print('Start scripts generation, it takes a few seconds...', chalk.blue);
   print();
 
   const mrmArgs = getMrmArgs(answers.additional);
 
-  if (globalMrm) {
-    spawn.sync('mrm', mrmArgs, spawnArgs);
-  }
-
   if (isDlx) {
     spawn.sync('yarn', ['dlx', 'mrm', ...mrmArgs], spawnArgs);
-  }
-
-  if (isNpx) {
+  } else {
     spawn.sync('npx', ['mrm', ...mrmArgs], spawnArgs);
   }
 

@@ -21,7 +21,7 @@ function task() {
 
   overwrite(lines, '.prettierignore').add(getDefaultIgnore()).save();
 
-  install('prettier');
+  install(['prettier']);
 
   packageJson()
     .setScript('pretty', generateExecuteScript('prettier --write .'))

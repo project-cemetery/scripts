@@ -29,12 +29,12 @@ function task(params) {
 
   overwrite(lines, '.stylelintignore').add(getDefaultIgnore()).save();
 
-  install(
+  install([
     'stylelint',
     'stylelint-order',
     'stylelint-config-recess-order',
     'stylelint-config-recommended',
-  );
+  ]);
 
   packageJson()
     .setScript(

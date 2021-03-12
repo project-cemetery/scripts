@@ -13,7 +13,7 @@ function task(params) {
     packageJsonPath: 'standard-version',
   });
 
-  install('standard-version');
+  install(['standard-version']);
 
   packageJson()
     .setScript('release', generateExecuteScript('standard-version'))

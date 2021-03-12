@@ -87,7 +87,7 @@ function task() {
   );
   uninstall(uninstallDependencies);
 
-  install(...installDependencies);
+  install(installDependencies);
 
   // scripts
   packageJson()

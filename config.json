@@ -5,7 +5,7 @@
       "prettier",
       "commitlint",
       "commitizen",
-      "husky",
+      "simple-git-hooks",
       "eslint",
       "stylelint",
       "standard-version"

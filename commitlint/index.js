@@ -15,7 +15,7 @@ function task() {
     packageJsonPath: 'commitlint',
   });
 
-  install('@commitlint/cli', '@commitlint/config-conventional');
+  install(['@commitlint/cli', '@commitlint/config-conventional']);
 
   packageJson()
     .set('commitlint', {

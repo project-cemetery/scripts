@@ -3,3 +3,6 @@ node_modules
 .pnp.js
 .vscode
 *.log
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
