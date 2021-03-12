@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/solid-soda/scripts/compare/v2.3.2...v2.4.0) (2021-03-12)
+
+### Features
+
+- **husky:** replace husky by simple-git-hooks ([d07c6ee](https://github.com/solid-soda/scripts/commit/d07c6eedeef3aaefaed4b4ed44802cc4c38726f0))
+
 ### [2.3.2](https://github.com/solid-soda/scripts/compare/v2.3.1...v2.3.2) (2021-03-05)
 
 ### Bug Fixes
