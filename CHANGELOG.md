@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.5.0](https://github.com/solid-soda/scripts/compare/v2.4.0...v2.5.0) (2021-03-12)
+
+### Features
+
+- drop dlx support ([47c4537](https://github.com/solid-soda/scripts/commit/47c45372082ad880e29c9b78377988cc91cc7eb8))
+
 ## [2.4.0](https://github.com/solid-soda/scripts/compare/v2.3.2...v2.4.0) (2021-03-12)
 
 ### Features
