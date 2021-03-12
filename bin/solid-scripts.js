@@ -18,12 +18,6 @@ const getMrmArgs = (presets = []) => {
 
 const spawnArgs = { stdio: 'inherit' };
 
-const fullArgs = process.argv.join('');
-
-const isDlx =
-  fullArgs.includes('yarn') &&
-  (fullArgs.includes('berry') || fullArgs.includes('unplugged'));
-
 const invoke = async () => {
   print(`Hello, it is @solid-soda/scripts v${version}`, chalk.blue.bold);
   print(
@@ -59,11 +53,7 @@ const invoke = async () => {
 
   const mrmArgs = getMrmArgs(answers.additional);
 
-  if (isDlx) {
-    spawn.sync('yarn', ['dlx', 'mrm', ...mrmArgs], spawnArgs);
-  } else {
-    spawn.sync('npx', ['mrm', ...mrmArgs], spawnArgs);
-  }
+  spawn.sync('npx', ['mrm', ...mrmArgs], spawnArgs);
 
   print();
   print('All done, enjoy! 🥑', chalk.blue);

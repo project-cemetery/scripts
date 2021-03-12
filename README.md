@@ -14,12 +14,6 @@ Speed up the creation and maintenance of your JS applications. Zero configuratio
 ## TL;DR
 
 ```sh
-yarn dlx @solid-soda/scripts
-```
-
-or if you prefer `npm`
-
-```sh
 npx @solid-soda/scripts
 ```
 
@@ -32,13 +26,7 @@ npx @solid-soda/scripts
 
 Just run scripts in a directory with your project.
 
-If you use `yarn@berry`, just run:
-
-```sh
-yarn dlx @solid-soda/scripts
-```
-
-If you use `npm` of `yarn@classic`, just run:
+Just run:
 
 ```sh
 npx @solid-soda/scripts
